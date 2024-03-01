@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | Component: Tabs</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="./favicon.ico" />
+   <link rel="stylesheet" href="assets/styles/styles.css" />
+</head>
+
+<body class="fixed-navbar">
+
+
+   <div class="wrapper">
+      <nav class="navbar navbar-expand-md navbar--image">
+         <div class="navbar__wrapper">
+            <div class="navbar__header">
+               <button class="button button--link d-block d-md-none js-button-nav-toggler" id="menuToggler">
+                  <i data-feather="list" class="icon-feather"></i>
+               </button>
+               <a class="navbar__brand" href="./dashboard.html" title="Dashboard">
+
+
+                  <img class="navbar__logo" src="./assets/images/default/img-logo-cp.png" />
+                  <img class="navbar__logo-simplified" src="./assets/images/default/logo-cp-white-simplified.png" alt="">
+               </a>
+               <button class="button button--link d-block d-md-none" data-toggle="collapse" data-target="#navbarForMobile">
+                  <i data-feather="more-vertical" class="icon-feather"></i>
+               </button>
+            </div>
+            <div class="navbar__body">
+               <div class="collapse navbar-collapse" id="navbarForMobile">
+                  <ul class="navbar__nav">
+                     <li class="d-none d-md-block">
+                        <button id="zenToggleButton" class="button button--link navbar__link js-button-zenmode" href="#">
+                           <i data-feather="list" class="navbar__icon"></i>
+                           <span>Zen Mode</span>
+                        </button>
+                     </li>
+                     <li>
+                        <a class="navbar__link" href="http://webdev.cyberprimatama.co.id/" target="_blank">
+                           <i data-feather="home" class="navbar__icon"></i>
+                           <span>Visit Site</span>
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="navbar__nav ml-auto">
+                     <li class="dropdown navbar__dropdown">
+                        <span class="navbar__dropdown-text">Howdy</span>
+                        <button class="button button--link navbar__dropdown-toggle is-online" data-toggle="dropdown">
+                           <span class="avatar-name">Natalie Dormer</span>
+                           <span class="avatar-photo ">
+                              <img src="./assets/images/default/img-profile-md.jpg" />
+                              <!--
+                        Default image
+                        =============
+                        <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+                        =============
+                        -->
+                           </span>
+                           <i></i>
+                        </button>
+                        <div class="dropdown-menu navbar__dropdown-menu">
+                           <a href="./user-edit.html" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="user-check"></i>
+                              <span>Edit Profile</span>
+                           </a>
+                           <a href="#" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="help-circle"></i>
+                              <span>Help</span>
+                           </a>
+                           <a href="./index.html" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="log-out"></i>
+                              <span>Logout</span>
+                           </a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div class="main-menu main-menu--fixed">
+         <div class="main-menu__profile">
+            <div class="main-menu__profile-picture">
+               <img src="./assets/images/default/img-profile-md.jpg" />
+               <!--
+         Default image
+         =============
+         <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+         =============
+         -->
+            </div>
+            <div class="main-menu__content">
+               <span class="main-menu__profile-name">Natalie Dormer</span>
+               <span class="main-menu__profile-role">Administrator</span>
+            </div>
+         </div>
+         <div class="main-menu__container">
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Main</span>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./dashboard.html" title="">
+                     <i data-feather="anchor"></i>
+                     <span>Dashboard</span>
+                  </a>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="https://instagram.com" title="">
+                     <i data-feather="file-text"></i>
+                     <span>Pages</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list ">
+                        <a href="./page-lists.html">View All Pages</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./page-create.html">Create New Page</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="message-circle"></i>
+                     <span>Post</span>
+                     <span class="badge badge-pill badge-danger">20</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./news-lists.html">All Posts</a>
+                     </li>
+                     <li>
+                        <a href="./news-create.html">Add New Post</a>
+                     </li>
+                     <li>
+                        <a href="./news-category.html">Categories</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="./settings.html" title="">
+                     <i data-feather="camera"></i>
+                     <span>Media</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list ">
+                        <a href="./media-lists.html">Library</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./media-create.html">Insert New Asset</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="settings"></i>
+                     <span>Settings</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./settings.html">One Page Settings</a>
+                     </li>
+                     <li>
+                        <a href="./settings-with-tabs.html">Settings with Tabs</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="user"></i>
+                     <span>Users</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./user-lists.html">User Lists</a>
+                     </li>
+                     <li>
+                        <a href="./user-permissions.html">User Permissions</a>
+                     </li>
+                     <li>
+                        <a href="./user-add.html">Add New User</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sidemenu.html" title="">
+                     <i data-feather="sidebar"></i>
+                     <span>Manage Menu</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Documentations</span>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="command"></i>
+                     <span>Components</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list">
+                        <a href="./components-accordion.html">Accordion</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-alert.html">Alert</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-breadcrumb.html">Breadcrumb</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-button.html">Buttons</a>
+                     </li>
+                     <li class="sub-menu__list has-sub">
+                        <a href="#">
+                           <span>Card</span>
+                           <span class="icon-arrow"></span></a>
+                        <ul class="sub-menu">
+                           <li>
+                              <a href="./components-card.html">Card groups</a>
+                           </li>
+                           <li>
+                              <a href="our-services.html">Card decks</a>
+                           </li>
+                           <li>
+                              <a href="#">Card column</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-modal.html">Modal</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-pagination.html">Pagination</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-tabs.html">Tabs</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="lock"></i>
+                     <span>Authentication</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list">
+                        <a href="./login-default.html">Login Default</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./login-light.html">Login Light</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./login-dark.html">Login Dark</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./forgot-password.html">Reactivation Password</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="edit"></i>
+                     <span>Content</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="grid"></i>
+                     <span>Layout</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="life-buoy"></i>
+                     <span>Utilities</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Customize Pages</span>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-applicant-list.html" title="">
+                     <i data-feather="users"></i>
+                     <span>Applicant List Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-talent-search.html" title="">
+                     <i data-feather="users"></i>
+                     <span>Talent Search</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-product-page.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Product Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-brand-page.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Brand Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-recruitment-dashboard.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Recruitment Dashboard Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-questions.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Form Add Questions</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="main-menu__title-collapsed"></div>
+         <div class="main-menu__submenu-collapsed"></div>
+      </div>
+
+      <div class="main-content">
+         <div class="row">
+            <div class="col mb-3">
+               <h2 class="main-content__title">Component: Tabs</h2>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-12">
+               <h3 class="main-content__subtitle">Tabs Outside Box</h3>
+               <nav>
+                  <div class="nav nav-tabs nav-tabs--primary" id="navTab" role="tablist">
+                     <a href="#tab1" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                        <i class="icon-feather" data-feather="triangle"></i>
+                        <span>Tabs List 1</span>
+                     </a>
+                     <a href="#tab2" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                        <i class="icon-feather" data-feather="square"></i>
+                        <span>Tabs List 2</span>
+                     </a>
+                     <a href="#tab3" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                        <i class="icon-feather" data-feather="circle"></i>
+                        <span>Tabs List 3</span>
+                     </a>
+                  </div>
+               </nav>
+               <div class="tab-content" id="navTabContent">
+                  <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                     <form class="form" novalidate>
+                        <div class="form__column">
+                           <h4 class="form__title">Basic Information</h4>
+                           <div class="form-group">
+                              <label for="fname">Company Name</label>
+                              <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                              <div class="invalid-feedback">You forgot filled your Company Name</div>
+                              <div class="valid-feedback">Looks Great</div>
+                           </div>
+                           <div class="form-group">
+                              <label for="fname">Representative Email</label>
+                              <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                              <div class="invalid-feedback">You forgot filled your Company Name</div>
+                              <div class="valid-feedback">Looks Great</div>
+                           </div>
+                           <div class="form-group">
+                              <label for="space">Hosting Space *</label>
+                              <div class="d-flex">
+                                 <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                 <select class="form-control ml-3" id="unit">
+                                    <option value="">Select Unit</option>
+                                    <option value="MB" selected>MB</option>
+                                    <option value="GB">GB</option>
+                                    <option value="TB">TB</option>
+                                 </select>
+                              </div>
+                              <div class="invalid-feedback">Please Select your Role</div>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="form__actions">
+                              <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="tab-pane fade" id="tab2" role="tabpanel">
+                     <form action="" class="form" novalidate>
+                        <div class="form__column">
+                           <h4 class="form__title">Group Title</h4>
+                           <div class="form__column-head d-flex align-items-center">
+                              <div class="form__desc">
+                                 <h3 class="form__desc-title">Accessible Mode</h3>
+                                 <p class="form__desc-subtitle">It will be revealed on each page and can be accessed</p>
+                              </div>
+                              <div class="form__actions">
+                                 <select class="form-control form-control--inline-block js-select" id="action" required>
+                                    <option value="">Select Bulk Action</option>
+                                    <option value="allow">Allow All</option>
+                                    <option value="deny">Deny All</option>
+                                    <option value="inherit">Inherit All</option>
+                                 </select>
+                              </div>
+                           </div><!-- /.form__column-head -->
+                           <div class="form__column-body">
+                              <div class="form__list d-flex form__list--stripe">
+                                 <div class="form__desc">List Option 1</div>
+                                 <div class="form__actions">
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check1" value="allow" class="form__input-radio" id="r1-allow" checked />
+                                       <label for="r1-allow" class="form__label-radio">Allow</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check1" value="deny" class="form__input-radio" id="r1-deny" />
+                                       <label for="r1-deny" class="form__label-radio">Deny</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check1" value="inherit" class="form__input-radio" id="r1-inherit" />
+                                       <label for="r1-inherit" class="form__label-radio">Inherit</label>
+                                    </div>
+                                 </div>
+                              </div><!-- /.form__list -->
+                              <div class="form__list d-flex form__list--stripe">
+                                 <div class="form__desc">List Option 2</div>
+                                 <div class="form__actions">
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check2" value="allow" class="form__input-radio" id="r2-allow" />
+                                       <label for="r2-allow" class="form__label-radio">Allow</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check2" value="deny" class="form__input-radio" id="r2-deny" checked />
+                                       <label for="r2-deny" class="form__label-radio">Deny</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check2" value="inherit" class="form__input-radio" id="r2-inherit" />
+                                       <label for="r2-inherit" class="form__label-radio">Inherit</label>
+                                    </div>
+                                 </div>
+                              </div><!-- /.form__list -->
+                              <div class="form__list d-flex form__list--stripe">
+                                 <div class="form__desc">List Option 3</div>
+                                 <div class="form__actions">
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check3" value="allow" class="form__input-radio" id="r3-allow" />
+                                       <label for="r3-allow" class="form__label-radio">Allow</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check3" value="deny" class="form__input-radio" id="r3-deny" />
+                                       <label for="r3-deny" class="form__label-radio">Deny</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check3" value="inherit" class="form__input-radio" id="r3-inherit" checked />
+                                       <label for="r3-inherit" class="form__label-radio">Inherit</label>
+                                    </div>
+                                 </div>
+                              </div><!-- /.form__list -->
+                           </div><!-- /.form__column-body -->
+                        </div><!-- /.form__column -->
+                        <!-- separator -->
+                        <div class="p-3"></div>
+                        <!-- end separator -->
+                        <div class="form__column">
+                           <h4 class="form__title">Group Title - 2</h4>
+                           <div class="form__column-head d-flex align-items-center">
+                              <div class="form__desc">
+                                 <h3 class="form__desc-title">Accessible Mode</h3>
+                                 <p class="form__desc-subtitle">It will be revealed on each page and can be accessed</p>
+                              </div>
+                              <div class="form__actions">
+                                 <select class="form-control form-control--inline-block js-select" id="action" required>
+                                    <option value="">Select Bulk Action</option>
+                                    <option value="allow">Allow All</option>
+                                    <option value="deny">Deny All</option>
+                                    <option value="inherit">Inherit All</option>
+                                 </select>
+                              </div>
+                           </div><!-- /.form__column-head -->
+                           <div class="form__column-body">
+                              <div class="form__list d-flex form__list--stripe">
+                                 <div class="form__desc">List Option 4</div>
+                                 <div class="form__actions">
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check4" value="allow" class="form__input-radio" id="r4-allow" checked />
+                                       <label for="r4-allow" class="form__label-radio">Allow</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check4" value="deny" class="form__input-radio" id="r4-deny" />
+                                       <label for="r4-deny" class="form__label-radio">Deny</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check4" value="inherit" class="form__input-radio" id="r4-inherit" />
+                                       <label for="r4-inherit" class="form__label-radio">Inherit</label>
+                                    </div>
+                                 </div>
+                              </div><!-- /.form__list -->
+                              <div class="form__list d-flex form__list--stripe">
+                                 <div class="form__desc">List Option 5</div>
+                                 <div class="form__actions">
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check5" value="allow" class="form__input-radio" id="5-allow" />
+                                       <label for="5-allow" class="form__label-radio">Allow</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check5" value="deny" class="form__input-radio" id="5-deny" checked />
+                                       <label for="5-deny" class="form__label-radio">Deny</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check5" value="inherit" class="form__input-radio" id="5-inherit" />
+                                       <label for="5-inherit" class="form__label-radio">Inherit</label>
+                                    </div>
+                                 </div>
+                              </div><!-- /.form__list -->
+                              <div class="form__list d-flex form__list--stripe">
+                                 <div class="form__desc">List Option 6</div>
+                                 <div class="form__actions">
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check6" value="allow" class="form__input-radio" id="r6-allow" />
+                                       <label for="r6-allow" class="form__label-radio">Allow</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check6" value="deny" class="form__input-radio" id="r6-deny" />
+                                       <label for="r6-deny" class="form__label-radio">Deny</label>
+                                    </div>
+                                    <div class="form__action-flex">
+                                       <input type="radio" name="radio_check6" value="inherit" class="form__input-radio" id="r6-inherit" checked />
+                                       <label for="r6-inherit" class="form__label-radio">Inherit</label>
+                                    </div>
+                                 </div>
+                              </div><!-- /.form__list -->
+                           </div><!-- /.form__column-body -->
+                        </div><!-- /.form__column -->
+                        <div class="form-group">
+                           <div class="form__actions">
+                              <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="tab-pane fade" id="tab3" role="tabpanel">
+                     <form action="" class="form" novalidate>
+                        <div class="form__column">
+                           <div class="form-group d-flex align-items-center d-stripe">
+                              <div class="form__desc">
+                                 <h3 class="form__desc-title">Set as Homepage Section</h3>
+                                 <p class="form__desc-subtitle">It will show on homepage as feature section</p>
+                              </div>
+                              <div class="form__actions">
+                                 <div class="toggle-switch">
+                                    <label>
+                                       <input type="checkbox" name="isHomepage" value="true" class="form-check-input" checked />
+                                       <span class="toggle-switch__box">
+                                          <span class="toggle-switch__switcher"></span>
+                                       </span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-group d-flex align-items-center d-stripe">
+                              <div class="form__desc">
+                                 <h3 class="form__desc-title">Accessible Mode</h3>
+                                 <p class="form__desc-subtitle">It will be revealed on each page and can be accessed</p>
+                              </div>
+                              <div class="form__actions">
+                                 <div class="toggle-switch">
+                                    <label>
+                                       <input type="checkbox" name="isAccesible" value="true" class="form-check-input" required />
+                                       <span class="toggle-switch__box">
+                                          <span class="toggle-switch__switcher"></span>
+                                       </span>
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="form__actions">
+                              <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div><!-- /.tab-content -->
+            </div><!-- /.col -->
+         </div><!-- /.row -->
+
+         <div class="row">
+            <div class="col-12">
+               <h3 class="main-content__subtitle">Tabs Inside Box</h3>
+               <div class="box">
+                  <div class="box__wrapper">
+                     <div class="box__header">
+                        <h3 class="box__title">Horizontal Tabs</h3>
+                        <div class="box__action">
+                           <button class="button button--link js-button-reload">
+                              <i data-feather="rotate-cw"></i>
+                           </button>
+                           <button class="button button--link js-button-expand js-jamil">
+                              <i data-feather="maximize"></i>
+                           </button>
+                        </div>
+                     </div><!-- /.box__header -->
+                     <div class="box__body">
+                        <div class="py-3"></div>
+                        <nav>
+                           <div class="nav nav-tabs nav-tabs--secondary" id="navTab" role="tablist">
+                              <a href="#tab4" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                                 <i class="icon-feather" data-feather="triangle"></i>
+                                 <span>Tabs List 1</span>
+                              </a>
+                              <a href="#tab5" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                 <i class="icon-feather" data-feather="square"></i>
+                                 <span>Tabs List 2</span>
+                              </a>
+                              <a href="#tab6" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                 <i class="icon-feather" data-feather="circle"></i>
+                                 <span>Tabs List 3</span>
+                              </a>
+                           </div>
+                        </nav>
+                        <div class="tab-content tab-content--more-space" id="navTabContent">
+                           <div class="tab-pane fade show active" id="tab4" role="tabpanel">
+                              <form class="form" novalidate>
+                                 <div class="form__column">
+                                    <h4 class="form__title">Extended Information</h4>
+                                    <div class="form-group">
+                                       <label for="fname">Company Name</label>
+                                       <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                                       <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="fname">Representative Email</label>
+                                       <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                                       <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="space">Hosting Space *</label>
+                                       <div class="d-flex">
+                                          <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                          <select class="form-control ml-3" id="unit">
+                                             <option value="">Select Unit</option>
+                                             <option value="MB" selected>MB</option>
+                                             <option value="GB">GB</option>
+                                             <option value="TB">TB</option>
+                                          </select>
+                                       </div>
+                                       <div class="invalid-feedback">Please Select your Role</div>
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <div class="form__actions">
+                                       <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                           <div class="tab-pane fade" id="tab5" role="tabpanel">
+                              <form class="form" novalidate>
+                                 <div class="form__column">
+                                    <h4 class="form__title">Additional Information</h4>
+                                    <div class="form-group">
+                                       <label for="fname">Company Name</label>
+                                       <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                                       <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="fname">Representative Email</label>
+                                       <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                                       <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="space">Hosting Space *</label>
+                                       <div class="d-flex">
+                                          <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                          <select class="form-control ml-3" id="unit">
+                                             <option value="">Select Unit</option>
+                                             <option value="MB" selected>MB</option>
+                                             <option value="GB">GB</option>
+                                             <option value="TB">TB</option>
+                                          </select>
+                                       </div>
+                                       <div class="invalid-feedback">Please Select your Role</div>
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <div class="form__actions">
+                                       <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                           <div class="tab-pane fade" id="tab6" role="tabpanel">
+                              <form class="form" novalidate>
+                                 <div class="form__column">
+                                    <h4 class="form__title">Basic Information</h4>
+                                    <div class="form-group">
+                                       <label for="fname">Company Name</label>
+                                       <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                                       <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="fname">Representative Email</label>
+                                       <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                                       <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="space">Hosting Space *</label>
+                                       <div class="d-flex">
+                                          <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                          <select class="form-control ml-3" id="unit">
+                                             <option value="">Select Unit</option>
+                                             <option value="MB" selected>MB</option>
+                                             <option value="GB">GB</option>
+                                             <option value="TB">TB</option>
+                                          </select>
+                                       </div>
+                                       <div class="invalid-feedback">Please Select your Role</div>
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <div class="form__actions">
+                                       <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div><!-- /.tab-content -->
+                     </div><!-- /.body__body -->
+                  </div><!-- /.body__wrapper -->
+               </div><!-- /.body -->
+            </div><!-- /.col -->
+         </div><!-- /.row -->
+
+         <div class="row">
+            <div class="col-12">
+               <div class="box">
+                  <div class="box__wrapper">
+                     <div class="box__header">
+                        <h3 class="box__title">Horizontal Tabs: Blue Themes</h3>
+                        <div class="box__action">
+                           <button class="button button--link js-button-reload">
+                              <i data-feather="rotate-cw"></i>
+                           </button>
+                           <button class="button button--link js-button-expand js-jamil">
+                              <i data-feather="maximize"></i>
+                           </button>
+                        </div>
+                     </div><!-- /.box__header -->
+                     <div class="box__body">
+                        <div class="p-3">
+                           <nav>
+                              <div class="nav nav-tabs nav-tabs--blue" id="navTab" role="tablist">
+                                 <a href="#tab7" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                                    <i class="icon-feather" data-feather="triangle"></i>
+                                    <span>Tabs List 7</span>
+                                 </a>
+                                 <a href="#tab8" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <i class="icon-feather" data-feather="square"></i>
+                                    <span>Tabs List 8</span>
+                                 </a>
+                                 <a href="#tab9" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <i class="icon-feather" data-feather="circle"></i>
+                                    <span>Tabs List 9</span>
+                                 </a>
+                              </div>
+                           </nav>
+                           <div class="tab-content tab-content--blue" id="navTabContent">
+                              <div class="tab-pane fade show active" id="tab7" role="tabpanel">
+                                 <form class="form" novalidate>
+                                    <div class="form__column">
+                                       <h4 class="form__title">Extended Information</h4>
+                                       <div class="form-group">
+                                          <label for="fname">Company Name</label>
+                                          <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                                          <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                          <div class="valid-feedback">Looks Great</div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="fname">Representative Email</label>
+                                          <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                                          <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                          <div class="valid-feedback">Looks Great</div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="space">Hosting Space *</label>
+                                          <div class="d-flex">
+                                             <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                             <select class="form-control ml-3" id="unit">
+                                                <option value="">Select Unit</option>
+                                                <option value="MB" selected>MB</option>
+                                                <option value="GB">GB</option>
+                                                <option value="TB">TB</option>
+                                             </select>
+                                          </div>
+                                          <div class="invalid-feedback">Please Select your Role</div>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <div class="form__actions">
+                                          <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                              <div class="tab-pane fade" id="tab8" role="tabpanel">
+                                 <form class="form" novalidate>
+                                    <div class="form__column">
+                                       <h4 class="form__title">Additional Information</h4>
+                                       <div class="form-group">
+                                          <label for="fname">Company Name</label>
+                                          <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                                          <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                          <div class="valid-feedback">Looks Great</div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="fname">Representative Email</label>
+                                          <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                                          <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                          <div class="valid-feedback">Looks Great</div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="space">Hosting Space *</label>
+                                          <div class="d-flex">
+                                             <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                             <select class="form-control ml-3" id="unit">
+                                                <option value="">Select Unit</option>
+                                                <option value="MB" selected>MB</option>
+                                                <option value="GB">GB</option>
+                                                <option value="TB">TB</option>
+                                             </select>
+                                          </div>
+                                          <div class="invalid-feedback">Please Select your Role</div>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <div class="form__actions">
+                                          <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                              <div class="tab-pane fade" id="tab9" role="tabpanel">
+                                 <form class="form" novalidate>
+                                    <div class="form__column">
+                                       <h4 class="form__title">Basic Information</h4>
+                                       <div class="form-group">
+                                          <label for="fname">Company Name</label>
+                                          <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                                          <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                          <div class="valid-feedback">Looks Great</div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="fname">Representative Email</label>
+                                          <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                                          <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                          <div class="valid-feedback">Looks Great</div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="space">Hosting Space *</label>
+                                          <div class="d-flex">
+                                             <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                             <select class="form-control ml-3" id="unit">
+                                                <option value="">Select Unit</option>
+                                                <option value="MB" selected>MB</option>
+                                                <option value="GB">GB</option>
+                                                <option value="TB">TB</option>
+                                             </select>
+                                          </div>
+                                          <div class="invalid-feedback">Please Select your Role</div>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <div class="form__actions">
+                                          <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div><!-- /.tab-content -->
+                        </div>
+                     </div><!-- /.body__body -->
+                  </div><!-- /.body__wrapper -->
+               </div><!-- /.body -->
+            </div><!-- /.col -->
+         </div><!-- /.row -->
+
+         <div class="row align-items-start">
+            <div class="col-12">
+               <h3 class="main-content__subtitle">Tabs Vertical</h3>
+            </div>
+            <div class="col col-lg-3">
+               <div class="box">
+                  <div class="box__wrapper">
+                     <div class="box__body">
+                        <h4 class="form__title mb-0 p-3">Tab Navigation</h4>
+                        <nav>
+                           <div class="nav nav-tabs nav-tabs--vertical" id="navTab" role="tablist">
+                              <a href="#tab10" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                                 <i class="icon-feather" data-feather="triangle"></i>
+                                 <span>Tabs List 10</span>
+                              </a>
+                              <a href="#tab11" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                 <i class="icon-feather" data-feather="square"></i>
+                                 <span>Tabs List 11</span>
+                              </a>
+                              <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                 <i class="icon-feather" data-feather="circle"></i>
+                                 <span>Tabs List 12</span>
+                              </a>
+                           </div>
+                        </nav>
+                     </div><!-- /.box__body -->
+                  </div><!-- /.box__wrapper -->
+               </div><!-- /.box -->
+            </div><!-- /.col -->
+            <div class="col col-lg-9">
+               <div class="tab-content" id="navTabContent">
+                  <div class="tab-pane fade show active" id="tab10" role="tabpanel">
+                     <form class="form" novalidate>
+                        <div class="form__column">
+                           <h4 class="form__title">Extended Information</h4>
+                           <div class="form-group">
+                              <label for="fname">Company Name</label>
+                              <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                              <div class="invalid-feedback">You forgot filled your Company Name</div>
+                              <div class="valid-feedback">Looks Great</div>
+                           </div>
+                           <div class="form-group">
+                              <label for="fname">Representative Email</label>
+                              <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                              <div class="invalid-feedback">You forgot filled your Company Name</div>
+                              <div class="valid-feedback">Looks Great</div>
+                           </div>
+                           <div class="form-group">
+                              <label for="space">Hosting Space *</label>
+                              <div class="d-flex">
+                                 <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                 <select class="form-control ml-3" id="unit">
+                                    <option value="">Select Unit</option>
+                                    <option value="MB" selected>MB</option>
+                                    <option value="GB">GB</option>
+                                    <option value="TB">TB</option>
+                                 </select>
+                              </div>
+                              <div class="invalid-feedback">Please Select your Role</div>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="form__actions">
+                              <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="tab-pane fade" id="tab11" role="tabpanel">
+                     <form class="form" novalidate>
+                        <div class="form__column">
+                           <h4 class="form__title">Additional Information</h4>
+                           <div class="form-group">
+                              <label for="fname">Company Name</label>
+                              <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                              <div class="invalid-feedback">You forgot filled your Company Name</div>
+                              <div class="valid-feedback">Looks Great</div>
+                           </div>
+                           <div class="form-group">
+                              <label for="fname">Representative Email</label>
+                              <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                              <div class="invalid-feedback">You forgot filled your Company Name</div>
+                              <div class="valid-feedback">Looks Great</div>
+                           </div>
+                           <div class="form-group">
+                              <label for="space">Hosting Space *</label>
+                              <div class="d-flex">
+                                 <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                 <select class="form-control ml-3" id="unit">
+                                    <option value="">Select Unit</option>
+                                    <option value="MB" selected>MB</option>
+                                    <option value="GB">GB</option>
+                                    <option value="TB">TB</option>
+                                 </select>
+                              </div>
+                              <div class="invalid-feedback">Please Select your Role</div>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="form__actions">
+                              <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <div class="tab-pane fade" id="tab12" role="tabpanel">
+                     <form class="form" novalidate>
+                        <div class="form__column">
+                           <h4 class="form__title">Basic Information</h4>
+                           <div class="form-group">
+                              <label for="fname">Company Name</label>
+                              <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" required>
+                              <div class="invalid-feedback">You forgot filled your Company Name</div>
+                              <div class="valid-feedback">Looks Great</div>
+                           </div>
+                           <div class="form-group">
+                              <label for="fname">Representative Email</label>
+                              <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                              <div class="invalid-feedback">You forgot filled your Company Name</div>
+                              <div class="valid-feedback">Looks Great</div>
+                           </div>
+                           <div class="form-group">
+                              <label for="space">Hosting Space *</label>
+                              <div class="d-flex">
+                                 <input id="space" name="space" type="number" class="form-control" value="500" required>
+                                 <select class="form-control ml-3" id="unit">
+                                    <option value="">Select Unit</option>
+                                    <option value="MB" selected>MB</option>
+                                    <option value="GB">GB</option>
+                                    <option value="TB">TB</option>
+                                 </select>
+                              </div>
+                              <div class="invalid-feedback">Please Select your Role</div>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <div class="form__actions">
+                              <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div><!-- /.tab-content -->
+            </div><!-- /.col  -->
+         </div><!-- /.row -->
+         <div class="row row--footer">
+            <div class="col">
+               <p>&copy; Copyright 2017. Cyberindo Primatama. All Rights Reserved.</p>
+            </div>
+            <div class="col">
+               <p class="text-right">Powered by <a href="#">PENA Systems</a></p>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <!-- Global Scripts -->
+   <script src="./assets/scripts/modernizr/modernizr.js"></script>
+   <script src="./assets/scripts/jquery/jquery.min.js"></script>
+   <script src="./assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="./assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="./assets/scripts/jquery.nicescroll/jquery.nicescroll.js"></script>
+   <script src="./assets/scripts/prismjs/prism.js"></script>
+   <script src="./assets/scripts/components/global.js"></script>
+   <script src="./assets/scripts/components/sample-button.js"></script>
+   <!-- // Global Scripts -->
+
+   <!-- Additional Vendor Scripts -->
+
+   <!-- // Additional Vendor Scripts -->
+
+   <!-- Additional Custom Scripts -->
+
+   <script src="./assets/scripts/components/sample-form.js"></script>
+
+   <!-- // Additional Custom Scripts -->
+</body>
+
+</html>

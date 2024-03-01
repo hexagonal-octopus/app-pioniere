@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | Sidemenu</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="./favicon.ico"/>
+   <!-- build:css assets/styles/styles.css -->
+<link rel="stylesheet" href="./assets/styles/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/styles/animate.css/animate.css" />
+<link rel="stylesheet" href="./assets/styles/summernote/summernote-lite.css">
+<link rel="stylesheet" href="./assets/styles/air-datepicker/css/datepicker.css">
+<link rel="stylesheet" href="./assets/styles/datatables.net-dt/css/jquery.dataTables.css" />
+<link rel="stylesheet" href="./assets/styles/prismjs/themes/prism.css">
+<link rel="stylesheet" href="./assets/styles/select2/css/select2.min.css">
+<link rel="stylesheet" href="./assets/styles/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="./temp/styles/style.css">
+<!-- endbuild -->
+</head>
+<body class="fixed-navbar">
+   
+   
+   <div class="wrapper">
+      <nav class="navbar navbar-expand-md navbar--image">
+   <div class="navbar__wrapper">
+      <div class="navbar__header">
+         <button class="button button--link d-block d-md-none js-button-nav-toggler" id="menuToggler">
+            <i data-feather="list" class="icon-feather"></i>
+         </button>
+         <a class="navbar__brand" href="./dashboard.html" title="Dashboard">
+            
+            
+            <img class="navbar__logo" src="./assets/images/default/img-logo-cp.png"/>
+            <img class="navbar__logo-simplified" src="./assets/images/default/logo-cp-white-simplified.png" alt="">
+         </a>
+         <button class="button button--link d-block d-md-none" data-toggle="collapse" data-target="#navbarForMobile">
+            <i data-feather="more-vertical" class="icon-feather"></i>
+         </button>
+      </div>
+      <div class="navbar__body">
+         <div class="collapse navbar-collapse" id="navbarForMobile">
+            <ul class="navbar__nav">
+               <li class="d-none d-md-block">
+                  <button id="zenToggleButton" class="button button--link navbar__link js-button-zenmode" href="#">
+                     <i data-feather="list" class="navbar__icon"></i>
+                     <span>Zen Mode</span>
+                  </button>
+               </li>
+               <li>
+                  <a class="navbar__link" href="http://webdev.cyberprimatama.co.id/" target="_blank">
+                     <i data-feather="home" class="navbar__icon"></i>
+                     <span>Visit Site</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="navbar__nav ml-auto">
+               <li class="dropdown navbar__dropdown">
+                  <span class="navbar__dropdown-text">Howdy</span>
+                  <button class="button button--link navbar__dropdown-toggle is-online" data-toggle="dropdown">
+                     <span class="avatar-name">Natalie Dormer</span>
+                     <span class="avatar-photo ">
+                        <img src="./assets/images/default/img-profile-md.jpg"/>
+                        <!--
+                        Default image
+                        =============
+                        <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+                        =============
+                        -->
+                     </span>
+                     <i></i>
+                  </button>
+                  <div class="dropdown-menu navbar__dropdown-menu">
+                     <a href="./user-edit.html" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="user-check"></i>
+                        <span>Edit Profile</span>
+                     </a>
+                     <a href="#" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="help-circle"></i>
+                        <span>Help</span>
+                     </a>
+                     <a href="./index.html" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="log-out"></i>
+                        <span>Logout</span>
+                     </a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</nav>
+      <div class="main-menu main-menu--fixed">
+   <div class="main-menu__profile">
+      <div class="main-menu__profile-picture">
+         <img src="./assets/images/default/img-profile-md.jpg"/>
+         <!--
+         Default image
+         =============
+         <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+         =============
+         -->
+      </div>
+      <div class="main-menu__content">
+         <span class="main-menu__profile-name">Natalie Dormer</span>
+         <span class="main-menu__profile-role">Administrator</span>
+      </div>
+   </div>
+   <div class="main-menu__container">
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Main</span>
+         </li>
+         <li class="main-menu__list">
+            <a href="./dashboard.html" title="">
+               <i data-feather="anchor"></i>
+               <span>Dashboard</span>
+            </a>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="https://instagram.com" title="">
+               <i data-feather="file-text"></i>
+               <span>Pages</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list ">
+                  <a href="./page-lists.html">View All Pages</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./page-create.html">Create New Page</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="message-circle"></i>
+               <span>Post</span>
+               <span class="badge badge-pill badge-danger">20</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./news-lists.html">All Posts</a>
+               </li>
+               <li>
+                  <a href="./news-create.html">Add New Post</a>
+               </li>
+               <li>
+                  <a href="./news-category.html">Categories</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="./settings.html" title="">
+               <i data-feather="camera"></i>
+               <span>Media</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list ">
+                  <a href="./media-lists.html">Library</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./media-create.html">Insert New Asset</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="settings"></i>
+               <span>Settings</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./settings.html">One Page Settings</a>
+               </li>
+               <li>
+                  <a href="./settings-with-tabs.html">Settings with Tabs</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="user"></i>
+               <span>Users</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./user-lists.html">User Lists</a>
+               </li>
+               <li>
+                  <a href="./user-permissions.html">User Permissions</a>
+               </li>
+               <li>
+                  <a href="./user-add.html">Add New User</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sidemenu.html" title="">
+               <i data-feather="sidebar"></i>
+               <span>Manage Menu</span>
+            </a>
+         </li>
+      </ul>
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Documentations</span>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="command"></i>
+               <span>Components</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list">
+                  <a href="./components-accordion.html">Accordion</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-alert.html">Alert</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-breadcrumb.html">Breadcrumb</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-button.html">Buttons</a>
+               </li>
+               <li class="sub-menu__list has-sub">
+                  <a href="#">
+                     <span>Card</span>
+                     <span class="icon-arrow"></span></a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./components-card.html">Card groups</a>
+                     </li>
+                     <li>
+                        <a href="our-services.html">Card decks</a>
+                     </li>
+                     <li>
+                        <a href="#">Card column</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-modal.html">Modal</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-pagination.html">Pagination</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-tabs.html">Tabs</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="lock"></i>
+               <span>Authentication</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list">
+                  <a href="./login-default.html">Login Default</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./login-light.html">Login Light</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./login-dark.html">Login Dark</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./forgot-password.html">Reactivation Password</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="edit"></i>
+               <span>Content</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="grid"></i>
+               <span>Layout</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="life-buoy"></i>
+               <span>Utilities</span>
+            </a>
+         </li>
+      </ul>
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Customize Pages</span>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-applicant-list.html" title="">
+               <i data-feather="users"></i>
+               <span>Applicant List Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-talent-search.html" title="">
+               <i data-feather="users"></i>
+               <span>Talent Search</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-product-page.html" title="">
+               <i data-feather="command"></i>
+               <span>Product Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-brand-page.html" title="">
+               <i data-feather="command"></i>
+               <span>Brand Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-recruitment-dashboard.html" title="">
+               <i data-feather="command"></i>
+               <span>Recruitment Dashboard Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-questions.html" title="">
+               <i data-feather="command"></i>
+               <span>Form Add Questions</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <div class="main-menu__title-collapsed"></div>
+   <div class="main-menu__submenu-collapsed"></div>
+</div>  
+      
+   <div class="main-content">
+      <div class="row">
+         <div class="col mb-3">
+            <div class="page-heading">
+               <h2 class="page-heading__title">Sidemenu</h2>
+               <p class="page-heading__text">To activate Menu Group, please add menu items into desired gorup menu on the right side.</p>
+            </div>
+         </div>
+      </div>
+      <div class="row align-items-start">
+         <div class="col-12">
+            <div class="box">
+               <div class="box__wrapper">
+                  <div class="box__header">
+                     <h3 class="box__title">
+                        <i data-feather="file-plus"></i> Add New Group</h3>
+                  </div>
+                  <div class="box__body box__body--spacy">
+                     <form class="form-row" id="formaddnewgroup" novalidate>
+                        <div class="col-12 col-md-9">
+                           <label for="inputnewgroup" class="sr-only">Enter New Group</label>
+                           <input type="text" id="inputnewgroup" class="form-control form-control--big" placeholder="type new group" required/>
+                        </div>
+                        <div class="col-12 col-md-3">
+                           <button class="button button--alt button--secondary button--icon-left button--block js-add-group-button mb-3 js-add-new-group-btn" type="submit">
+                              <i class="icon-feather icon-feather--black mr-1" data-feather="plus"></i>Add New Group</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-12">
+            <div class="row">
+               <div class="col-12 col-xl-6">
+                  <div class="box">
+                     <div class="box__wrapper">
+                        <div class="box__header">
+                           <h3 class="box__title">
+                              <i data-feather="grid"></i> Group Menu</h3>
+                           <div class="box__action">
+                              <button class="button button--link js-button-reload">
+                                 <i data-feather="rotate-cw"></i>
+                              </button>
+                              <button class="button button--link js-button-minimize">
+                                 <i data-feather="minus"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__body box__body--spacy">
+                           <p class="box__text">Lists of available Menu Group</p>
+                           <div class="lists">
+                              <ul class="lists__group sortable">
+                                 <li class="lists__group-item" id="group-main">
+                                    <a href="#" class="d-flex align-items-center">Main<i class="icon-feather icon-feather--dark ml-auto lists__icon-toggle" data-feather="chevron-up"></i>
+                                    </a>
+                                    <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                       <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                    </button>
+                                    <ul class="sublists">
+                                       <li>
+                                          <a href="#">Dashboard</a>
+                                          <div class="button-actions">
+                                             <button type="button" class="button button--ghost-secondary">
+                                                <i class="icon" data-feather="edit"></i>
+                                             </button>
+                                             <button type="button" class="button button--ghost-danger">
+                                                <i class="icon" data-feather="trash"></i>
+                                             </button>
+                                          </div>
+                                       </li>
+                                       <li>
+                                          <a href="#">Pages</a>
+                                          <div class="button-actions">
+                                             <button type="button" class="button button--ghost-secondary">
+                                                <i class="icon" data-feather="edit"></i>
+                                             </button>
+                                             <button type="button" class="button button--ghost-danger">
+                                                <i class="icon" data-feather="trash"></i>
+                                             </button>
+                                          </div>
+                                          <ul>
+                                             <li>
+                                                <a href="#">All Pages</a>
+                                                <div class="button-actions">
+                                                   <button type="button" class="button button--ghost-secondary">
+                                                      <i class="icon" data-feather="edit"></i>
+                                                   </button>
+                                                   <button type="button" class="button button--ghost-danger">
+                                                      <i class="icon" data-feather="trash"></i>
+                                                   </button>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <a href="#">Add new Pages</a>
+                                                <div class="button-actions">
+                                                   <button type="button" class="button button--ghost-secondary">
+                                                      <i class="icon" data-feather="edit"></i>
+                                                   </button>
+                                                   <button type="button" class="button button--ghost-danger">
+                                                      <i class="icon" data-feather="trash"></i>
+                                                   </button>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#">Post</a>
+                                          <div class="button-actions">
+                                             <button type="button" class="button button--ghost-secondary">
+                                                <i class="icon" data-feather="edit"></i>
+                                             </button>
+                                             <button type="button" class="button button--ghost-danger">
+                                                <i class="icon" data-feather="trash"></i>
+                                             </button>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="lists__group-item" id="group-documentation">
+                                    <a href="#" class="d-flex align-items-center">
+                                       Documentation
+                                       <i class="icon-feather icon-feather--dark ml-auto lists__icon-toggle" data-feather="chevron-up"></i>
+                                    </a>
+                                    <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                       <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                    </button>
+                                    <ul class="sublists">
+                                       <li>
+                                          <a href="#">Components</a>
+                                          <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                             <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                          </button>
+                                          <ul>
+                                             <li>
+                                                <a href="#">Alert &amp; Toast</a>
+                                                <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                                   <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                                </button>
+                                             </li>
+                                             <li>
+                                                <a href="#">Button</a>
+                                                <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                                   <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                                </button>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#">Layout</a>
+                                          <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                             <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                          </button>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="lists__group-item" id="group-log">
+                                    <a href="#" class="d-flex align-items-center">
+                                       Log
+                                       <i class="icon-feather icon-feather--dark ml-auto lists__icon-toggle" data-feather="chevron-up"></i>
+                                    </a>
+                                    <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                       <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                    </button>
+                                    <ul class="sublists">
+                                       <li>
+                                          <a href="#">Components</a>
+                                          <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                             <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                          </button>
+                                          <ul>
+                                             <li>
+                                                <a href="#">Alert &amp; Toast</a>
+                                                <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                                   <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                                </button>
+                                             </li>
+                                             <li>
+                                                <a href="#">Button</a>
+                                                <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                                   <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                                </button>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#">Layout</a>
+                                          <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                             <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                          </button>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="box__footer box__footer--with-space box__footer--border-top justify-content-end">
+                           <div class="box__footer-actions">
+                              <a href="dashboard.html" class="button button--alt button--hollow mr-2">Cancel</a>
+                              <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /.box -->
+               </div>
+               <!-- /.col-inner -->
+               <div class="col-12 col-xl-6">
+                  <div class="box">
+                     <div class="box__wrapper">
+                        <div class="box__header">
+                           <h3 class="box__title">
+                              <i data-feather="list"></i> Available Menu Items</h3>
+                           <div class="box__action">
+                              <button class="button button--link js-button-reload">
+                                 <i data-feather="rotate-cw"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__body box__body--space-bottom">
+                           <div class="lists lists--more-space lists--scroll">
+                              <ul class="lists__container">
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./dashboard.html" class="panel__link mr-auto"><span>Dashboard</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./page-lists.html" class="panel__link mr-auto"><span>Pages</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./page-lists.html" class="panel__link mr-auto"><span>View All Pages</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./page-add-new.html" class="panel__link mr-auto"><span>Add New Page</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./page-categories.html" class="panel__link mr-auto"><span>Categories</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./news-list.html" class="panel__link mr-auto"><span>Post</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./news-list.html" class="panel__link mr-auto"><span>All Posts</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./add-news.html" class="panel__link mr-auto"><span>Add New Post</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./media.html" class="panel__link mr-auto"><span>Media</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./dashboard.html" class="panel__link mr-auto"><span>Dashboard</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./settings.html" class="panel__link mr-auto"><span>Settings</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./components.html" class="panel__link mr-auto"><span>Components</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./components-alert.html" class="panel__link mr-auto"><span>Alert &amp; Toast</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./components-breadcrumb.html" class="panel__link mr-auto"><span>Breadcrumb</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./login-default.html" class="panel__link mr-auto"><span>Authentication</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./login-default.html" class="panel__link mr-auto"><span>Login default</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="./login-light.html" class="panel__link mr-auto"><span>Login Light</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   
+</ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.col-inner -->
+            </div>
+            <!-- /.row -inner -->
+         </div>
+         <!-- /.col -->
+      </div>
+
+      <div class="row row--footer">
+   <div class="col">
+      <p>&copy; Copyright 2017. Cyberindo Primatama. All Rights Reserved.</p>
+   </div>
+   <div class="col">
+      <p class="text-right">Powered by <a href="#">PENA Systems</a></p>
+   </div>
+</div> 
+   </div>
+
+   </div>
+   <!-- Global Scripts -->
+   <script src="./assets/scripts/modernizr/modernizr.js"></script>
+   <script src="./assets/scripts/jquery/jquery.min.js"></script>
+   <script src="./assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="./assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="./assets/scripts/jquery.nicescroll/jquery.nicescroll.js"></script>
+   <script src="./assets/scripts/prismjs/prism.js"></script>
+   <script src="./assets/scripts/components/global.js"></script>
+   <script src="./assets/scripts/components/sample-button.js"></script>
+   <!-- // Global Scripts -->
+
+   <!-- Additional Vendor Scripts -->
+   
+   <script src="./assets/scripts/jquery-ui-dist/jquery-ui.js"></script>
+   <script src="assets/scripts/nestedsortable/jquery.mjs.nestedsortable.js"></script>
+
+   <!-- // Additional Vendor Scripts -->
+
+   <!-- Additional Custom Scripts -->
+   
+   <script src="./assets/scripts/components/sample-group-menu.js"></script>
+
+   <!-- // Additional Custom Scripts -->
+</body>
+</html>

@@ -1,0 +1,39 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Sample Talent Search" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-form.js"></script>
+{% endblock %}
+
+{% block additional_vendor_scripts %}
+<script src="{{BASE_HREF}}assets/scripts/select2/js/select2.min.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col">
+         <div class="d-flex align-items-center mb-3">
+            <h2 class="main-content__title">Talent Search</h2>
+            <form class="form form-inline form--search">
+               <div class="form-row">
+                  <input type="text" class="form-control" placeholder="Masukkan keywords">
+               </div>
+               <div class="form-row">
+                  <button type="submit" class="button button--alt button--secondary">Cari</button>
+               </div>
+            </form>
+            <button class="button button--alt button--outline ml-auto" data-target="#filterApplicants" data-toggle="box-fixed-right"><i data-feather="settings" class="icon-feather"></i> <span>Sorting Filter</span></button>
+         </div>
+      </div>
+   </div>
+   {% include "partials/filter-applicants.njk" %}
+   {% include "partials/lists-applicants-single.njk" %}
+   {# {% include "components/_footer.njk" %} #}
+   <div class="spinner">
+      <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+   </div>
+</div>
+{% endblock %}

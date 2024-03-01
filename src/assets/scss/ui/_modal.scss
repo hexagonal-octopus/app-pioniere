@@ -1,0 +1,110 @@
+.modal{
+   z-index: 9099;
+
+   &-content{
+      border-radius: 8px;
+      box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+      background-color: white;
+   }
+
+   &-title{
+      font-size: rem(20);
+      font-family: $font-family-bold-alt;
+   }
+
+   &--show{
+      display: block;
+      position: relative;
+      z-index: 1;
+   }
+
+   &--fullsize{
+      .modal-dialog{
+         max-width: none;
+         width: 100%;
+         width: calc(100% - 48px);
+         margin: 24px;
+         height: calc(100% - 48px);
+         @include max-md-height{
+            height: auto;
+         }
+
+      }
+
+      .modal-content{
+         width: 100%;
+         height: 100%;
+         border-radius: 0;
+      }
+
+      .modal-body{
+         padding:  30px 15px;
+         display: flex;
+         overflow-y: auto;
+      }
+
+      .row{
+         width: 100%;
+         margin: 0;
+      }
+
+      .modal__actions-right{
+         display: flex;
+         width: 100%;
+         align-items: center;
+         justify-content: flex-end;
+      }
+
+      .modal-meta{
+         background: #f1f1f1;
+         height: 100%;
+         padding: 24px;
+         font-size: rem(14);
+      }
+   }
+
+   &-header{
+      justify-content: center;
+   }
+
+   &-body{
+      padding: 30px 15px;
+   }
+
+   &__title{
+      font-size: 1.5em;
+      line-height: 1.5;
+      font-family: $font-family-bold-alt;
+      text-align: center;
+      color: black;
+   }
+
+   &__icon-close{
+      color: #999;
+      transition: color 200ms ease-out;
+   }
+
+   &__button-close{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      &:hover .modal__icon-close{
+         color: black;
+      }
+   }
+
+   &__content{
+      max-height: 396px;
+      padding: 0 25px;
+      overflow-y: auto;
+   }
+
+   .small{
+      color: #999;
+   }
+
+   &-backdrop{
+      z-index: 9092;
+   }
+}

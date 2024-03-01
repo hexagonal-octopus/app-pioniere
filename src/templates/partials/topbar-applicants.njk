@@ -1,0 +1,44 @@
+<div class="box">
+   <div class="box__wrapper">
+      <div class="box__header box__header--no-padding-y">
+         <div class="box__column box__column--display-flex">
+            <div class="checkbox checkbox--green">
+               <label>
+                  <input type="checkbox" id="checkedAll">
+                  <span class="checkbox__span" name="unspecified_gender">
+                     <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                  </span>
+                  <span class="checkbox__text">Select All</span>
+               </label>
+            </div>
+            <div class="dropdown dropdown--bulk ml-4">
+               <button class="button button--outline button--small dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Bulk Operation
+               </button>
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Terpilih</a>
+                  <a class="dropdown-item" href="#">Wawancara</a>
+                  <a class="dropdown-item" href="#">Tidak Sesuai</a>
+               </div>
+            </div>
+         </div>
+         <div class="nav__wrapper ml-auto">
+            <div class="nav nav-tabs nav-tabs--tertiary" id="navTab">
+               <a href="#unprocessed" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                  <span>Belum Diproses - <strong>25</strong></span>
+               </a>
+               <a href="#chosen" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                  <span>Terpilih - <strong>25</strong></span>
+               </a>
+               <a href="#interview" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                  <span>Wawancara - <strong>25</strong></span>
+               </a>
+               <a href="#dumped" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                  <span>Tidak Sesuai - <strong>25</strong></span>
+               </a>
+            </div>
+         </div>
+      </div><!-- /.box__header -->
+   </div>
+</div>
+<!-- /.box -->

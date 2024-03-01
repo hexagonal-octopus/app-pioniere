@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-md navbar--image">
+   <div class="navbar__wrapper">
+      <div class="navbar__header">
+         <button class="button button--link d-block d-md-none js-button-nav-toggler" id="menuToggler">
+            <i data-feather="list" class="icon-feather"></i>
+         </button>
+         <a class="navbar__brand" href="./dashboard.html" title="Dashboard">
+            {# <svg class="navbar__logo-full">
+               <use xlink:href="#new-cp-logo-white"></use>
+            </svg> #}
+            {# <span class="icon icon--new-cp-logo-white navbar__logo-full"></span> #}
+            <img class="navbar__logo" src="{{BASE_HREF}}assets/images/default/img-logo-cp.png"/>
+            <img class="navbar__logo-simplified" src="{{ BASE_HREF }}assets/images/default/logo-cp-white-simplified.png" alt="">
+         </a>
+         <button class="button button--link d-block d-md-none" data-toggle="collapse" data-target="#navbarForMobile">
+            <i data-feather="more-vertical" class="icon-feather"></i>
+         </button>
+      </div>
+      <div class="navbar__body">
+         <div class="collapse navbar-collapse" id="navbarForMobile">
+            <ul class="navbar__nav">
+               <li class="d-none d-md-block">
+                  <button id="zenToggleButton" class="button button--link navbar__link js-button-zenmode" href="#">
+                     <i data-feather="list" class="navbar__icon"></i>
+                     <span>Zen Mode</span>
+                  </button>
+               </li>
+               <li>
+                  <a class="navbar__link" href="http://webdev.cyberprimatama.co.id/" target="_blank">
+                     <i data-feather="home" class="navbar__icon"></i>
+                     <span>Visit Site</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="navbar__nav ml-auto">
+               <li class="dropdown navbar__dropdown">
+                  <span class="navbar__dropdown-text">Howdy</span>
+                  <button class="button button--link navbar__dropdown-toggle is-online" data-toggle="dropdown">
+                     <span class="avatar-name">Natalie Dormer</span>
+                     <span class="avatar-photo ">
+                        <img src="{{BASE_HREF}}assets/images/default/img-profile-md.jpg"/>
+                        <!--
+                        Default image
+                        =============
+                        <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+                        =============
+                        -->
+                     </span>
+                     <i></i>
+                  </button>
+                  <div class="dropdown-menu navbar__dropdown-menu">
+                     <a href="{{BASE_HREF}}user-edit.html" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="user-check"></i>
+                        <span>Edit Profile</span>
+                     </a>
+                     <a href="#" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="help-circle"></i>
+                        <span>Help</span>
+                     </a>
+                     <a href="./index.html" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="log-out"></i>
+                        <span>Logout</span>
+                     </a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</nav>

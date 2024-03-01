@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | Settings with Tabs</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="./favicon.ico" />
+   <link rel="stylesheet" href="assets/styles/styles.css" />
+</head>
+
+<body class="fixed-navbar">
+
+
+   <div class="wrapper">
+      <nav class="navbar navbar-expand-md navbar--image">
+         <div class="navbar__wrapper">
+            <div class="navbar__header">
+               <button class="button button--link d-block d-md-none js-button-nav-toggler" id="menuToggler">
+                  <i data-feather="list" class="icon-feather"></i>
+               </button>
+               <a class="navbar__brand" href="./dashboard.html" title="Dashboard">
+
+
+                  <img class="navbar__logo" src="./assets/images/default/img-logo-cp.png" />
+                  <img class="navbar__logo-simplified" src="./assets/images/default/logo-cp-white-simplified.png" alt="">
+               </a>
+               <button class="button button--link d-block d-md-none" data-toggle="collapse" data-target="#navbarForMobile">
+                  <i data-feather="more-vertical" class="icon-feather"></i>
+               </button>
+            </div>
+            <div class="navbar__body">
+               <div class="collapse navbar-collapse" id="navbarForMobile">
+                  <ul class="navbar__nav">
+                     <li class="d-none d-md-block">
+                        <button id="zenToggleButton" class="button button--link navbar__link js-button-zenmode" href="#">
+                           <i data-feather="list" class="navbar__icon"></i>
+                           <span>Zen Mode</span>
+                        </button>
+                     </li>
+                     <li>
+                        <a class="navbar__link" href="http://webdev.cyberprimatama.co.id/" target="_blank">
+                           <i data-feather="home" class="navbar__icon"></i>
+                           <span>Visit Site</span>
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="navbar__nav ml-auto">
+                     <li class="dropdown navbar__dropdown">
+                        <span class="navbar__dropdown-text">Howdy</span>
+                        <button class="button button--link navbar__dropdown-toggle is-online" data-toggle="dropdown">
+                           <span class="avatar-name">Natalie Dormer</span>
+                           <span class="avatar-photo ">
+                              <img src="./assets/images/default/img-profile-md.jpg" />
+                              <!--
+                        Default image
+                        =============
+                        <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+                        =============
+                        -->
+                           </span>
+                           <i></i>
+                        </button>
+                        <div class="dropdown-menu navbar__dropdown-menu">
+                           <a href="./user-edit.html" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="user-check"></i>
+                              <span>Edit Profile</span>
+                           </a>
+                           <a href="#" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="help-circle"></i>
+                              <span>Help</span>
+                           </a>
+                           <a href="./index.html" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="log-out"></i>
+                              <span>Logout</span>
+                           </a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div class="main-menu main-menu--fixed">
+         <div class="main-menu__profile">
+            <div class="main-menu__profile-picture">
+               <img src="./assets/images/default/img-profile-md.jpg" />
+               <!--
+         Default image
+         =============
+         <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+         =============
+         -->
+            </div>
+            <div class="main-menu__content">
+               <span class="main-menu__profile-name">Natalie Dormer</span>
+               <span class="main-menu__profile-role">Administrator</span>
+            </div>
+         </div>
+         <div class="main-menu__container">
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Main</span>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./dashboard.html" title="">
+                     <i data-feather="anchor"></i>
+                     <span>Dashboard</span>
+                  </a>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="https://instagram.com" title="">
+                     <i data-feather="file-text"></i>
+                     <span>Pages</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list ">
+                        <a href="./page-lists.html">View All Pages</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./page-create.html">Create New Page</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="message-circle"></i>
+                     <span>Post</span>
+                     <span class="badge badge-pill badge-danger">20</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./news-lists.html">All Posts</a>
+                     </li>
+                     <li>
+                        <a href="./news-create.html">Add New Post</a>
+                     </li>
+                     <li>
+                        <a href="./news-category.html">Categories</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="./settings.html" title="">
+                     <i data-feather="camera"></i>
+                     <span>Media</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list ">
+                        <a href="./media-lists.html">Library</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./media-create.html">Insert New Asset</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="settings"></i>
+                     <span>Settings</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./settings.html">One Page Settings</a>
+                     </li>
+                     <li>
+                        <a href="./settings-with-tabs.html">Settings with Tabs</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="user"></i>
+                     <span>Users</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./user-lists.html">User Lists</a>
+                     </li>
+                     <li>
+                        <a href="./user-permissions.html">User Permissions</a>
+                     </li>
+                     <li>
+                        <a href="./user-add.html">Add New User</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sidemenu.html" title="">
+                     <i data-feather="sidebar"></i>
+                     <span>Manage Menu</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Documentations</span>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="command"></i>
+                     <span>Components</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list">
+                        <a href="./components-accordion.html">Accordion</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-alert.html">Alert</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-breadcrumb.html">Breadcrumb</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-button.html">Buttons</a>
+                     </li>
+                     <li class="sub-menu__list has-sub">
+                        <a href="#">
+                           <span>Card</span>
+                           <span class="icon-arrow"></span></a>
+                        <ul class="sub-menu">
+                           <li>
+                              <a href="./components-card.html">Card groups</a>
+                           </li>
+                           <li>
+                              <a href="our-services.html">Card decks</a>
+                           </li>
+                           <li>
+                              <a href="#">Card column</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-modal.html">Modal</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-pagination.html">Pagination</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-tabs.html">Tabs</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="lock"></i>
+                     <span>Authentication</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list">
+                        <a href="./login-default.html">Login Default</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./login-light.html">Login Light</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./login-dark.html">Login Dark</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./forgot-password.html">Reactivation Password</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="edit"></i>
+                     <span>Content</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="grid"></i>
+                     <span>Layout</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="life-buoy"></i>
+                     <span>Utilities</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Customize Pages</span>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-applicant-list.html" title="">
+                     <i data-feather="users"></i>
+                     <span>Applicant List Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-talent-search.html" title="">
+                     <i data-feather="users"></i>
+                     <span>Talent Search</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-product-page.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Product Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-brand-page.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Brand Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-recruitment-dashboard.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Recruitment Dashboard Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-questions.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Form Add Questions</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="main-menu__title-collapsed"></div>
+         <div class="main-menu__submenu-collapsed"></div>
+      </div>
+
+      <div class="main-content">
+         <div class="row">
+            <div class="col mb-3">
+               <div class="d-flex">
+                  <h2 class="main-content__title">Settings with Tabs</h2>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-12">
+               <div class="box">
+                  <nav>
+                     <div class="nav nav-tabs nav-tabs--primary" id="navTab" role="tablist">
+                        <a href="#tabGeneral" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                           <i class="icon-feather" data-feather="compass"></i>
+                           <span>General Settings</span>
+                        </a>
+                        <a href="#tabGoogle" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <i class="icon-feather" data-feather="play"></i>
+                           <span>Google Integrations</span>
+                        </a>
+                        <a href="#tabParty" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <i class="icon-feather" data-feather="globe"></i>
+                           <span>Third Party Plugins</span>
+                        </a>
+                        <a href="#tabLang" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <i class="icon-feather" data-feather="mic"></i>
+                           <span>Language Settings</span>
+                        </a>
+                     </div>
+                  </nav>
+                  <div class="tab-content">
+                     <div class="tab-pane fade show active" id="tabGeneral" role="tabpanel">
+                        <form class="form" novalidate>
+                           <div class="tab-pane__top">
+                              <h2 class="tab-pane__title">
+                                 <i class="icon-feather" data-feather="compass"></i><span>General Settings</span>
+                              </h2>
+                           </div>
+                           <div class="row row--space-bottom">
+                              <div class="col-12 col-xl-3">
+                                 <div class="form__column">
+                                    <div class="form__image">
+                                       <div class="image-wrapper">
+                                          <img src="./assets/images/default/img-cp-logo-example.png" alt="logo-cyberprimatama">
+                                          <!-- Image Default -->
+                                          <!--<img src="./assets/images/default/img-placeholder-add-logo.jpg" alt="image-placeholder-add-logo">-->
+                                       </div>
+                                    </div>
+                                    <div class="button-upload mb-3">
+                                       <!-- If no-image was found, change button to "Upload Logo" insted of "Update" -->
+                                       <button type="button" class="button button--primary button--alt button--outline button--block mb-2 js-upload-button">Update Logo</button>
+                                       <input type="file" accept="image/*" class="file-upload hide-default">
+                                    </div>
+                                    <p class="small"><strong>Take note:</strong><br/>Maximum File image dimension: 300x300 px</p>
+                                 </div>
+                              </div>
+                              <div class="col-12 col-xl-9">
+                                 <div class="row">
+                                    <div class="col-12">
+                                       <div class="form__column">
+                                          <h4 class="form__title">Basic Information</h4>
+                                          <div class="form-group">
+                                             <label for="fname">Company Name</label>
+                                             <input id="fname" name="fname" class="form-control" placeholder="Your Company Name" value="Cyberindo Primatama" data-toggle="count" data-length="50" required>
+                                             <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                             <div class="valid-feedback">Looks Great</div>
+                                          </div>
+                                          <div class="form-group">
+                                             <label for="fname">Representative Email</label>
+                                             <input id="fname" name="fname" class="form-control" value="brian.pranata@cyberprimatama.co.id" required>
+                                             <div class="invalid-feedback">You forgot filled your Company Name</div>
+                                             <div class="valid-feedback">Looks Great</div>
+                                          </div>
+                                          <div class="form-group">
+                                             <label for="space">Hosting Space *</label>
+                                             <div class="d-flex flex-md-wrap justify-content-between">
+                                                <input id="space" name="space" type="number" class="form-control w50" value="500" required>
+                                                <select class="form-control w50" id="unit">
+                                                   <option value="">Select Unit</option>
+                                                   <option value="MB" selected>MB</option>
+                                                   <option value="GB">GB</option>
+                                                   <option value="TB">TB</option>
+                                                </select>
+                                             </div>
+                                             <div class="invalid-feedback">Please Select your Role</div>
+                                          </div>
+                                       </div>
+                                    </div><!-- /.inner-col-12 -->
+                                 </div><!-- /.inner-row -->
+                              </div><!-- /.col-12 -->
+                           </div><!-- /.row -->
+                           <div class="row row--space-bottom">
+                              <div class="col-12">
+                                 <div class="form__column">
+                                    <h4 class="form__title">Contact Information</h4>
+                                    <div class="form-group">
+                                       <label for="phone">Phone</label>
+                                       <input id="phone" name="phone" placeholder="Format Phone ex. 02129964900" class="form-control phone" data-toggle="count" data-length="11" required>
+                                       <div class="invalid-feedback">Input your correct phone number, start with [CODE AREA][NUMBERS]</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="fax">Fax</label>
+                                       <input id="fax" name="fax" placeholder="Format Phone ex. 02129964900" class="form-control phone" data-toggle="count" data-length="11" required>
+                                       <div class="invalid-feedback">Input your correct fax number, start with [CODE AREA][NUMBERS]</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="c_email">Corporate Email *</label>
+                                       <input id="c_email" name="c_email" type="email" class="form-control" placeholder="Your valid E-mail address" data-toggle="count" data-length="50" value="webdev@cyberprimatama.co.id" required>
+                                       <div class="invalid-feedback">Invalid Email Address, you Dipshit</div>
+                                       <div class="valid-feedback">Looks Great</div>
+                                    </div>
+                                 </div>
+                              </div><!-- /.inner-col-12 -->
+                           </div>
+                           <div class="row">
+                              <div class="col-12">
+                                 <div class="form__column">
+                                    <h4 class="form__title">Additional Information</h4>
+                                    <div class="form-group">
+                                       <label for="sitename">Company Sitename*</label>
+
+                                       <input id="sitename" name="sitename" class="form-control" placeholder="Your Great Company" value="Cyberindo Primatama" data-toggle="count" data-length="50" required>
+                                       <div class="invalid-feedback">Company Sitename must not be blank</div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="content_id">Company Address</label>
+                                       <textarea id="content_id" name="content_id" class="form-control summernote" data-toggle="count" data-length="500" required>
+<p>Cyber 2 Tower 33rd Floor<br/>
+Jl. HR Rasuna Said X5 No. 13<br/>
+Jakarta Selatan, 12950 Tel. +62 21 29964900<br/>
+Fax. +62 21 5742481</p>
+               </textarea>
+                                       <div class="invalid-feedback">Your Company address must not empty</div>
+                                    </div>
+                                    <div class="form-group d-flex align-items-center py-2">
+                                       <div class="form__desc">
+                                          <p class="form__desc-title">Set Browse Cache Limit</p>
+                                          <p class="form__desc-subtitle">Sample information about browser cache, default was null</p>
+                                       </div>
+                                       <div class="form__actions">
+                                          <div class="toggle-switch">
+                                             <label>
+                                                <input type="checkbox" name="isHomepage" value="true" class="form-check-input" />
+                                                <span class="toggle-switch__box">
+                                                   <span class="toggle-switch__switcher"></span>
+                                                </span>
+                                             </label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="form-group d-flex align-items-center py-2">
+                                       <div class="form__desc">
+                                          <p class="form__desc-title">Set as Default</p>
+                                          <p class="form__desc-subtitle">Primary information about your company</p>
+                                       </div>
+                                       <div class="form__actions">
+                                          <div class="toggle-switch">
+                                             <label>
+                                                <input type="checkbox" name="isDefaultInfo" value="true" class="form-check-input" checked />
+                                                <span class="toggle-switch__box">
+                                                   <span class="toggle-switch__switcher"></span>
+                                                </span>
+                                             </label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="form-group d-flex align-items-center py-2">
+                                       <div class="form__desc">
+                                          <p class="form__desc-title">Admin Themes</p>
+                                          <p class="form__desc-subtitle">Set Themes for Company Login Member/Admin Area</p>
+                                       </div>
+                                       <div class="form__actions">
+                                          <div class="toggle-switch">
+                                             <select class="form-control" id="themes-option">
+                                                <option value="">Select Themes</option>
+                                                <option value="MB" selected>Light</option>
+                                                <option value="GB">Dark</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div><!-- /.col-12 -->
+                           </div><!-- /.row -->
+                           <div class="row pt-3">
+                              <div class="col-12">
+                                 <div class="d-flex justify-content-end flex-wrap">
+                                    <a href="./dashboard.html" class="button button--alt button--hollow mr-2 mb-2">Cancel</a>
+                                    <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                                 </div>
+                              </div>
+                           </div><!-- /.row -->
+                        </form>
+                     </div>
+                     <div class="tab-pane fade" id="tabGoogle" role="tabpanel">
+                        <form class="form" novalidate>
+                           <div class="tab-pane__top">
+                              <h2 class="tab-pane__title">
+                                 <i class="icon-feather" data-feather="play"></i><span>Google Integrations</span>
+                              </h2>
+                           </div>
+                           <div class="row">
+                              <div class="col-12">
+                                 <div class="form__column mb-0">
+                                    <h4 class="form__title">Google Maps</h4>
+                                    <div class="row">
+                                       <div class="form-group col">
+                                          <label for="lat">Latitude</label>
+                                          <input type="text" class="form-control" value="-6.226227" placeholder="Latitude Coordinate" required>
+                                          <div class="invalid-feedback">Please fill-in latitude coordinate</div>
+                                       </div>
+                                       <div class="form-group col">
+                                          <label for="lat">Longitude</label>
+                                          <input type="text" class="form-control" value="106.832373" placeholder="Longitude Coordinate" required>
+                                          <div class="invalid-feedback">Please fill-in longitude coordinate</div>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="lat">Embed iframe Location</label>
+                                       <textarea class="form-control" placeholder="Put your shareable link embed-a-map from Google Maps here." rows="5"><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2820548347518!2d106.83017361535887!3d-6.226493995492759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f96ef78ef8bf%3A0x5f977fd63b4489a3!2sCyber+2+Tower!5e0!3m2!1sen!2sid!4v1536036844460' width='600' height='450' frameborder='0' style='border:0' allowfullscreen></iframe></textarea>
+                                       <div class="invalid-feedback">Please fill-in input with shared code you get from Google Map location</div>
+                                    </div>
+                                 </div>
+                              </div><!-- /.col-->
+                           </div><!-- /.row -->
+                           <div class="row pt-3">
+                              <div class="col-12">
+                                 <div class="d-flex justify-content-end flex-wrap">
+                                    <a href="./dashboard.html" class="button button--alt button--hollow mr-2">Cancel</a>
+                                    <button type="submit" data-type="valid" data-view="top" data-title="Sucess Update" data-message="Data have been saved succesfully on Database." class="button button--alt button--primary js-button-custom-toast">Save Settings</button>
+                                 </div>
+                              </div>
+                           </div><!-- /.row -->
+                        </form>
+                     </div>
+                     <div class="tab-pane fade" id="tabParty" role="tabpanel">
+                        <div class="tab-pane__top">
+                           <h2 class="tab-pane__title">
+                              <i class="icon-feather" data-feather="globe"></i><span>Third Party Plugins</span>
+                           </h2>
+                        </div>
+                        <div class="row justify-content-center">
+                           <div class="col-12">
+                              <div class="form__column mb-0">
+                                 <h4 class="form__title">Plugin Settings</h4>
+                                 <div class="div-table">
+                                    <div class="div-table__row div-table__row--heading">
+                                       <div class="div-table__cell">Service</div>
+                                       <div class="div-table__cell">Description</div>
+                                       <div class="div-table__cell">Action</div>
+                                    </div>
+                                    <div class="div-table__row">
+                                       <div class="div-table__cell"><strong>MailJet</strong></div>
+                                       <div class="div-table__cell">Easy to use Marketing Email Solution</div>
+                                       <div class="div-table__cell"><button class="button button--alt ml-auto" data-toggle="collapse" data-target="#mailJet">Configure</button></div>
+                                       <div class="w-100">
+                                          <div class="collapse" id="mailJet">
+                                             <div class="more-space pt-0">
+                                                <form class="form col-xl-10 ml-auto">
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col col-xl-3">
+                                                         <div class="form__desc">Status</div>
+                                                      </div>
+                                                      <div class="col col-xl-9">
+                                                         <div class="form__actions">
+                                                            <div class="toggle-switch">
+                                                               <label>
+                                                                  <input type="checkbox" name="isHomepage" value="true" class="form-check-input" checked />
+                                                                  <span class="toggle-switch__box">
+                                                                     <span class="toggle-switch__switcher"></span>
+                                                                  </span>
+                                                               </label>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12 col-xl-3">
+                                                         <div class="form__desc">API Key</div>
+                                                      </div>
+                                                      <div class="col-12 col-xl-9">
+                                                         <label class="sr-only" for="api">API Key</label>
+                                                         <input class="form-control" id="api" type="text" placeholder="Insert API Key" />
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12 col-xl-3">
+                                                         <div class="form__desc">Username</div>
+                                                      </div>
+                                                      <div class="col-12 col-xl-9">
+                                                         <label class="sr-only" for="user">Username</label>
+                                                         <input class="form-control" id="user" type="text" placeholder="Insert Valid Username" />
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12">
+                                                         <div class="form__actions">
+                                                            <a href="#" class="button button--alt button--hollow mr-2">Cancel</a>
+                                                            <button type="submit" class="button button--secondary button--alt">Save Changes</button>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </form>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="div-table__row">
+                                       <div class="div-table__cell"><strong>Slack Notification</strong></div>
+                                       <div class="div-table__cell">Receive event notifications in Slack</div>
+                                       <div class="div-table__cell"><button class="button button--alt ml-auto" data-toggle="collapse" data-target="#slackNotif">Configure</button></div>
+                                       <div class="w-100">
+                                          <div class="collapse" id="slackNotif">
+                                             <div class="more-space pt-0">
+                                                <form class="form col-xl-10 ml-auto">
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col col-xl-3">
+                                                         <div class="form__desc">Status</div>
+                                                      </div>
+                                                      <div class="col col-xl-9">
+                                                         <div class="form__actions">
+                                                            <div class="toggle-switch">
+                                                               <label>
+                                                                  <input type="checkbox" name="isHomepage" value="true" class="form-check-input" checked />
+                                                                  <span class="toggle-switch__box">
+                                                                     <span class="toggle-switch__switcher"></span>
+                                                                  </span>
+                                                               </label>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12 col-xl-3">
+                                                         <div class="form__desc">Webhooks</div>
+                                                      </div>
+                                                      <div class="col-12 col-xl-9">
+                                                         <label class="sr-only" for="webhooks">Webhooks</label>
+                                                         <input class="form-control" id="webhooks" type="text" placeholder="Insert API Key" />
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12 col-xl-3">
+                                                         <div class="form__desc">Username</div>
+                                                      </div>
+                                                      <div class="col-12 col-xl-9">
+                                                         <label class="sr-only" for="user">Username</label>
+                                                         <input class="form-control" id="user" type="text" placeholder="Insert Valid Username" />
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12 col-xl-3">
+                                                         <div class="form__desc">Room</div>
+                                                      </div>
+                                                      <div class="col-12 col-xl-9">
+                                                         <label class="sr-only" for="user">Username</label>
+                                                         <input class="form-control" id="user" type="text" placeholder="Channel Rooms" />
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12">
+                                                         <div class="form__actions">
+                                                            <a href="#" class="button button--alt button--hollow mr-2">Cancel</a>
+                                                            <button type="submit" class="button button--secondary button--alt">Save Changes</button>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </form>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="div-table__row">
+                                       <div class="div-table__cell"><strong>Basreng Security 4.0</strong></div>
+                                       <div class="div-table__cell">Brian Basreng configuration for page optimization and web-security</div>
+                                       <div class="div-table__cell"><button class="button button--alt ml-auto" data-toggle="collapse" data-target="#basreng">Configure</button></div>
+                                       <div class="w-100">
+                                          <div class="collapse" id="basreng">
+                                             <div class="more-space pt-0">
+                                                <form class="form col-xl-10 ml-auto">
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col col-xl-3">
+                                                         <div class="form__desc">Status</div>
+                                                      </div>
+                                                      <div class="col col-xl-9">
+                                                         <div class="form__actions">
+                                                            <div class="toggle-switch">
+                                                               <label>
+                                                                  <input type="checkbox" name="isHomepage" value="true" class="form-check-input" checked />
+                                                                  <span class="toggle-switch__box">
+                                                                     <span class="toggle-switch__switcher"></span>
+                                                                  </span>
+                                                               </label>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12 col-xl-3">
+                                                         <div class="form__desc">WebToken</div>
+                                                      </div>
+                                                      <div class="col-12 col-xl-9">
+                                                         <label class="sr-only" for="webhooks">WebToken</label>
+                                                         <input class="form-control" id="webhooks" type="text" value="s4BOloN9R3nGw4kAnD4" placeholder="Insert WebToken Key" readonly />
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12 col-xl-3">
+                                                         <div class="form__desc">Username</div>
+                                                      </div>
+                                                      <div class="col-12 col-xl-9">
+                                                         <label class="sr-only" for="user">Username</label>
+                                                         <input class="form-control" id="user" type="text" value="Brian Benjamin Basreng" placeholder="Insert Valid Username" />
+                                                      </div>
+                                                   </div>
+                                                   <div class="form__list form__list--stripe">
+                                                      <div class="col-12">
+                                                         <div class="form__actions">
+                                                            <a href="#" class="button button--alt button--hollow mr-2">Cancel</a>
+                                                            <button type="submit" class="button button--secondary button--alt">Save Changes</button>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </form>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div><!-- /.col-->
+                        </div><!-- /.row -->
+
+                     </div>
+                     <div class="tab-pane fade" id="tabLang" role="tabpanel">
+                        <form class="form" novalidate>
+                           <div class="tab-pane__top">
+                              <h2 class="tab-pane__title">
+                                 <i class="icon-feather" data-feather="mic"></i><span>Language Settings</span>
+                              </h2>
+                           </div>
+                           <div class="row">
+                              <div class="col-12">
+                                 <div class="form__column mb-0">
+                                    <div class="row">
+                                       <div class="col-12">
+                                          <h4 class="form__title">Language Settings</h4>
+                                          <button class="button button--alt button--outline button--icon-left d-block ml-auto"><i data-feather="plus" class="icon-feather"></i> Add a Language</button>
+                                          <div class="div-table div-table--margin-top">
+                                             <div class="div-table__row div-table__row--heading">
+                                                <div class="div-table__cell">Language</div>
+                                                <div class="div-table__cell">Action</div>
+                                             </div>
+                                             <div class="div-table__row">
+                                                <div class="div-table__cell"><strong>English</strong> &mdash; Default</div>
+                                                <div class="div-table__cell position-relative">
+                                                   <button class="button button--alt button--secondary button--dropdown d-block ml-auto" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i></button>
+                                                   <div class="dropdown-menu">
+                                                      <a href="#!" class="dropdown-item"><i data-feather="star" class="icon-feather icon-feather--dark"></i> Set as Default</a>
+                                                      <a href="#" class="dropdown-item dropdown-item--danger"><i data-feather="x-circle" class="icon-feather icon-feather--dark icon-feather--danger"></i> Delete</a>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="div-table__row">
+                                                <div class="div-table__cell"><strong>Bahasa - ID</strong></div>
+                                                <div class="div-table__cell position-relative">
+                                                   <button class="button button--alt button--secondary button--dropdown d-block ml-auto" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i></button>
+                                                   <div class="dropdown-menu">
+                                                      <a href="#!" class="dropdown-item"><i data-feather="star" class="icon-feather icon-feather--dark"></i> Set as Default</a>
+                                                      <a href="#" class="dropdown-item dropdown-item--danger"><i data-feather="x-circle" class="icon-feather icon-feather--dark icon-feather--danger"></i> Delete</a>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="div-table__row">
+                                                <div class="div-table__cell"><strong>Wakanda</strong></div>
+                                                <div class="div-table__cell position-relative">
+                                                   <button class="button button--alt button--secondary button--dropdown d-block ml-auto" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i></button>
+                                                   <div class="dropdown-menu">
+                                                      <a href="#!" class="dropdown-item"><i data-feather="star" class="icon-feather icon-feather--dark"></i> Set as Default</a>
+                                                      <a href="#" class="dropdown-item dropdown-item--danger"><i data-feather="x-circle" class="icon-feather icon-feather--dark icon-feather--danger"></i> Delete</a>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div><!-- /.col-->
+                           </div><!-- /.row -->
+                           <div class="row pt-3">
+                              <div class="col-12">
+                                 <div class="d-flex justify-content-end flex-wrap">
+                                    <a href="./dashboard.html" class="button button--alt button--hollow mr-2">Cancel</a>
+                                    <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                                 </div>
+                              </div>
+                           </div><!-- /.row -->
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row row--footer">
+            <div class="col">
+               <p>&copy; Copyright 2017. Cyberindo Primatama. All Rights Reserved.</p>
+            </div>
+            <div class="col">
+               <p class="text-right">Powered by <a href="#">PENA Systems</a></p>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <!-- Global Scripts -->
+   <script src="./assets/scripts/modernizr/modernizr.js"></script>
+   <script src="./assets/scripts/jquery/jquery.min.js"></script>
+   <script src="./assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="./assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="./assets/scripts/jquery.nicescroll/jquery.nicescroll.js"></script>
+   <script src="./assets/scripts/prismjs/prism.js"></script>
+   <script src="./assets/scripts/components/global.js"></script>
+   <script src="./assets/scripts/components/sample-button.js"></script>
+   <!-- // Global Scripts -->
+
+   <!-- Additional Vendor Scripts -->
+
+   <script src="./assets/scripts/summernote/summernote.js"></script>
+
+   <!-- // Additional Vendor Scripts -->
+
+   <!-- Additional Custom Scripts -->
+
+   <script src="./assets/scripts/components/sample-form.js"></script>
+   <script src="./assets/scripts/components/sample-toast.js"></script>
+   <script src="./assets/scripts/components/init-summernote.js"></script>
+
+   <!-- // Additional Custom Scripts -->
+</body>
+
+</html>

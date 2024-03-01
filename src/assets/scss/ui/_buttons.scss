@@ -1,0 +1,612 @@
+// ***********************************
+// BUTTONS
+// ***********************************
+
+button {
+  font-size: 100%; /* Corrects font size not being inherited in all browsers */
+  margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+}
+
+.button {
+  border: 0;
+  box-shadow: none;
+  outline: 0;
+  cursor: pointer;
+  padding: 10px 48px;
+  font-family: $font-family-title;
+  text-transform: uppercase;
+  border-radius: 4px;
+  line-height: 1;
+  // height: 44px;
+  font-size: 1em;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  transition: background-color 200ms ease-out, box-shadow 200ms ease-out, transform 200ms ease-out;
+  display: inline-block;
+  color: inherit;
+  background-color: #ddd;
+
+  @include max-small {
+    width: 100%;
+    text-align: center;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    // margin-bottom: 16px !important;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  // .icon-feather{
+  //    stroke: black;
+  // }
+
+  .icon {
+    position: relative;
+    top: -1px;
+    margin-right: 4px;
+    float: left;
+    height: 24px;
+  }
+
+  &--alt {
+    font-family: $font-family-bold;
+    box-shadow: none;
+    text-transform: none;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 35px;
+
+    span {
+      line-height: 16px;
+    }
+
+    &:hover {
+      box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.2);
+      transform: translateY(0px);
+    }
+
+    &:active {
+      box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.5);
+      transform: translateY(0px);
+    }
+
+    .icon-feather {
+      margin-right: 4px;
+    }
+  }
+
+  &--icon {
+    padding: 10px 60px 10px 48px;
+  }
+
+  &--icon-left {
+    padding: 10px 48px 10px 32px;
+
+    .icon-feather {
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  &:focus,
+  &:active,
+  &:focus:active {
+    outline: 0;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:hover {
+    box-shadow: 0px 7px 10px -2px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: 0px 1px 5px -2px rgba(0, 0, 0, 0.5);
+    transform: translateY(0px);
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    cursor: not-allowed;
+    &:hover {
+      transform: none;
+      color: rgba(0, 0, 0, 0.2);
+      box-shadow: none;
+    }
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid #000;
+    transform: none;
+    box-shadow: none;
+    transition: background-color 300ms ease-out, border-color 300ms ease-out;
+
+    .icon-feather {
+      stroke: black;
+    }
+
+    &:hover,
+    &:visited:hover {
+      background-color: #e1e1e1;
+      border-color: #e1e1e1;
+      color: black;
+      text-decoration: none;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &--hollow {
+    background-color: transparent;
+    border: 1px solid transparent;
+    transform: none;
+    box-shadow: none;
+    color: #555;
+    transition: color 300ms ease-out, border-color 300ms ease-out;
+
+    &:hover,
+    &:visited:hover {
+      background-color: transparent;
+      border-color: #000;
+      color: black;
+      text-decoration: none;
+      transform: none;
+      box-shadow: none !important;
+    }
+  }
+
+  &--danger {
+    background: red;
+    color: white;
+    text-decoration: none;
+
+    &:focus {
+      background: red;
+      color: white;
+    }
+
+    &:hover,
+    &:visited:hover {
+      background-color: $red-300;
+      color: white;
+      text-decoration: none;
+    }
+
+    &:active,
+    &:hover:active,
+    &:focus:active,
+    &:visited:active {
+      background-color: $red-700;
+      color: white;
+      text-decoration: none;
+    }
+
+    &:disabled:hover,
+    &.is-loading:hover {
+      background: $red-700;
+    }
+  }
+
+  &--danger.button--hollow {
+    background-color: transparent;
+    border: 1px solid transparent;
+    transform: none;
+    box-shadow: none;
+    color: #555;
+    transition: color 300ms ease-out, border-color 300ms ease-out;
+
+    &:hover,
+    &:visited:hover {
+      background-color: transparent;
+      border-color: red;
+      color: black;
+      text-decoration: none;
+      transform: none;
+      box-shadow: none !important;
+    }
+  }
+
+  &--primary {
+    background: $orange-500;
+    color: black;
+    text-decoration: none;
+
+    &:hover,
+    &:visited:hover {
+      background-color: $orange-300;
+      color: black;
+      text-decoration: none;
+    }
+
+    &:active,
+    &:hover:active,
+    &:focus:active,
+    &:visited:active {
+      background-color: $orange-600;
+      color: white;
+      text-decoration: none;
+    }
+
+    &:disabled:hover,
+    &.is-loading:hover {
+      background: $orange-500;
+    }
+  }
+
+  &--primary.button--outline {
+    background-color: transparent;
+    border: 1px solid $orange-500;
+    transition: background-color 300ms ease-out, border-color 300ms ease-out;
+
+    &:hover,
+    &:visited:hover {
+      background-color: $orange-300;
+      border-color: $orange-300;
+      color: black;
+      text-decoration: none;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  &--secondary {
+    @extend .button--primary;
+    background: $green-400;
+    color: white;
+    vertical-align: baseline;
+
+    .icon-feather {
+      stroke: white !important;
+    }
+
+    &:hover,
+    &:visited:hover {
+      background-color: $green-400;
+      color: white;
+    }
+
+    &:focus {
+      color: white;
+      background-color: $green-400;
+    }
+
+    &:active,
+    &:hover:active,
+    &:focus:active,
+    &:visited:active {
+      background-color: $green-700;
+      color: white;
+
+      .icon-feather {
+        stroke: white !important;
+      }
+    }
+
+    &:disabled {
+      color: rgba(255, 255, 255, 0.2);
+    }
+
+    &:disabled:hover,
+    &.is-loading:hover {
+      background: $green-400;
+      color: rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &--secondary.button--outline {
+    background-color: transparent;
+    color: black;
+    border: 1px solid $green-400;
+    transition: background-color 300ms ease-out, border-color 300ms ease-out;
+
+    &:hover,
+    &:visited:hover {
+      background-color: $green-400;
+      border-color: $green-400;
+      color: white;
+      text-decoration: none;
+      transform: none;
+      box-shadow: none;
+
+      .icon-feather {
+        stroke: white !important;
+      }
+    }
+  }
+
+  &--secondary.button--hollow {
+    background-color: transparent;
+    border: 1px solid transparent;
+    transform: none;
+    box-shadow: none;
+    color: #555;
+    transition: color 300ms ease-out, border-color 300ms ease-out;
+
+    .icon-feather {
+      stroke: #333 !important;
+    }
+
+    &:hover,
+    &:visited:hover {
+      background-color: transparent;
+      border-color: $green-400;
+      color: black;
+      text-decoration: none;
+      transform: none;
+      box-shadow: none !important;
+    }
+  }
+
+  &--hollow-secondary {
+    background-color: transparent;
+    text-transform: none;
+    color: #333;
+    border: 1px solid $green-400;
+    box-shadow: none;
+    font-family: $font-family-bold;
+    transition: border-color 300ms ease-out, color 300ms ease-out, background-color 300ms ease-out;
+
+    &:hover {
+      box-shadow: none;
+      transform: none;
+      border: 1px solid $green-400;
+      background-color: #f4f4f4;
+    }
+
+    &:active {
+      box-shadow: none;
+      transform: none;
+      border: 1px solid $green-400;
+      color: white;
+      background-color: $green-400;
+    }
+  }
+
+  &--dropdown {
+    padding: 8px;
+    position: relative;
+
+    & > .icon-feather {
+      position: static !important;
+      margin: auto;
+      display: block;
+    }
+
+    //  &::after {
+    //    content: '';
+    //    position: absolute;
+    //    top: 13px;
+    //    right: 20px;
+    //    background-image: url('../../assets/images/sprites/sprite.png');
+    //    background-image: url('../../assets/images/sprites/sprite.svg');
+    //    background-position: 17.97752808988764% 93.75%;
+    //    width: 16px;
+    //    height: 16px;
+    //  }
+
+    & ~ .dropdown-menu {
+      min-width: 0 !important;
+
+      .dropdown-item {
+        padding: 0.5rem 1rem;
+        font-size: rem(14);
+
+        &:hover {
+          background: #e1e1e1 !important;
+        }
+
+        &--danger {
+          color: red;
+        }
+      }
+
+      .icon-feather {
+        margin-right: 6px;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  &--small {
+    height: 30px;
+    padding: 0px 15px;
+    text-transform: unset;
+    font-family: $font-family-base-alt;
+    font-size: 0.875rem;
+    line-height: 30px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &--small-rounded {
+    border-radius: 15px;
+    border-color: #ddd;
+  }
+
+  &--small-icon {
+    @extend .button--small;
+    padding: 0px 31px 0px 15px;
+    display: flex;
+
+    .icon-feather {
+      height: 30px;
+      margin-right: 6px;
+    }
+  }
+
+  &--link {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
+    line-height: 1;
+    border-radius: none;
+    transition: color 150ms ease-out;
+    color: black;
+
+    @include max-small {
+      width: auto;
+    }
+
+    &:hover:active,
+    &:hover {
+      box-shadow: none;
+      transform: none;
+      color: $green-400;
+
+      svg {
+        stroke: $green-400;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+      transform: none;
+    }
+
+    &.button--alt:hover {
+      box-shadow: none;
+    }
+  }
+
+  &--link-icon-left {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
+    line-height: rem(20);
+    border-radius: none;
+    transition: color 150ms ease-out;
+    color: black;
+    font-family: $font-family-bold;
+    text-transform: none;
+
+    .icon-feather {
+      margin-right: 8px;
+      position: relative;
+      top: 2px;
+    }
+
+    &:hover:active,
+    &:hover {
+      box-shadow: none;
+      transform: none;
+      color: $green-400;
+
+      svg {
+        stroke: $green-400;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+      transform: none;
+    }
+  }
+
+  &--icon-only {
+    padding: 8px;
+    line-height: 1;
+    height: auto;
+
+    .icon-feather {
+      position: relative;
+      top: 0px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  &--icon-rounded {
+    text-align: center;
+    border-radius: 50%;
+    line-height: 24px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+
+    .icon-feather {
+      position: relative;
+      text-align: center;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .spinner-circle {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #fff;
+    animation: spin 900ms infinite cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    display: inline-block;
+    line-height: 24px;
+    position: relative;
+    top: 2px;
+  }
+
+  &.is-loading {
+    &:hover {
+      transform: none;
+      box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.dropdown-item:hover {
+  background: #f1f1f1;
+}
+
+.button--ghost-secondary,
+.button--ghost-danger {
+  background: rgba(0, 0, 0, 0.05);
+  color: inherit;
+  box-shadow: none;
+
+  .icon {
+    background: none;
+  }
+}
+
+.button--ghost-secondary:active,
+.button--ghost-danger:active {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transform: translateY(0);
+}
+
+.button--ghost-secondary:hover {
+  background: $green-400;
+  color: white;
+
+  .icon {
+    stroke: white;
+  }
+}
+
+.button--ghost-danger:hover {
+  background: $red;
+  color: white;
+
+  .icon {
+    stroke: white;
+  }
+}

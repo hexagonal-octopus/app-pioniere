@@ -1,0 +1,38 @@
+// ***********************************
+// BASE
+// ***********************************
+
+// Footer always on Bottom using Flexbox
+// **********************
+html, body{
+	height: 100%;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	font-family: $font-family-base;
+	background: #f6f6f6;
+	color: #333;
+	font-size: 100%;
+	line-height: 1.5;
+
+	&.page-auth{
+		background-image: url('../../assets/images/default/bg-admin-cms.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+
+	&.fixed-navbar{
+		padding-top: 60px;
+	}
+}
+
+.wrapper{
+	flex: 1 0 auto;
+}
+
+// .footer{
+// 	flex-shrink: 0;
+// }

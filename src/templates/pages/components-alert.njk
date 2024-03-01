@@ -1,0 +1,300 @@
+{% extends "layouts/default.njk" %}
+
+{% set DOC_TITLE = "Component: Alert" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-toast.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">Component: Alert &amp; Notifications</h2>
+         </div>
+      </div><!-- /.col -->
+   </div><!-- /.row -->
+   <div class="row">
+      <div class="col-xs-12 col-lg-6 col-xl-4">
+         <div class="box box--full-height">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Basic Alert</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <p class="box__text">Alert menggunakan <code class="language-css">class="feedback feedback--alt feedback--centered"</code>. Take note untuk memunculkan alert perlu menambahkan class <code class="language-css">"feedback--visible feedback--shown"</code></p>
+                     <p class="box__text">Jenis alert dibagi dalam <code class="language-css">class="is-valid"</code>, <code class="language-css">class="is-invalid"</code>, <code class="language-css">class="is-warning"</code>, dan <code class="language-css">class="is-info"</code></p>
+                     <div class="highlight">
+                        <div class="feedback feedback--alt feedback--centered feedback--visible feedback--shown is-valid mb-3"><strong>Valid</strong> Alert Notification. please check source-code for more information</div>
+                        <div class="feedback feedback--alt feedback--centered feedback--visible feedback--shown is-invalid mb-3"><strong>Invalid</strong> Alert Notification</div>
+                        <div class="feedback feedback--alt feedback--centered feedback--visible feedback--shown is-warning mb-3"><strong>Warning</strong> Alert Notification</div>
+                        <div class="feedback feedback--alt feedback--centered feedback--visible feedback--shown is-info"><strong>Info</strong> Alert Notification</div>
+                     </div>
+                     <p class="box__text"><strong>Footnote:</strong> Penggunaan class <code class="language-css">class="mb-3"</code> hanya untuk keperluan dokumentasi, sifatnya optional, untuk memberikan ruang antar element</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> <!-- /.col -->
+      <div class="col-xs-12 col-lg-6 col-xl-4">
+         <div class="box box--full-height">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Alert Pointing</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <p class="box__text">Alert default menggunakan <code class="language-css">class="feedback"</code>. Take note untuk memunculkan alert perlu menambahkan class <code class="language-css">"feedback--visible feedback--shown"</code></p>
+                     <div class="highlight">
+                        <div class="feedback feedback--visible feedback--shown is-valid mb-3"><strong>Valid</strong> Alert Notification. please check source-code for more information</div>
+                        <div class="feedback feedback--visible feedback--shown is-invalid mb-3"><strong>Invalid</strong> Alert Notification</div>
+                     </div>  
+                     <p class="box__text">Alert dengan tipe pointing kebawah menambahkan class <code class="language-css">"feedback--top"</code></p>
+                     <div class="highlight">
+                        <div class="feedback feedback--top feedback--visible feedback--shown is-warning mb-3"><strong>Warning</strong> Alert Notification. please check source-code for more information</div>
+                        <div class="feedback feedback--top  feedback--visible feedback--shown is-info"><strong>Info</strong> Alert Notification</div>
+                     </div>  
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> <!-- /.col -->
+      <div class="col-xs-12 col-lg-6 col-xl-4">
+         <div class="box box--full-height">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Alert with Close Button</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <p class="box__text">Mohon perhatikan penggunaan <code class="language-css">&lt;button></code> dan <code class="language-css">&lt;div class="feedback__text"></code> didalamnya.</p>
+                     <div class="highlight">
+                        <div class="feedback feedback--alt feedback--visible feedback--shown is-valid mb-3">
+                           <button class="feedback__button feedback__button--close" data-dismiss="feedback"><i data-feather="x" class="icon-feather"></i></button>
+                           <div class="feedback__text"><strong>Valid</strong> Alert Notification. please check source-code for more information, Alert Notification. please check source-code for more information</div>
+                        </div>
+                        <div class="feedback feedback--alt feedback--visible feedback--shown is-invalid mb-3">
+                           <button class="feedback__button feedback__button--close" data-dismiss="feedback"><i data-feather="x" class="icon-feather"></i></button>
+                           <strong>Invalid</strong> Alert Notification
+                        </div>
+                        <div class="feedback feedback--visible feedback--shown is-valid mb-3">
+                           <button class="feedback__button feedback__button--close" data-dismiss="feedback"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                           <div class="feedback__text"><strong>Valid</strong> Alert Notification. please check source-code for more information, Alert Notification. please check source-code for more information</div>
+                        </div>
+                        <div class="feedback feedback--visible feedback--shown is-invalid">
+                           <button class="feedback__button feedback__button--close" data-dismiss="feedback"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                           <strong>Invalid</strong> Alert Notification
+                        </div>
+                     </div>  
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> <!-- /.col -->
+   </div><!-- /.row -->
+   <div class="row">
+      <div class="col-xs-12 col-lg-6">
+         <div class="box box--full-height">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Alert with Icon</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <p class="box__text">Mohon perhatikan penggunaan <code class="language-css">"feedback__icon"</code> dan <code class="language-css">"feedback__text"</code></p>
+                     <div class="highlight">
+                        <div class="feedback feedback--alt feedback--visible feedback--shown is-valid mb-3">
+                           <div class="feedback__icon"><i data-feather="check" class="icon-feather"></i></div>
+                           <div class="feedback__text">
+                              Success Notification. please check <a href="#">source-code</a> for more information
+                           </div>
+                        </div>
+                        <div class="feedback feedback--alt feedback--visible feedback--shown is-invalid mb-3">
+                           <div class="feedback__icon"><i data-feather="x-circle" class="icon-feather"></i></div>
+                           <div class="feedback__text">
+                              Error Notification. please check source-code for more information
+                           </div>
+                        </div>
+                        <div class="feedback feedback--alt feedback--visible feedback--shown is-warning mb-3">
+                           <div class="feedback__icon"><i data-feather="alert-triangle" class="icon-feather"></i></div>
+                           <div class="feedback__text">
+                              Warning Notification. please check source-code for more information
+                           </div>
+                        </div>
+                        <div class="feedback feedback--alt feedback--visible feedback--shown is-info">
+                           <div class="feedback__icon"><i data-feather="info" class="icon-feather"></i></div>
+                           <div class="feedback__text">
+                              Information Notification. please check source-code for more information
+                           </div>
+                        </div>
+                     </div>
+                     <p class="box__text">
+                        Alert tanpa pointer dengan menambahkan class <code class="language-css">"feedback--no-pointer"</code> pada parent element.
+                     </p>
+                     <div class="highlight">
+                        <div class="feedback feedback--no-pointer feedback--visible feedback--shown is-info mb-3">
+                           <button class="feedback__button feedback__button--close" data-dismiss="feedback"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                           <div class="feedback__icon"><i data-feather="info" class="icon-feather"></i></div>
+                           <div class="feedback__text">
+                              Information Notification. please <a href="#">check source-code</a> for more information
+                           </div>
+                        </div>
+                        <div class="feedback feedback--no-pointer feedback--visible feedback--shown is-warning mb-3">
+                           <button class="feedback__button feedback__button--close" data-dismiss="feedback"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                           <div class="feedback__icon"><i data-feather="alert-triangle" class="icon-feather"></i></div>
+                           <div class="feedback__text">
+                              Information Notification. please <a href="#">check source-code</a> for more information
+                           </div>
+                        </div>
+                        <div class="feedback feedback--no-pointer feedback--visible feedback--shown is-invalid mb-3">
+                           <button class="feedback__button feedback__button--close" data-dismiss="feedback"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                           <div class="feedback__icon"><i data-feather="x-circle" class="icon-feather"></i></div>
+                           <div class="feedback__text">
+                              Information Notification. please <a href="#">check source-code</a> for more information
+                           </div>
+                        </div>
+                        <div class="feedback feedback--no-pointer feedback--visible feedback--shown is-valid">
+                           <button class="feedback__button feedback__button--close" data-dismiss="feedback"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                           <div class="feedback__icon"><i data-feather="check-circle" class="icon-feather"></i></div>
+                           <div class="feedback__text">
+                              Information Notification. please <a href="#">check source-code</a> for more information
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> <!-- /.col -->
+      <div class="col-xs-12 col-lg-6">
+         <div class="box box--full-height">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">System Notifications</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <p class="box__text">System notification menggunakan <code class="language-css">class="toast"</code>. Take note untuk memunculkan Notif perlu menambahkan class <code class="language-css">"toast--visible toast--shown"</code></p>
+                     <div class="highlight">
+                        <div class="toast toast--valid toast--visible toast--shown mb-3">
+                           <div class="toast__content">
+                              <button type="button" class="toast__close" data-dismiss="toast"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                              <span>Message have been sent. Lorem ipsum set dolor ames set patriacum. Lin gardium leviosa. Lorem ipsum set dolor ames set patriacum. </span>
+                           </div>
+                           <div class="toast__action">
+                              <a href="#" class="button button--alt button--link">View Message</a>
+                              <a href="#" class="button button--alt button--link">View Spam</a>
+                           </div>
+                        </div>
+                        <div class="toast toast--invalid toast--visible toast--shown mb-3">
+                           <div class="toast__content">
+                              <button type="button" class="toast__close" data-dismiss="toast"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                              <span class="toast__title"><strong>Error State #9831342</strong></span>
+                              <span>Error on saving, Please wait in 5days. If Nothing happened after the retry, please contact <a href="https://en.wikipedia.org/wiki/Crocodile_Dundee_II" target="_blank">Brian Basreng</a> for the assists</span>
+                           </div>
+                           <div class="toast__action">
+                              <a href="#" class="button button--alt button--link">Retry Now</a>
+                           </div>
+                        </div>
+                        <div class="toast toast--warning toast--visible toast--shown mb-3">
+                           <div class="toast__content">
+                              <button type="button" class="toast__close" data-dismiss="toast"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                              <span class="toast__title"><strong>Module.js deprecated</strong></span>
+                              <span>Cannot set user agent for iframe with location different to this page.</span>
+                           </div>
+                           <div class="toast__action"></div>
+                        </div>
+                        <div class="toast toast--info toast--visible toast--shown">
+                           <div class="toast__content">
+                              <button type="button" class="toast__close" data-dismiss="toast"><i data-feather="x" class="icon-feather icon-feather--dark"></i></button>
+                              <span><strong>Did You Know?</strong> Basreng is also known as Fried Meatball.</span>
+                           </div>
+                           <div class="toast__action"></div>
+                        </div>
+                     </div>
+                     <p class="box__text"><strong>Footnote:</strong> Penggunaan class <code class="language-css">class="mb-3"</code> hanya untuk keperluan dokumentasi, sifatnya optional, untuk memberikan ruang antar element</p>  
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> <!-- /.col -->
+   </div><!-- /.row -->
+   <div class="row">
+      <div class="col">
+         <div class="box box--full-height">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Demo Alert &amp; Toast</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <div class="highlight">
+                        <button class="button button--secondary button--alt mr-3 mb-3 js-button-alert" data-view="is-valid" data-icon="check-circle" data-target="feedback--alt" data-message="Brian Basreng was here. Once upon a time, there was a Boy with his smile, flirting with every girls that he met. With his fatty cheek, he conquer the ladies but forgot about the children.">Show Valid Alert</button>  
+                        <button class="button button--secondary button--alt mr-3 mb-3 js-button-alert" data-view="is-invalid" data-icon="x-circle" data-target="feedback--alt" data-message="Brian Pranata doesn't exists, please try Brian Basreng">Show Invalid Alert</button> 
+                        <button class="button button--alt mr-3 mb-3 js-button-toast" data-view="top">Toast Top Right</button>
+                        <button class="button button--alt mr-3 mb-3 js-button-toast" data-view="bottom">Toast Bottom Right</button>
+                        <button class="button button--alt button--primary mr-3 mb-3 js-button-custom-toast" data-view="top" data-type="info" data-title="Toast Notification" data-message="Show Notification on Top-Right Corner">Toast Single Top Right</button>
+                        <button class="button button--alt button--primary mr-3 mb-3 js-button-custom-toast" data-view="bottom" data-type="valid" data-title="Toast Notification" data-message="Show Notification on Bottom-Right Corner.">Toast Single Bottom Right</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> <!-- /.col -->
+   </div><!-- /.row -->
+   
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

@@ -1,0 +1,180 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Add New Page" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_vendor_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/flatpickr/flatpickr.min.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/summernote/summernote.js"></script>
+{% endblock %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/init-summernote.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-toast.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-date-picker.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">{{ DOC_TITLE }}</h2>
+         </div>
+      </div>
+   </div>
+   <form class="form" name="form_new_page">
+      <div class="row align-items-start">
+         <div class="col-xs-12 col-md-12 col-xl-9">
+            <div class="box">
+               <div class="box__wrapper">
+                  <div class="box__header">
+                     <h3 class="box__title"><i data-feather="edit"></i> General</h3>
+                     <div class="box__action">
+                        <button class="button button--link js-button-reload">
+                           <i data-feather="rotate-cw"></i>
+                        </button>
+                        <button class="button button--link js-button-expand">
+                           <i data-feather="maximize"></i>
+                        </button>
+                        <button class="button button--link js-button-minimize">
+                           <i data-feather="minus"></i>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="box__body box__body--spacy">
+                     <div class="form-group">
+                        <label for="pageTitle">Page Title</label>
+                        <input type="text" class="form-control" id="pageTitle" name="page_title" placeholder="Enter Title here.">
+                     </div>
+                     <div class="form-group">
+                        <label for="pageDesc">Description</label>
+                        <textarea id="pageDesc" name="page_desc" class="form-control summernote"></textarea>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="box">
+               <div class="box__wrapper">
+                  <div class="box__header">
+                     <h3 class="box__title"><i data-feather="compass"></i> Page Settings</h3>
+                     <div class="box__action">
+                        <button class="button button--link js-button-reload">
+                           <i data-feather="rotate-cw"></i>
+                        </button>
+                        <button class="button button--link js-button-expand">
+                           <i data-feather="maximize"></i>
+                        </button>
+                        <button class="button button--link js-button-minimize">
+                           <i data-feather="minus"></i>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="box__body">
+                     <div class="pxb-20px">
+                        <div class="form-group d-flex align-items-center d-stripe">
+                           <div class="form__desc">
+                              <h3 class="form__desc-title">Set as Main Navigation</h3>
+                              <p class="form__desc-subtitle">It will show on main-navigation on each page</p>
+                           </div>
+                           <div class="form__actions">
+                              <div class="toggle-switch">
+                                 <label>
+                                    <input type="checkbox" name="isHomepage" value="true" class="form-check-input" checked/>
+                                    <span class="toggle-switch__box">
+                                       <span class="toggle-switch__switcher"></span>
+                                    </span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="form-group d-flex align-items-center d-stripe">
+                           <div class="form__desc">
+                              <h3 class="form__desc-title">Accessible Mode</h3>
+                              <p class="form__desc-subtitle">It will be revealed on each page and can be accessed</p>
+                           </div>
+                           <div class="form__actions">
+                              <div class="toggle-switch">
+                                 <label>
+                                    <input type="checkbox" name="isAccesible" value="true" class="form-check-input"/>
+                                    <span class="toggle-switch__box">
+                                       <span class="toggle-switch__switcher"></span>
+                                    </span>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-xs-12 col-md-12 col-xl-3">
+            <div class="box">
+               <div class="box__wrapper">
+                  <div class="box__header">
+                     <h3 class="box__title"><i data-feather="send"></i> Publish</h3>
+                     <div class="box__action">
+                        <button class="button button--link js-button-minimize">
+                           <i data-feather="minus"></i>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="box__body">
+                     <div class="pxb-20px">
+                        <div class="form-group">
+                           <label for="status">Status</label>
+                           <select id="status" class="form-control">
+                              <option selected>Status Page</option>
+                              <option>Draft</option>
+                              <option>Pending Review</option>
+                              <option>Published</option>
+                           </select>
+                        </div>
+                        <div class="form-group">
+                           <label for="pub_date">Publish Date</label>
+                           <select id="pub_date" class="form-control">
+                              <option selected>Scheduled for</option>
+                              <option>Option A</option>
+                              <option>Option B</option>
+                              <option>Option C</option>
+                           </select>
+                        </div>
+                        <div class="form-group form-group--icon-right mb-5">
+                           <input type="text" class="form-control form--datepicker" data-position="left top" data-language="en" name="published_date"/>
+                           <span class="form-group__icon"><i data-feather="calendar"></i></span>
+                        </div>
+                        <div class="form-group">
+                           <input type="submit" class="button button--alt button--secondary button--block mb-3 js-button-alert" value="Publish" data-view="is-valid" data-icon="check" data-target="feedback--alt" data-message="Yeay!! Page has been Created.">
+                           <button type="button" class="button button--alt button--block js-button-alert" data-view="is-info" data-icon="info" data-target="feedback--no-pointer" data-message="Page has been saved as a Draft." >Save as a Draft</button>
+                        </div>
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="box">
+               <div class="box__wrapper">
+                  <div class="box__header">
+                     <h3 class="box__title"><i data-feather="image"></i> Featured Image</h3>
+                     <div class="box__action">
+                        <button class="button button--link js-button-minimize">
+                           <i data-feather="minus"></i>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="box__body">
+                     <div class="pxb-20px">
+                        <div class="form-image-preview"></div>
+                        <button type="button" class="button button--alt button--secondary button--outline button--block">Set Featured Image</button>
+                        <p class="form__info text-center">Allowed file format: ( .png , .jpg , .jpeg), Maximum file size 1 MB and ideal image ratio are 4:3</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </form>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

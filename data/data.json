@@ -1,0 +1,417 @@
+{
+	"posts": [
+		{
+			"id": 1,
+			"title": "10 Ways to Improve Your Website Design",
+			"author": "Emma Watson",
+			"author_role": "Editor",
+			"author_photo": "img-emma-watson-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-06-05 12:00:00",
+			"status": 1
+		},
+		{
+			"id": 2,
+			"title": "The MVP Is Dead, Long Life To The MAP. (Minimum Awesome Product)",
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"categories": ["UI UX", "Design"],
+			"date": "2018-06-04 10:00:00",
+			"status": 0
+		},
+		{
+			"id": 3,
+			"title": "Building An Atomic Design System With Sketch Library",
+			"author": "Emma Watson",
+			"author_role": "Editor",
+			"author_photo": "img-emma-watson-42x42.jpg",
+			"categories": ["Website Design", "Design"],
+			"date": "2018-06-04 08:00:00",
+			"status": 1
+		},
+		{
+			"id": 4,
+			"title": "Not So Scary: Using Design Thinking For Haunted Houses",
+			"author": "Emma Watson",
+			"author_role": "Editor",
+			"author_photo": "img-emma-watson-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-06-04 10:00:00",
+			"status": 1
+		},
+		{
+			"id": 5,
+			"title": "A Human-Centered Take On Seniors And Technology",
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-06-03 09:00:00",
+			"status": 0
+		},
+		{
+			"id": 6,
+			"title": "A Step-By-Step Guide To User Research",
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-06-02 23:00:00",
+			"status": 0
+		},
+		{
+			"id": 7,
+			"title": "How To Become A Successful Entry Level UX Designer",
+			"author": "Emma Watson",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-watson-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-06-02 20:00:00",
+			"status": 1
+		},
+		{
+			"id": 8,
+			"title": "Why We All Need Design Thinking",
+			"author": "Emma Watson",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-watson-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-06-01 12:00:00",
+			"status": 1
+		},
+		{
+			"id": 9,
+			"title": "Tips For Presenting Designs Remotely",
+			"author": "Jennifer Lawrence",
+			"author_role": "Administrator",
+			"author_photo": "img-jenlaw-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-06-01 12:00:00",
+			"status": 1
+		},
+		{
+			"id": 10,
+			"title": "Why Qualitative App Analytics Are A UX Designer’s Dream",
+			"author": "Jennifer Lawrence",
+			"author_role": "Administrator",
+			"author_photo": "img-jenlaw-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-06-01 12:00:00",
+			"status": 1
+		},
+		{
+			"id": 11,
+			"title": "How to build a strong corporate identity",
+			"author": "Emma Watson",
+			"author_role": "Editor",
+			"author_photo": "img-emma-watson-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-05-29 12:00:00",
+			"status": 1
+		},
+		{
+			"id": 12,
+			"title": "The intricate world of pattern design (and how to create one for your brand)",
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"categories": ["UX", "Design"],
+			"date": "2018-05-29 12:00:00",
+			"status": 1
+		}
+	],
+	"postCategories": [
+		{
+			"id": 1,
+			"name": "Social",
+			"slug": "social",
+			"description": "",
+			"depth": "0"
+		},
+		{
+			"id": 2,
+			"name": "Psychology",
+			"slug": "social-psychology",
+			"description": "Category about Psychology",
+			"depth": "1"
+		},
+		{
+			"id": 3,
+			"name": "Anthropology",
+			"slug": "social-anthropology",
+			"description": "",
+			"depth": "1"
+		},
+		{
+			"id": 4,
+			"name": "Anthropology Liberal",
+			"slug": "social-anthropology-liberal",
+			"description": "Anthropolgy in Liberal State",
+			"depth": "2"
+		},
+		{
+			"id": 5,
+			"name": "Politic",
+			"slug": "politic",
+			"description": "Category about Politic",
+			"depth": "0"
+		}
+	],
+	"users": [
+		{
+			"id": 1,
+			"name": "Emma Watson",
+			"roles": ["Editor"],
+			"photo": "img-emma-stone-42x42.jpg",
+			"email": "emma.watson@cbn.net.id"
+		},
+		{
+			"id": 2,
+			"name": "Emma Stone",
+			"roles": ["Moderator"],
+			"photo": "img-emma-watson-42x42.jpg",
+			"email": "emma.stone@cbn.net.id"
+		},
+		{
+			"id": 3,
+			"name": "Jennifer Lawrence",
+			"roles": ["Administrator", "Editor"],
+			"photo": "img-jenlaw-42x42.jpg",
+			"email": "jennifer.lawrence@cbn.net.id"
+		},
+		{
+			"id": 4,
+			"name": "Natalie Dormer",
+			"roles": ["Administrator", "Editor"],
+			"photo": "img-nat-dormer-42x42.jpg",
+			"email": "natalie.dormer@cbn.net.id"
+		}
+	],
+	"menus": [
+		{
+			"id": 1,
+			"name": "Dashboard",
+			"link": "./dashboard.html",
+			"icon": "anchor"
+		},
+		{
+			"id": 2,
+			"name": "Pages",
+			"link": "./page-lists.html",
+			"icon": "file-text"
+		},
+		{
+			"id": 3,
+			"name": "View All Pages",
+			"link": "./page-lists.html",
+			"icon": "file-text"
+		},
+		{
+			"id": 4,
+			"name": "Add New Page",
+			"link": "./page-add-new.html",
+			"icon": "file-text"
+		},
+		{
+			"id": 5,
+			"name": "Categories",
+			"link": "./page-categories.html",
+			"icon": "file-text"
+		},
+		{
+			"id": 6,
+			"name": "Post",
+			"link": "./news-list.html",
+			"icon": "message-circle"
+		},
+		{
+			"id": 7,
+			"name": "All Posts",
+			"link": "./news-list.html",
+			"icon": "message-circle"
+		},
+		{
+			"id": 8,
+			"name": "Add New Post",
+			"link": "./add-news.html",
+			"icon": "message-circle"
+		},
+		{
+			"id": 9,
+			"name": "Media",
+			"link": "./media.html",
+			"icon": "camera"
+		},
+		{
+			"id": 10,
+			"name": "Dashboard",
+			"link": "./dashboard.html",
+			"icon": "anchor"
+		},
+		{
+			"id": 11,
+			"name": "Settings",
+			"link": "./settings.html",
+			"icon": "settings"
+		},
+		{
+			"id": 12,
+			"name": "Components",
+			"link": "./components.html",
+			"icon": "command"
+		},
+		{
+			"id": 13,
+			"name": "Alert & Toast",
+			"link": "./components-alert.html",
+			"icon": "command"
+		},
+		{
+			"id": 14,
+			"name": "Breadcrumb",
+			"link": "./components-breadcrumb.html",
+			"icon": "command"
+		},
+		{
+			"id": 15,
+			"name": "Authentication",
+			"link": "./login-default.html",
+			"icon": "lock"
+		},
+		{
+			"id": 16,
+			"name": "Login default",
+			"link": "./login-default.html",
+			"icon": "lock"
+		},
+		{
+			"id": 17,
+			"name": "Login Light",
+			"link": "./login-light.html",
+			"icon": "lock"
+		}
+	],
+	"pages": [
+		{
+			"id": 1,
+			"name": "Home",
+			"has_parent": 0,
+			"parents": [],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 2,
+			"name": "About Us",
+			"has_parent": 0,
+			"parents": [],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 3,
+			"name": "Our History",
+			"has_parent": 1,
+			"parents": ["About Us"],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 4,
+			"name": "Careers",
+			"has_parent": 1,
+			"parents": ["About Us"],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 5,
+			"name": "Products",
+			"has_parent": 0,
+			"parents": [],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 6,
+			"name": "Product Category 1",
+			"has_parent": 1,
+			"parents": ["Products"],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 7,
+			"name": "Product Category 2",
+			"has_parent": 1,
+			"parents": ["Products"],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 8,
+			"name": "Product A",
+			"has_parent": 1,
+			"parents": ["Products", "Product Category 1"],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 9,
+			"name": "Product B",
+			"has_parent": 1,
+			"parents": ["Products", "Product Category 2"],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 10,
+			"name": "Product C",
+			"has_parent": 1,
+			"parents": ["Products", "Product Category 2"],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 11,
+			"name": "FAQ",
+			"has_parent": 0,
+			"parents": [],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		},
+		{
+			"id": 12,
+			"name": "Contact Us",
+			"has_parent": 0,
+			"parents": [],
+			"author": "Emma Stone",
+			"author_role": "Moderator",
+			"author_photo": "img-emma-stone-42x42.jpg",
+			"date": "2018-05-29 12:00:00"
+		}
+	]
+}

@@ -1,0 +1,229 @@
+.navbar{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 9091;
+   
+   &__wrapper{
+      width: 100%;
+   }
+
+   &__header{
+      float: left;
+      width: 240px;
+      transition: width 300ms ease-out;
+      position: relative;
+      // &:after{
+      //    content: '';
+      //    display: block;
+      //    clear: both;
+      // }
+      @include max-medium{
+         width: 100%;
+         float: none;
+         padding: 0 15px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+   }
+
+   &__body{
+      margin-left: 240px;
+      transition: margin 300ms ease-out;
+   }
+
+   &--image{
+      background-size: cover;
+      background-image: url('../../assets/images/default/bg-top-nav.jpg');
+      height: 60px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 0;
+   }
+
+   &__toggler{
+      float: left;
+      padding: 20px 0;
+   }
+
+   &__brand{
+      float: left;
+      padding: 9px;
+      height: 60px;
+   }
+
+   &__logo{
+      height: 40px;
+      width: auto;
+   }
+
+   &__logo-full{
+      height: 40px;
+      width: 97px;
+      stroke: currentColor;
+      stroke-width: 0;
+   }
+
+   &__logo-simplified{
+      height: 40px;
+      width: auto;
+      display: block;
+      display: none;
+   }
+
+   &__nav{
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+   }
+
+   &__link{
+      fill: white;
+      color: white;
+      text-decoration: none;
+      font-family: $font-family-base;
+      text-transform: none;
+      transition: color 200ms ease-out, fill 200ms ease-out;
+      padding: 18px 10px;
+      font-size: 0.875em;
+      line-height:24px;
+      display: flex;
+
+      &:hover,
+      &:focus:hover,
+      &:active{
+         text-decoration: none;
+         color: $green-neon !important;
+         fill: $green-neon;
+         
+         svg{
+            stroke: $green-neon !important;
+         }
+      }
+
+      &:focus{
+         text-decoration: none;
+         color: white;
+         fill: $green-neon;
+         
+         svg{
+            stroke: white;
+         }
+      }
+
+   }
+
+   &__icon{
+      height: 24px;
+      width: 18px;
+      margin-right: 6px;
+   }
+
+   &-collapse{
+      padding: 0;
+      padding-right: 15px;
+      display: flex;
+
+      @include max-medium{
+         position: absolute;
+         background-color: $green-900;
+         top: 60px;
+         left: 0;
+         width: 100%;
+         display: flex;
+      }
+   }
+
+   &__dropdown{
+      color: white;
+      font-size: 0.875em;
+      &:after{
+         content: '';
+         display: block;
+         clear: both;
+      }
+   }
+
+   &__dropdown-text{
+      padding: 18px 6px;
+      line-height:24px;
+      float: left;
+   }
+
+   &__dropdown-toggle{
+      font-size: 1em;
+      color: $green-neon;
+      text-transform: none;
+      font-family: $font-family-bold;
+      line-height: 24px;
+      height: 60px;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &.is-online i{
+         width:8px;
+         height: 8px;
+         background-color: $green-neon;
+         border-radius: 50%;
+         position: absolute;
+         z-index: 1;
+         right: 8px;
+         bottom: 8px;
+      }
+   }
+
+   &__dropdown-menu{
+      left: auto;
+      right: 0;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: 0 5px 20px rgba( 0,0,0,0.2);
+      border: 0;
+      padding: 0;
+      position: absolute;
+      @include max-medium{
+         position: fixed;
+         top: 118px;
+         left: 0px;
+         width: 100%;
+      }
+
+      .dropdown-item{
+         color: #666;
+         display: flex;
+         align-items: center;
+         padding: 12px 20px;
+         transition: fill 300ms ease-out, color 300ms ease-out, background-color 300ms ease-out;
+      }
+
+      .dropdown-item:hover{
+         color: black;
+         background: #f7f7f7;
+         fill: $green-500;
+      }
+
+      .dropdown-item:last-child{
+         background: #f1f1f1;
+      }
+
+      span{
+         line-height: 24px;
+      }
+   }
+}
+
+.menu-collapsed{
+   .navbar__logo{
+      display: none;
+   }
+
+   .navbar__logo-simplified{
+      display: block;
+   }
+}

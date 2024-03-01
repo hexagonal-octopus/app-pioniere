@@ -1,0 +1,251 @@
+<div class="main-menu main-menu--fixed">
+   <div class="main-menu__profile">
+      <div class="main-menu__profile-picture">
+         <img src="{{BASE_HREF}}assets/images/default/img-profile-md.jpg"/>
+         <!--
+         Default image
+         =============
+         <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+         =============
+         -->
+      </div>
+      <div class="main-menu__content">
+         <span class="main-menu__profile-name">Natalie Dormer</span>
+         <span class="main-menu__profile-role">Administrator</span>
+      </div>
+   </div>
+   <div class="main-menu__container">
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Main</span>
+         </li>
+         <li class="main-menu__list">
+            <a href="{{ BASE_HREF }}dashboard.html" title="">
+               <i data-feather="anchor"></i>
+               <span>Dashboard</span>
+            </a>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="https://instagram.com" title="">
+               <i data-feather="file-text"></i>
+               <span>Pages</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list ">
+                  <a href="{{BASE_HREF}}page-lists.html">View All Pages</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{BASE_HREF}}page-create.html">Create New Page</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="message-circle"></i>
+               <span>Post</span>
+               <span class="badge badge-pill badge-danger">20</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="{{ BASE_HREF }}news-lists.html">All Posts</a>
+               </li>
+               <li>
+                  <a href="{{ BASE_HREF }}news-create.html">Add New Post</a>
+               </li>
+               <li>
+                  <a href="{{ BASE_HREF }}news-category.html">Categories</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="{{ BASE_HREF }}settings.html" title="">
+               <i data-feather="camera"></i>
+               <span>Media</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list ">
+                  <a href="{{BASE_HREF}}media-lists.html">Library</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{BASE_HREF}}media-create.html">Insert New Asset</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="settings"></i>
+               <span>Settings</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="{{ BASE_HREF }}settings.html">One Page Settings</a>
+               </li>
+               <li>
+                  <a href="{{ BASE_HREF }}settings-with-tabs.html">Settings with Tabs</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="user"></i>
+               <span>Users</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="{{ BASE_HREF }}user-lists.html">User Lists</a>
+               </li>
+               <li>
+                  <a href="{{ BASE_HREF }}user-permissions.html">User Permissions</a>
+               </li>
+               <li>
+                  <a href="{{ BASE_HREF }}user-add.html">Add New User</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list">
+            <a href="{{ BASE_HREF }}sidemenu.html" title="">
+               <i data-feather="sidebar"></i>
+               <span>Manage Menu</span>
+            </a>
+         </li>
+      </ul>
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Documentations</span>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="command"></i>
+               <span>Components</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}components-accordion.html">Accordion</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}components-alert.html">Alert</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}components-breadcrumb.html">Breadcrumb</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}components-button.html">Buttons</a>
+               </li>
+               <li class="sub-menu__list has-sub">
+                  <a href="#">
+                     <span>Card</span>
+                     <span class="icon-arrow"></span></a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="{{BASE_HREF}}components-card.html">Card groups</a>
+                     </li>
+                     <li>
+                        <a href="our-services.html">Card decks</a>
+                     </li>
+                     <li>
+                        <a href="#">Card column</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}components-modal.html">Modal</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}components-pagination.html">Pagination</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}components-tabs.html">Tabs</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="lock"></i>
+               <span>Authentication</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}login-default.html">Login Default</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}login-light.html">Login Light</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}login-dark.html">Login Dark</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="{{ BASE_HREF }}forgot-password.html">Reactivation Password</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="edit"></i>
+               <span>Content</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="grid"></i>
+               <span>Layout</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="life-buoy"></i>
+               <span>Utilities</span>
+            </a>
+         </li>
+      </ul>
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Customize Pages</span>
+         </li>
+         <li class="main-menu__list">
+            <a href="{{BASE_HREF}}sample-applicant-list.html" title="">
+               <i data-feather="users"></i>
+               <span>Applicant List Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="{{BASE_HREF}}sample-talent-search.html" title="">
+               <i data-feather="users"></i>
+               <span>Talent Search</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="{{BASE_HREF}}sample-product-page.html" title="">
+               <i data-feather="command"></i>
+               <span>Product Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="{{BASE_HREF}}sample-brand-page.html" title="">
+               <i data-feather="command"></i>
+               <span>Brand Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="{{BASE_HREF}}sample-recruitment-dashboard.html" title="">
+               <i data-feather="command"></i>
+               <span>Recruitment Dashboard Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="{{BASE_HREF}}sample-questions.html" title="">
+               <i data-feather="command"></i>
+               <span>Form Add Questions</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <div class="main-menu__title-collapsed"></div>
+   <div class="main-menu__submenu-collapsed"></div>
+</div>

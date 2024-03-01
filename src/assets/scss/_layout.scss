@@ -1,0 +1,281 @@
+// ***********************************
+// LAYOUT
+// ***********************************
+.auth-dialog {
+   padding: 30px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   flex-direction: column;
+
+   &__text {
+      text-align: center;
+      color: white;
+      font-size: 0.75em;
+      line-height: 1.5;
+      font-family: $font-family-light-alt;
+      margin-bottom: 30px;
+   }
+
+   &__box {
+      width: 480px;
+      padding: 30px 100px;
+      border-radius: 8px;
+      box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.15);
+      background-image: url('../../assets/images/default/bg-admin-cms-blur.jpg');
+      background-position: center center;
+      background-size: auto;
+      @include max-small {
+         width: calc(100% - 30px);
+         padding: 30px;
+      }
+   }
+
+   &__box-header {
+      padding-bottom: 30px;
+
+      @include max-small {
+         width: 100%;
+      }
+   }
+
+   &__logo {
+      height: 80px;
+      display: block;
+      margin: auto;
+
+      @include max-small {
+         width: 70%;
+         height: auto;
+      }
+   }
+
+   &__footer {
+      font-size: 0.75em;
+      color: white;
+      padding-top: 30px;
+      font-family: $font-family-base-alt;
+
+      @include max-md-height {
+         padding-top: 12px;
+      }
+   }
+
+   &__links {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      li {
+         display: inline-block;
+         padding: 16px 5px;
+         list-style: none;
+         @include max-md-height {
+            padding: 16px 5px 10px;
+         }
+      }
+
+      a {
+         color: white;
+         text-decoration: none;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+
+   &__copy {
+      margin: 0;
+
+      a {
+         color: white;
+         text-decoration: none;
+
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
+.auth-dialog--light {
+   background: #f2f2f2;
+
+   .auth-dialog {
+      &__logo img {
+         display: block;
+         margin: 0 auto;
+      }
+
+      &__box {
+         background-image: none;
+         background-color: white;
+      }
+
+      &__text,
+      &__footer,
+      &__footer a {
+         color: #555;
+      }
+
+      &__footer a {
+         transition: color 250ms ease-out;
+      }
+
+      &__footer a:hover {
+         color: black;
+      }
+   }
+}
+
+.auth-dialog--dark {
+   background: $blue-grey-900;
+
+   .auth-dialog {
+      &__logo img {
+         display: block;
+         margin: 0 auto;
+      }
+
+      &__box {
+         background-image: none;
+         background-color: $blue-grey-800;
+      }
+
+      &__text,
+      &__footer,
+      &__footer a {
+         color: $blue-grey-300;
+      }
+
+      &__footer a {
+         transition: color 250ms ease-out;
+      }
+
+      &__footer a:hover {
+         color: white;
+      }
+   }
+}
+
+.page-heading {
+   margin-bottom: rem(32);
+
+   &--flex {
+      display: flex;
+      align-items: center;
+   }
+
+   &__title {
+      font-family: $font-family-bold-alt;
+      font-size: 1.25em;
+      color: black;
+      line-height: rem(48);
+      margin-bottom: 0;
+   }
+
+   &__text {
+      font-size: rem(14);
+      color: #666;
+      line-height: rem(24);
+      margin: 0;
+      margin-bottom: 24px;
+   }
+}
+
+.page-column {
+   padding: 40px;
+}
+
+.drop-area {
+   width: 100%;
+   position: relative;
+
+   &:before {
+      content: '';
+      display: block;
+      padding-top: 75%;
+
+      @include large {
+         padding-top: 20%;
+      }
+   }
+
+   &__wrapper {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin-bottom: 30px;
+      align-items: center;
+      border: 2px dashed rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+   }
+
+   &__content {
+      text-align: center;
+      width: 100%;
+   }
+
+   &__title {
+      font-size: rem(18);
+      font-family: $font-family-base-alt;
+      line-height: rem(24);
+      color: #999;
+   }
+
+   &__text {
+      font-size: rem(14);
+      line-height: rem(24);
+      color: #999;
+   }
+}
+
+.row {
+   align-items: flex-start;
+
+   &--space-bottom {
+      padding-bottom: 30px;
+   }
+
+   &--m24 {
+      margin-left: -12px;
+      margin-right: -12px;
+   }
+
+   &--align-stretch {
+      align-items: stretch;
+   }
+}
+
+.w1of4 {
+   width: 100%;
+   padding-left: 12px;
+   padding-right: 12px;
+
+   @include large {
+      width: 50%;
+   }
+
+   @include xxlarge {
+      width: 25%;
+   }
+}
+
+.w1of2 {
+   width: 100%;
+   padding-left: 12px;
+   padding-right: 12px;
+
+   @include large {
+      width: 50%;
+   }
+
+   @include xxlarge {
+      width: 50%;
+   }
+}

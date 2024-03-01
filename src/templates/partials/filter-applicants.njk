@@ -1,0 +1,114 @@
+<div class="box--fixed-right" id="filterApplicants">
+   <div class="box">
+      <div class="box__wrapper" data-nicescroll="on">
+         <div class="box__header">
+            {# <h3 class="box__title"><i data-feather="settings"></i> Sorting Filter</h3> #}
+            <button class="button button--alt button--link ml-auto" data-dismiss="box-fixed-right">Close Filter</button>
+         </div><!-- /.box__header -->
+         <div class="box__body box__body--spacy">
+            <form class="form" novalidate>
+               <div class="form-group mb-4">
+                  <p class="form__group-text">Kewarganegaraan</p>
+                  <div class="checkbox checkbox--green">
+                     <label>
+                        <input type="checkbox">
+                        <span class="checkbox__span">
+                           <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                        </span>
+                        <span class="checkbox__text">Indonesia - <strong>25</strong></span>
+                     </label>
+                  </div>
+                  <div class="checkbox checkbox--green">
+                     <label>
+                        <input type="checkbox">
+                        <span class="checkbox__span">
+                           <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                        </span>
+                        <span class="checkbox__text">Asing - <strong>12</strong></span>
+                     </label>
+                  </div>
+               </div><!-- /.form-group -->
+               <div class="form-group mb-4">
+                  <p class="form__group-text">Gender</p>
+                  <div class="checkbox checkbox--green">
+                     <label>
+                        <input type="checkbox" name="male">
+                        <span class="checkbox__span">
+                           <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                        </span>
+                        <span class="checkbox__text">Male - <strong>25</strong></span>
+                     </label>
+                  </div>
+                  <div class="checkbox checkbox--green">
+                     <label>
+                        <input type="checkbox">
+                        <span class="checkbox__span" name="female">
+                           <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                        </span>
+                        <span class="checkbox__text">Female - <strong>12</strong></span>
+                     </label>
+                  </div>
+                  <div class="checkbox checkbox--green">
+                     <label>
+                        <input type="checkbox">
+                        <span class="checkbox__span" name="unspecified_gender">
+                           <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                        </span>
+                        <span class="checkbox__text">Unspecified - <strong>2</strong></span>
+                     </label>
+                  </div>
+               </div><!-- /.form-group -->
+               <div class="form-group mb-4">
+                  <p class="form__group-text">Age Range</p>
+                  <div class="form__display-flex">
+                     <label for="min_age">Min.</label>
+                     <input type="number" id="min_age" name="min_age" class="form-control" min="20" max="30" />
+                  </div>
+                  <div class="form__display-flex">
+                     <label for="max_age">Max.</label>
+                     <input type="number" id="max_age" name="max_age" class="form-control" min="30" max="45" />
+                  </div>
+               </div><!-- /.form-group -->
+               <div class="form-group mb-4">
+                  <p class="form__group-text">Years Experience</p>
+                  <input type="number" id="experience_years" name="experience_years" class="form-control" min="20" max="30"  placeholder="Minimum 1 years"/>
+               </div><!-- /.form-group -->
+               <div class="form-group mb-4">
+                  <p class="form__group-text">Education Degree</p>
+                  <select class="form-control select2 select2--default" name="edu_degree" id="edu_degree" multiple="multiple">
+                     <option value="High School">High School or Equivalent (SMU, SMK, etc)</option>
+                     <option value="Diploma Degree">Diploma Degree - D4</option>
+                     <option value="Associate degree">Associate degree / Diploma Degree (D1 - D3)</option>
+                     <option value="Bachelor Degree">Bachelor Degree</option>
+                     <option value="Master Degree">Master Degree / Post Graduate Degree</option>
+                     <option value="Doctorate">Doctorate</option>
+                  </select>
+               </div><!-- /.form-group -->
+               <div class="form-group mb-4">
+                  <p class="form__group-text">Job Level</p>
+                  <select class="form-control select2 select2--default" name="job_level" id="job_level" multiple="multiple">
+                     <option value="fresh_graduate">Fresh Graduates / Less Than 1 Year Experience</option>
+                     <option value="junior_staff">Staff / Junior Staff</option>
+                     <option value="senior_staff">Senior Staff / Supervisor / Coordinator / Team Leader</option>
+                     <option value="manager">Manager / Senior Manager / Department Head</option>
+                     <option value="director">Associate Director / Director / GM</option>
+                     <option value="c_level">C - Level (CEO, COO, CMO, CFO)</option>
+                  </select>
+               </div><!-- /.form-group -->
+               <div class="form-group">
+                  <p class="form__group-text">Province</p>
+                  <select class="form-control select2 select2--default" name="province" id="province">
+                     <option value="sumatera_utara">Sumatera Utara</option>
+                     <option value="sumatera_barat">Sumatera Barat</option>
+                     <option value="riau">Riau</option>
+                     <option value="jambi">Jambi</option>
+                     <option value="sumater_selatan">Sumatera Selatan</option>
+                     <option value="bengkulu">Bengkulu</option>
+                     <option value="others">Isi sendiri, Capek Ngetik</option>
+                  </select>
+               </div><!-- /.form-group -->
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

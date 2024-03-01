@@ -1,0 +1,106 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "User Profile" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">User Profile</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header ">
+                  <h3 class="box__title">Profile Information</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand js-jamil">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div><!-- /.box__header -->
+               <div class="box__body">
+                  <div class="profile profile--more-space">
+                     <div class="row">
+                        <div class="col-12 col-xl-3">
+                           <div class="profile__img">
+                              <!-- Image Default -->
+                              <!--<img src="[BASE_HREF]assets/images/default/img-profile-big-default.jpg" alt="Image profile default"> -->
+                              <img src="{{BASE_HREF}}assets/images/default/img-natalie-dormer-300x300.jpg" alt="Img profile default">
+                           </div>
+                           <div class="profile__quotes">I don't know if I'm a daredevil, exactly, but I do enjoy a good challenge. It's the only way you grow.</div>
+                        </div>
+                        <div class="col-12 col-xl-8 offset-xl-1">
+                           <div class="row">
+                              <div class="col-12 col-xl-6">
+                                 <h4 class="profile__title">Basic Information</h4>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Fullname</div>
+                                    <div class="profile__text">Natalie Dormer</div>
+                                 </div>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Position</div>
+                                    <div class="profile__text">Administrator</div>
+                                 </div>
+                                 <div class="profile__group">
+                                    <div class="profile__label">ID Number</div>
+                                    <div class="profile__text">CP_ADM-0912</div>
+                                 </div>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Gender</div>
+                                    <div class="profile__text">Female</div>
+                                 </div>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Location</div>
+                                    <div class="profile__text">England</div>
+                                 </div>
+                              </div>
+                              <div class="col-12 col-xl-6">
+                                 <h4 class="profile__title">Contact Information</h4>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Emergency Phone</div>
+                                    <div class="profile__text">+62-8123-123123</div>
+                                 </div>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Address</div>
+                                    <div class="profile__text">Twickenham, London, England</div>
+                                 </div>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Email</div>
+                                    <div class="profile__text"><a href="mailto:natalie.dormer@gmail.com" title="send me message">natalie.dormer@gmail.com</a></div>
+                                 </div>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Site</div>
+                                    <div class="profile__text"><a href="https://www.imdb.com/name/nm1754059/" target="_blank">https://www.imdb.com/name/nm1754059/</a></div>
+                                 </div>
+                                 <div class="profile__group">
+                                    <div class="profile__label">Extension</div>
+                                    <div class="profile__text">5331</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div><!-- /.box__body -->
+               <div class="box__footer box__footer--with-space box__footer--border-top justify-content-end">
+                  <div class="box__footer-actions">
+                     <a href="{{BASE_HREF}}user-lists.html" class="button button--alt button--hollow mr-2">Back to User Lists</a>
+                     <a href="{{BASE_HREF}}user-edit.html" class="button button--alt button--primary">Edit Profile</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

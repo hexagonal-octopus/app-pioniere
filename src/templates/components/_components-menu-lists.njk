@@ -1,0 +1,14 @@
+<ul class="lists__container">
+   {% for menu in menus %}
+   <li class="lists__item">
+      <div class="panel panel--collapse">
+         <div class="panel__header">
+            <a href="{{menu.link}}" class="panel__link mr-auto"><span>{{menu.name}}</span><i class="icon-feather ml-auto"></i></a>
+         </div>
+         <div class="panel__body">
+            <div class="panel__links"></div>
+         </div>
+      </div>
+   </li>
+   {% endfor %}
+</ul>

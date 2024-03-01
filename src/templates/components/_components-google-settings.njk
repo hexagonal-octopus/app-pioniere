@@ -1,0 +1,39 @@
+<form class="form" novalidate>
+   <div class="tab-pane__top">
+      <h2 class="tab-pane__title">
+         <i class="icon-feather" data-feather="play"></i><span>Google Integrations</span>
+      </h2>
+   </div>
+   <div class="row">
+      <div class="col-12">
+         <div class="form__column mb-0">
+            <h4 class="form__title">Google Maps</h4>
+            <div class="row">
+               <div class="form-group col">
+                  <label for="lat">Latitude</label>
+                  <input type="text" class="form-control" value="-6.226227" placeholder="Latitude Coordinate" required>
+                  <div class="invalid-feedback">Please fill-in latitude coordinate</div>
+               </div>
+               <div class="form-group col">
+                  <label for="lat">Longitude</label>
+                  <input type="text" class="form-control" value="106.832373" placeholder="Longitude Coordinate" required>
+                  <div class="invalid-feedback">Please fill-in longitude coordinate</div>
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="lat">Embed iframe Location</label>
+               <textarea class="form-control" placeholder="Put your shareable link embed-a-map from Google Maps here." rows="5" ><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2820548347518!2d106.83017361535887!3d-6.226493995492759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f96ef78ef8bf%3A0x5f977fd63b4489a3!2sCyber+2+Tower!5e0!3m2!1sen!2sid!4v1536036844460' width='600' height='450' frameborder='0' style='border:0' allowfullscreen></iframe></textarea>
+               <div class="invalid-feedback">Please fill-in input with shared code you get from Google Map location</div>
+            </div>
+         </div>
+      </div><!-- /.col-->
+   </div><!-- /.row -->
+   <div class="row pt-3">
+      <div class="col-12">
+         <div class="d-flex justify-content-end flex-wrap">
+            <a href="{{BASE_HREF}}dashboard.html" class="button button--alt button--hollow mr-2">Cancel</a>
+            <button type="submit" data-type="valid" data-view="top" data-title="Sucess Update" data-message="Data have been saved succesfully on Database." class="button button--alt button--primary js-button-custom-toast">Save Settings</button>
+         </div>
+      </div>
+   </div><!-- /.row -->
+</form>

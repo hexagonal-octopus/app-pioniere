@@ -1,0 +1,160 @@
+{% extends "layouts/default.njk" %}
+
+{% set DOC_TITLE = "Component Card" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">Components Cards</h2>
+         </div>
+      </div><!-- /.col -->
+   </div><!-- /.row -->
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Basic Buttons</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <div class="highlight">
+                        <button class="button">Default</button>
+                        <button class="button button--primary">Primary</button>
+                        <button class="button button--secondary">Secondary</button>
+                        <button class="button button--link">Button Link</button>
+                     </div>  
+<div class="language-html">
+<pre><code>&lt;button class="button">Default&lt;/button>
+&lt;button class="button button--primary">Primary&lt;/button>
+&lt;button class="button button--secondary">Secondary&lt;/button>
+&lt;button class="button button--link">Button Link&lt;/button>
+</code></pre>
+</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div> <!-- /.col -->
+   </div><!-- /.row -->
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Basic Buttons - Alternative</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <div class="highlight">
+                        <button class="button button--alt">Default</button>
+                        <button class="button button--primary button--alt">Primary</button>
+                        <button class="button button--secondary button--alt">Secondary</button>
+                        <button class="button button--link button--alt">Button Link</button>
+                     </div>  
+<div class="language-html">
+<pre><code>&lt;button class="button button--alt">Default&lt;/button>
+&lt;button class="button button--primary button--alt">Primary&lt;/button>
+&lt;button class="button button--secondary button--alt">Secondary&lt;/button>
+&lt;button class="button button--link button--alt">Button Link&lt;/button>
+</code></pre>
+</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div><!-- ./col -->
+   </div><!-- /.row -->
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Basic Buttons - small</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <div class="highlight">
+                        <button class="button button--small">Default</button>
+                        <button class="button button--primary button--small">Primary</button>
+                        <button class="button button--secondary button--small">Secondary</button>
+                        <button class="button button--link button--small">Button Link</button>
+                     </div>  
+<div class="language-html">
+<pre><code>&lt;button class="button button--small">Default&lt;/button>
+&lt;button class="button button--primary button--small">Primary&lt;/button>
+&lt;button class="button button--secondary button--small">Secondary&lt;/button>
+&lt;button class="button button--link button--small">Button Link&lt;/button>
+</code></pre>
+</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div><!-- ./col -->
+   </div><!-- /.row -->
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Buttons Outline</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="pxb-20px">
+                     <div class="highlight">
+                        <button class="button button--outline">Default</button>
+                        <button class="button button--primary button--outline">Primary</button>
+                        <button class="button button--secondary button--outline">Secondary</button>
+                     </div>  
+<div class="language-html">
+<pre><code>&lt;button class="button button--outline">Default&lt;/button>
+&lt;button class="button button--primary button--outline">Primary&lt;/button>
+&lt;button class="button button--secondary button--outline">Secondary&lt;/button>
+</code></pre>
+</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div><!-- ./col -->
+   </div><!-- /.row -->
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

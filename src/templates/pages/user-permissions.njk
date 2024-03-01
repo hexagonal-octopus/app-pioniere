@@ -1,0 +1,197 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "User Permissions" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-form.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">User Permissions</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Core</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand js-jamil">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div><!-- /.box__header -->
+               <form class="form" novalidate>
+                  <div class="box__body box__body--more-space">
+                     <div class="row">
+                        <div class="col col-xl-10  offset-xl-1">
+                           <div class="form__column">
+                              <h4 class="form__title">Group Title</h4>
+                              <div class="form__column-head d-flex align-items-center">
+                                 <div class="form__desc">
+                                    <h3 class="form__desc-title">Accessible Mode</h3>
+                                    <p class="form__desc-subtitle">It will be revealed on each page and can be accessed</p>
+                                 </div>
+                                 <div class="form__actions">
+                                    <select class="form-control form-control--inline-block js-select" id="action" required>
+                                       <option value="">Select Bulk Action</option>
+                                       <option value="allow">Allow All</option>
+                                       <option value="deny">Deny All</option>
+                                       <option value="inherit">Inherit All</option>
+                                    </select>
+                                 </div>
+                              </div><!-- /.form__column-head -->
+                              <div class="form__column-body">
+                                 <div class="form__list d-flex form__list--stripe">
+                                    <div class="form__desc">List Option 1</div>
+                                    <div class="form__actions">
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check1" value="allow" class="form__input-radio" id="r1-allow" checked/>
+                                          <label for="r1-allow" class="form__label-radio">Allow</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check1" value="deny" class="form__input-radio" id="r1-deny"/>
+                                          <label for="r1-deny" class="form__label-radio">Deny</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check1" value="inherit" class="form__input-radio" id="r1-inherit"/>
+                                          <label for="r1-inherit" class="form__label-radio">Inherit</label>
+                                       </div>
+                                    </div>
+                                 </div><!-- /.form__list -->
+                                 <div class="form__list d-flex form__list--stripe">
+                                    <div class="form__desc">List Option 2</div>
+                                    <div class="form__actions">
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check2" value="allow" class="form__input-radio" id="r2-allow"/>
+                                          <label for="r2-allow" class="form__label-radio">Allow</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check2" value="deny" class="form__input-radio" id="r2-deny" checked/>
+                                          <label for="r2-deny" class="form__label-radio">Deny</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check2" value="inherit" class="form__input-radio" id="r2-inherit"/>
+                                          <label for="r2-inherit" class="form__label-radio">Inherit</label>
+                                       </div>
+                                    </div>
+                                 </div><!-- /.form__list -->
+                                 <div class="form__list d-flex form__list--stripe">
+                                    <div class="form__desc">List Option 3</div>
+                                    <div class="form__actions">
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check3" value="allow" class="form__input-radio" id="r3-allow"/>
+                                          <label for="r3-allow" class="form__label-radio">Allow</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check3" value="deny" class="form__input-radio" id="r3-deny"/>
+                                          <label for="r3-deny" class="form__label-radio">Deny</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check3" value="inherit" class="form__input-radio" id="r3-inherit" checked/>
+                                          <label for="r3-inherit" class="form__label-radio">Inherit</label>
+                                       </div>
+                                    </div>
+                                 </div><!-- /.form__list -->
+                              </div><!-- /.form__column-body -->
+                           </div><!-- /.form__column -->
+                           <!-- separator -->
+                           <div class="p-3"></div>
+                           <!-- end separator -->
+                           <div class="form__column">
+                              <h4 class="form__title">Group Title - 2</h4>
+                              <div class="form__column-head d-flex align-items-center">
+                                 <div class="form__desc">
+                                    <h3 class="form__desc-title">Accessible Mode</h3>
+                                    <p class="form__desc-subtitle">It will be revealed on each page and can be accessed</p>
+                                 </div>
+                                 <div class="form__actions">
+                                    <select class="form-control form-control--inline-block js-select" id="action" required>
+                                       <option value="">Select Bulk Action</option>
+                                       <option value="allow">Allow All</option>
+                                       <option value="deny">Deny All</option>
+                                       <option value="inherit">Inherit All</option>
+                                    </select>
+                                 </div>
+                              </div><!-- /.form__column-head -->
+                              <div class="form__column-body">
+                                 <div class="form__list d-flex form__list--stripe">
+                                    <div class="form__desc">List Option 4</div>
+                                    <div class="form__actions">
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check4" value="allow" class="form__input-radio" id="r4-allow" checked/>
+                                          <label for="r4-allow" class="form__label-radio">Allow</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check4" value="deny" class="form__input-radio" id="r4-deny"/>
+                                          <label for="r4-deny" class="form__label-radio">Deny</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check4" value="inherit" class="form__input-radio" id="r4-inherit"/>
+                                          <label for="r4-inherit" class="form__label-radio">Inherit</label>
+                                       </div>
+                                    </div>
+                                 </div><!-- /.form__list -->
+                                 <div class="form__list d-flex form__list--stripe">
+                                    <div class="form__desc">List Option 5</div>
+                                    <div class="form__actions">
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check5" value="allow" class="form__input-radio" id="5-allow"/>
+                                          <label for="5-allow" class="form__label-radio">Allow</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check5" value="deny" class="form__input-radio" id="5-deny" checked/>
+                                          <label for="5-deny" class="form__label-radio">Deny</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check5" value="inherit" class="form__input-radio" id="5-inherit"/>
+                                          <label for="5-inherit" class="form__label-radio">Inherit</label>
+                                       </div>
+                                    </div>
+                                 </div><!-- /.form__list -->
+                                 <div class="form__list d-flex form__list--stripe">
+                                    <div class="form__desc">List Option 6</div>
+                                    <div class="form__actions">
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check6" value="allow" class="form__input-radio" id="r6-allow"/>
+                                          <label for="r6-allow" class="form__label-radio">Allow</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check6" value="deny" class="form__input-radio" id="r6-deny"/>
+                                          <label for="r6-deny" class="form__label-radio">Deny</label>
+                                       </div>
+                                       <div class="form__action-flex">
+                                          <input type="radio" name="radio_check6" value="inherit" class="form__input-radio" id="r6-inherit" checked/>
+                                          <label for="r6-inherit" class="form__label-radio">Inherit</label>
+                                       </div>
+                                    </div>
+                                 </div><!-- /.form__list -->
+                              </div><!-- /.form__column-body -->
+                           </div><!-- /.form__column -->
+                        </div>
+                     </div>
+                  </div><!-- /.box__body -->
+                  <div class="box__footer box__footer--with-space box__footer--border-top justify-content-end">
+                     <div class="box__footer-actions">
+                        <a href="{{BASE_HREF}}user-lists.html" class="button button--alt button--hollow mr-2">Cancel</a>
+                        <button type="submit" class="button button--alt button--primary js-button-submit">Create User</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

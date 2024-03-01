@@ -1,0 +1,38 @@
+{% for cat in postCategories %}
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title">
+         {% if cat.depth == 2%}
+            <a href="#">&mdash;&mdash;{{cat.name}}</a>
+         {% elseif cat.depth == 1 %}
+            <a href="#">&mdash;{{cat.name}}</a>
+         {% else %}
+            <a href="#">{{cat.name}}</a>
+         {% endif %}
+         </h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Delete</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      {% if cat.description.length > 0 %}
+         <div>{{cat.description}}</div>
+      {% else %}
+         <div>&mdash;</div>
+      {% endif %}
+   </td>
+   <td>
+      <div class="table__container">
+         {{cat.slug}}
+      </div>
+   </td>
+</tr>
+{% endfor %}

@@ -1,0 +1,54 @@
+.icon {
+	height: 24px;
+	width: 16px;
+}
+
+.icon-feather {
+	fill: none;
+	stroke: white;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	height: 16px;
+	width: 16px;
+
+	&--black {
+		stroke: black;
+	}
+
+	&--bigger {
+		height: 24px;
+		width: 24px;
+	}
+
+	&--dark {
+		stroke: #666 !important;
+	}
+
+	&--danger {
+		stroke: red !important;
+	}
+}
+
+.feather-icon-black {
+	stroke: black;
+
+	&--is-spin {
+		animation: spin;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-duration: 1s;
+	}
+}
+
+.form-icon {
+	margin-top: -30px;
+	padding-right: 10px;
+	padding-left: 10px;
+
+	svg {
+		width: 16px;
+		height: 16px;
+		stroke: #999;
+	}
+}

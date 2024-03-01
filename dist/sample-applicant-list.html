@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | Sample Applicant List</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="./favicon.ico" />
+   <link rel="stylesheet" href="assets/styles/styles.css" />
+</head>
+
+<body class="fixed-navbar">
+
+
+   <div class="wrapper">
+      <nav class="navbar navbar-expand-md navbar--image">
+         <div class="navbar__wrapper">
+            <div class="navbar__header">
+               <button class="button button--link d-block d-md-none js-button-nav-toggler" id="menuToggler">
+                  <i data-feather="list" class="icon-feather"></i>
+               </button>
+               <a class="navbar__brand" href="./dashboard.html" title="Dashboard">
+
+
+                  <img class="navbar__logo" src="./assets/images/default/img-logo-cp.png" />
+                  <img class="navbar__logo-simplified" src="./assets/images/default/logo-cp-white-simplified.png" alt="">
+               </a>
+               <button class="button button--link d-block d-md-none" data-toggle="collapse" data-target="#navbarForMobile">
+                  <i data-feather="more-vertical" class="icon-feather"></i>
+               </button>
+            </div>
+            <div class="navbar__body">
+               <div class="collapse navbar-collapse" id="navbarForMobile">
+                  <ul class="navbar__nav">
+                     <li class="d-none d-md-block">
+                        <button id="zenToggleButton" class="button button--link navbar__link js-button-zenmode" href="#">
+                           <i data-feather="list" class="navbar__icon"></i>
+                           <span>Zen Mode</span>
+                        </button>
+                     </li>
+                     <li>
+                        <a class="navbar__link" href="http://webdev.cyberprimatama.co.id/" target="_blank">
+                           <i data-feather="home" class="navbar__icon"></i>
+                           <span>Visit Site</span>
+                        </a>
+                     </li>
+                  </ul>
+                  <ul class="navbar__nav ml-auto">
+                     <li class="dropdown navbar__dropdown">
+                        <span class="navbar__dropdown-text">Howdy</span>
+                        <button class="button button--link navbar__dropdown-toggle is-online" data-toggle="dropdown">
+                           <span class="avatar-name">Natalie Dormer</span>
+                           <span class="avatar-photo ">
+                              <img src="./assets/images/default/img-profile-md.jpg" />
+                              <!--
+                        Default image
+                        =============
+                        <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+                        =============
+                        -->
+                           </span>
+                           <i></i>
+                        </button>
+                        <div class="dropdown-menu navbar__dropdown-menu">
+                           <a href="./user-edit.html" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="user-check"></i>
+                              <span>Edit Profile</span>
+                           </a>
+                           <a href="#" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="help-circle"></i>
+                              <span>Help</span>
+                           </a>
+                           <a href="./index.html" class="dropdown-item">
+                              <i class="navbar__icon" data-feather="log-out"></i>
+                              <span>Logout</span>
+                           </a>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div class="main-menu main-menu--fixed">
+         <div class="main-menu__profile">
+            <div class="main-menu__profile-picture">
+               <img src="./assets/images/default/img-profile-md.jpg" />
+               <!--
+         Default image
+         =============
+         <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+         =============
+         -->
+            </div>
+            <div class="main-menu__content">
+               <span class="main-menu__profile-name">Natalie Dormer</span>
+               <span class="main-menu__profile-role">Administrator</span>
+            </div>
+         </div>
+         <div class="main-menu__container">
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Main</span>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./dashboard.html" title="">
+                     <i data-feather="anchor"></i>
+                     <span>Dashboard</span>
+                  </a>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="https://instagram.com" title="">
+                     <i data-feather="file-text"></i>
+                     <span>Pages</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list ">
+                        <a href="./page-lists.html">View All Pages</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./page-create.html">Create New Page</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="message-circle"></i>
+                     <span>Post</span>
+                     <span class="badge badge-pill badge-danger">20</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./news-lists.html">All Posts</a>
+                     </li>
+                     <li>
+                        <a href="./news-create.html">Add New Post</a>
+                     </li>
+                     <li>
+                        <a href="./news-category.html">Categories</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="./settings.html" title="">
+                     <i data-feather="camera"></i>
+                     <span>Media</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list ">
+                        <a href="./media-lists.html">Library</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./media-create.html">Insert New Asset</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="settings"></i>
+                     <span>Settings</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./settings.html">One Page Settings</a>
+                     </li>
+                     <li>
+                        <a href="./settings-with-tabs.html">Settings with Tabs</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="user"></i>
+                     <span>Users</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./user-lists.html">User Lists</a>
+                     </li>
+                     <li>
+                        <a href="./user-permissions.html">User Permissions</a>
+                     </li>
+                     <li>
+                        <a href="./user-add.html">Add New User</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sidemenu.html" title="">
+                     <i data-feather="sidebar"></i>
+                     <span>Manage Menu</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Documentations</span>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="command"></i>
+                     <span>Components</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list">
+                        <a href="./components-accordion.html">Accordion</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-alert.html">Alert</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-breadcrumb.html">Breadcrumb</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-button.html">Buttons</a>
+                     </li>
+                     <li class="sub-menu__list has-sub">
+                        <a href="#">
+                           <span>Card</span>
+                           <span class="icon-arrow"></span></a>
+                        <ul class="sub-menu">
+                           <li>
+                              <a href="./components-card.html">Card groups</a>
+                           </li>
+                           <li>
+                              <a href="our-services.html">Card decks</a>
+                           </li>
+                           <li>
+                              <a href="#">Card column</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-modal.html">Modal</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-pagination.html">Pagination</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./components-tabs.html">Tabs</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list has-sub">
+                  <a href="#" title="">
+                     <i data-feather="lock"></i>
+                     <span>Authentication</span>
+                     <span class="icon-arrow"></span>
+                  </a>
+                  <ul class="sub-menu">
+                     <li class="sub-menu__list">
+                        <a href="./login-default.html">Login Default</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./login-light.html">Login Light</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./login-dark.html">Login Dark</a>
+                     </li>
+                     <li class="sub-menu__list">
+                        <a href="./forgot-password.html">Reactivation Password</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="edit"></i>
+                     <span>Content</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="grid"></i>
+                     <span>Layout</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="#" title="">
+                     <i data-feather="life-buoy"></i>
+                     <span>Utilities</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="main-menu__lists">
+               <li class="main-menu__title">
+                  <span class="main-menu__title-text">Customize Pages</span>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-applicant-list.html" title="">
+                     <i data-feather="users"></i>
+                     <span>Applicant List Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-talent-search.html" title="">
+                     <i data-feather="users"></i>
+                     <span>Talent Search</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-product-page.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Product Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-brand-page.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Brand Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-recruitment-dashboard.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Recruitment Dashboard Page</span>
+                  </a>
+               </li>
+               <li class="main-menu__list">
+                  <a href="./sample-questions.html" title="">
+                     <i data-feather="command"></i>
+                     <span>Form Add Questions</span>
+                  </a>
+               </li>
+            </ul>
+         </div>
+         <div class="main-menu__title-collapsed"></div>
+         <div class="main-menu__submenu-collapsed"></div>
+      </div>
+
+      <div class="main-content">
+         <div class="row">
+            <div class="col">
+               <div class="d-flex align-items-center mb-3">
+                  <h2 class="main-content__title">Web Developer</h2>
+                  <button class="button button--alt button--outline ml-auto" data-target="#filterApplicants" data-toggle="box-fixed-right"><i data-feather="settings" class="icon-feather"></i> <span>Sorting Filter</span></button>
+               </div>
+            </div>
+         </div>
+         <div class="box--fixed-right" id="filterApplicants">
+            <div class="box">
+               <div class="box__wrapper" data-nicescroll="on">
+                  <div class="box__header">
+
+                     <button class="button button--alt button--link ml-auto" data-dismiss="box-fixed-right">Close Filter</button>
+                  </div><!-- /.box__header -->
+                  <div class="box__body box__body--spacy">
+                     <form class="form" novalidate>
+                        <div class="form-group mb-4">
+                           <p class="form__group-text">Kewarganegaraan</p>
+                           <div class="checkbox checkbox--green">
+                              <label>
+                                 <input type="checkbox">
+                                 <span class="checkbox__span">
+                                    <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                 </span>
+                                 <span class="checkbox__text">Indonesia - <strong>25</strong></span>
+                              </label>
+                           </div>
+                           <div class="checkbox checkbox--green">
+                              <label>
+                                 <input type="checkbox">
+                                 <span class="checkbox__span">
+                                    <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                 </span>
+                                 <span class="checkbox__text">Asing - <strong>12</strong></span>
+                              </label>
+                           </div>
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-4">
+                           <p class="form__group-text">Gender</p>
+                           <div class="checkbox checkbox--green">
+                              <label>
+                                 <input type="checkbox" name="male">
+                                 <span class="checkbox__span">
+                                    <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                 </span>
+                                 <span class="checkbox__text">Male - <strong>25</strong></span>
+                              </label>
+                           </div>
+                           <div class="checkbox checkbox--green">
+                              <label>
+                                 <input type="checkbox">
+                                 <span class="checkbox__span" name="female">
+                                    <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                 </span>
+                                 <span class="checkbox__text">Female - <strong>12</strong></span>
+                              </label>
+                           </div>
+                           <div class="checkbox checkbox--green">
+                              <label>
+                                 <input type="checkbox">
+                                 <span class="checkbox__span" name="unspecified_gender">
+                                    <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                 </span>
+                                 <span class="checkbox__text">Unspecified - <strong>2</strong></span>
+                              </label>
+                           </div>
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-4">
+                           <p class="form__group-text">Age Range</p>
+                           <div class="form__display-flex">
+                              <label for="min_age">Min.</label>
+                              <input type="number" id="min_age" name="min_age" class="form-control" min="20" max="30" />
+                           </div>
+                           <div class="form__display-flex">
+                              <label for="max_age">Max.</label>
+                              <input type="number" id="max_age" name="max_age" class="form-control" min="30" max="45" />
+                           </div>
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-4">
+                           <p class="form__group-text">Years Experience</p>
+                           <input type="number" id="experience_years" name="experience_years" class="form-control" min="20" max="30" placeholder="Minimum 1 years" />
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-4">
+                           <p class="form__group-text">Education Degree</p>
+                           <select class="form-control select2 select2--default" name="edu_degree" id="edu_degree" multiple="multiple">
+                              <option value="High School">High School or Equivalent (SMU, SMK, etc)</option>
+                              <option value="Diploma Degree">Diploma Degree - D4</option>
+                              <option value="Associate degree">Associate degree / Diploma Degree (D1 - D3)</option>
+                              <option value="Bachelor Degree">Bachelor Degree</option>
+                              <option value="Master Degree">Master Degree / Post Graduate Degree</option>
+                              <option value="Doctorate">Doctorate</option>
+                           </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group mb-4">
+                           <p class="form__group-text">Job Level</p>
+                           <select class="form-control select2 select2--default" name="job_level" id="job_level" multiple="multiple">
+                              <option value="fresh_graduate">Fresh Graduates / Less Than 1 Year Experience</option>
+                              <option value="junior_staff">Staff / Junior Staff</option>
+                              <option value="senior_staff">Senior Staff / Supervisor / Coordinator / Team Leader</option>
+                              <option value="manager">Manager / Senior Manager / Department Head</option>
+                              <option value="director">Associate Director / Director / GM</option>
+                              <option value="c_level">C - Level (CEO, COO, CMO, CFO)</option>
+                           </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                           <p class="form__group-text">Province</p>
+                           <select class="form-control select2 select2--default" name="province" id="province">
+                              <option value="sumatera_utara">Sumatera Utara</option>
+                              <option value="sumatera_barat">Sumatera Barat</option>
+                              <option value="riau">Riau</option>
+                              <option value="jambi">Jambi</option>
+                              <option value="sumater_selatan">Sumatera Selatan</option>
+                              <option value="bengkulu">Bengkulu</option>
+                              <option value="others">Isi sendiri, Capek Ngetik</option>
+                           </select>
+                        </div><!-- /.form-group -->
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header box__header--no-padding-y">
+                  <div class="box__column box__column--display-flex">
+                     <div class="checkbox checkbox--green">
+                        <label>
+                           <input type="checkbox" id="checkedAll">
+                           <span class="checkbox__span" name="unspecified_gender">
+                              <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                           </span>
+                           <span class="checkbox__text">Select All</span>
+                        </label>
+                     </div>
+                     <div class="dropdown dropdown--bulk ml-4">
+                        <button class="button button--outline button--small dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Bulk Operation
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <a class="dropdown-item" href="#">Terpilih</a>
+                           <a class="dropdown-item" href="#">Wawancara</a>
+                           <a class="dropdown-item" href="#">Tidak Sesuai</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="nav__wrapper ml-auto">
+                     <div class="nav nav-tabs nav-tabs--tertiary" id="navTab">
+                        <a href="#unprocessed" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                           <span>Belum Diproses - <strong>25</strong></span>
+                        </a>
+                        <a href="#chosen" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <span>Terpilih - <strong>25</strong></span>
+                        </a>
+                        <a href="#interview" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <span>Wawancara - <strong>25</strong></span>
+                        </a>
+                        <a href="#dumped" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <span>Tidak Sesuai - <strong>25</strong></span>
+                        </a>
+                     </div>
+                  </div>
+               </div><!-- /.box__header -->
+            </div>
+         </div>
+         <!-- /.box -->
+         <div class="tab-content" id="navTabContent">
+            <div class="tab-pane tab-pane--default fade show active" id="unprocessed" role="tabpanel">
+               <div class="row row--m24">
+                  <div class="box w1of4">
+                     <div class="box__wrapper">
+                        <div class="box__body p-3">
+                           <div class="display-flex">
+                              <div class="box__name"><a href="#" class="box__link" data-toggle="expand-box" data-target="#user01">Endi Kuskus</a></div>
+                              <div class="checkbox checkbox--green ml-auto">
+                                 <label>
+                                    <input type="checkbox" class="form-control" name="applicant" value="Endi Kuskus">
+                                    <span class="checkbox__span" name="unspecified_gender">
+                                       <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                    </span>
+                                 </label>
+                              </div>
+                           </div><!-- /.display-flex -->
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <p>Front End Developer ( &lt; 1Thn )</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-2 text-grey" id="Experience">
+                              <p>.NET Developer (<span>5Thn</span>)</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-3" id="latestExperience">
+                              <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span></p>
+                           </div>
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <button class="button button--alt button--small button--small-rounded button--outline">
+                                 <i data-feather="user-check" class="icon-feather"></i> <span>Kenapa Memilih Saya</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__footer box__footer--border-top p-3">
+                           <div class="display-flex w100p justify-content-center">
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Terpilih</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Wawancara</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Tidak Sesuai</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="box__separator"></div>
+                     <div class="box__expand-wrapper" id="user01">
+                        <div class="box__expand">
+                           <div class="box__row display-flex">
+                              <div class="display-flex">
+                                 <div class="img-profile90 border-green">
+                                    <img src="./assets/images/default/img-320x320.jpg" alt="Endi Kuskus" />
+                                 </div>
+                                 <div class="box__content">
+                                    <h3 class="box__name">Endi Kukus</h3>
+                                    <div class="box__text-small mb-2">
+                                       <p>Front End Developer (&lt; 1 Tahun)</p>
+                                       <p>PT. BUKALAPO</p>
+                                    </div>
+                                    <div class="box__text-small  mb-2">
+                                       <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span> | <span>Depok, Jawa Barat</span></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="ml-auto">
+                                 <p class="small">Melamar sejak: <span>01 Januari 1970</span></p>
+                                 <div class="position-relative">
+                                    <button class="button button--alt button--secondary" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i> <span>Choose your action</span></button>
+                                    <div class="dropdown-menu w100p">
+                                       <a href="./user-detail.html" class="dropdown-item">Terpilih</a>
+                                       <a href="./user-edit.html" class="dropdown-item">Wawancara</a>
+                                       <a href="#" class="dropdown-item dropdown-item--danger">Tidak Sesuai</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Mengapa Pilih Saya?</h2>
+                              <div class="profile__quotes">
+                                 <p>Saya kurus meskipun makannya banyak, tidak pernah melewatkan makan pagi, siang, malam, maupun larut malam. Saya peternak Ikan Cupang dan siap mengantar ke pelosok Indonesia. Ikan saja saya urus apalagi Perusahaan Bapak / Ibu, kan kujaga erat-erat karena susayang. </p>
+                                 <p>Akhir kata tak ada Gading yang tak retak, Salam satu aspal.</p>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pengalaman</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">1 Tahun 8 Bulan</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Front End Developer</p>
+                                       <p class="box__column-company">PT BUKALAPO</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Industri</td>
+                                                <td>Makanan &amp; Minuman /Katering /Restoran</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Spesialisasi</td>
+                                                <td>IT Komputer - Perangkat Lunak</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Bidang Pekerjaanny</td>
+                                                <td>Lainnya</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Jabatan</td>
+                                                <td>Staf Ahli Kepresidenan</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                    <div class="box__column-info mb-2">
+                                       <p>Menyayangi segala jenis makanan dan bertugas menjaga kebersihan piring-piring yang telah terpakai. Bertugas juga dalam Penginputan Data Makanan yang tersedia, menjaga kualitas produk dan menghabiskan produk yang hampir expired.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pendidikan</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Sep 2016</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Universitas Serba Guna</p>
+                                       <p class="box__column-company">Sarjana (S1) dalam Teknik (Komputer/Telekomunikasi) | Depok, Indonesia</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Tingkat</td>
+                                                <td>Teknik</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Bahasa</h2>
+                                 <p class="box__row-subtitle">Tingkat Kemampuan: 0 - Buruk, 10 - Sempurna</p>
+                              </div>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <th>Bahasa</th>
+                                       <th>Bicara</th>
+                                       <th>Menulis</th>
+                                       <th>Mengeja</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Indonesia</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>4</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Atlantis</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Tentang Saya</h2>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <td>Jenis Kelamin</td>
+                                       <td>Laki-laki</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Umur</td>
+                                       <td>25</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kontak</td>
+                                       <td>+6285813871463</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Alamat</td>
+                                       <td>Jl Cinta Damai Raya No 18 RT009 RW021 Kel. Mekar Jaya Kec. Sukmajaya Depok 16411</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kewarganegaraan</td>
+                                       <td>Afro Indonesia</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row box__row--green">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Riwayat</h2>
+                                 <p class="box__row-subtitle">Bagian ini hanya untuk penggunaan internal</p>
+                              </div>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">BELUM DIPROSES</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Programmer .NET CBN</p>
+                                       <p class="box__column-company">PT. Cyberindo Aditama (CBN)</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                        </div><!-- /.box-expand -->
+                     </div>
+                  </div>
+                  <!-- /.box -->
+                  <div class="box w1of4">
+                     <div class="box__wrapper">
+                        <div class="box__body p-3">
+                           <div class="display-flex">
+                              <div class="box__name"><a href="#" class="box__link" data-target="#user02" data-toggle="expand-box">Poltak Raja Minyak</a></div>
+                              <div class="checkbox checkbox--green ml-auto">
+                                 <label>
+                                    <input type="checkbox" class="form-control" name="applicant" value="Endi Kuskus">
+                                    <span class="checkbox__span" name="unspecified_gender">
+                                       <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                    </span>
+                                 </label>
+                              </div>
+                           </div><!-- /.display-flex -->
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <p>Front End Developer (
+
+                                 &lt; 1Thn )</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-2 text-grey" id="Experience">
+                              <p>.NET Developer (<span>5Thn</span>)</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-3" id="latestExperience">
+                              <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span></p>
+                           </div>
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <button class="button button--alt button--small button--small-rounded button--outline">
+                                 <i data-feather="user-check" class="icon-feather"></i> <span>Kenapa Memilih Saya</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__footer box__footer--border-top p-3">
+                           <div class="display-flex w100p justify-content-center">
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Terpilih</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Wawancara</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Tidak Sesuai</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="box__separator"></div>
+                     <div class="box__expand-wrapper" id="user02">
+                        <div class="box__expand">
+                           <div class="box__row display-flex">
+                              <div class="display-flex">
+                                 <div class="img-profile90 border-green">
+                                    <img src="./assets/images/default/img-320x320.jpg" alt="Endi Kuskus" />
+                                 </div>
+                                 <div class="box__content">
+                                    <h3 class="box__name">Poltak Raja Minyak</h3>
+                                    <div class="box__text-small mb-2">
+                                       <p>Front End Developer (&lt; 1 Tahun)</p>
+                                       <p>PT. BUKALAPO</p>
+                                    </div>
+                                    <div class="box__text-small  mb-2">
+                                       <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span> | <span>Depok, Jawa Barat</span></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="ml-auto">
+                                 <p class="small">Melamar sejak: <span>01 Januari 1970</span></p>
+                                 <div class="position-relative">
+                                    <button class="button button--alt button--secondary" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i> <span>Choose your action</span></button>
+                                    <div class="dropdown-menu w100p">
+                                       <a href="./user-detail.html" class="dropdown-item">Terpilih</a>
+                                       <a href="./user-edit.html" class="dropdown-item">Wawancara</a>
+                                       <a href="#" class="dropdown-item dropdown-item--danger">Tidak Sesuai</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Mengapa Pilih Saya?</h2>
+                              <div class="profile__quotes">
+                                 <p>Saya kurus meskipun makannya banyak, tidak pernah melewatkan makan pagi, siang, malam, maupun larut malam. Saya peternak Ikan Cupang dan siap mengantar ke pelosok Indonesia. Ikan saja saya urus apalagi Perusahaan Bapak / Ibu, kan kujaga erat-erat karena susayang. </p>
+                                 <p>Akhir kata tak ada Gading yang tak retak, Salam satu aspal.</p>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pengalaman</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">1 Tahun 8 Bulan</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Front End Developer</p>
+                                       <p class="box__column-company">PT BUKALAPO</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Industri</td>
+                                                <td>Makanan &amp; Minuman /Katering /Restoran</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Spesialisasi</td>
+                                                <td>IT Komputer - Perangkat Lunak</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Bidang Pekerjaanny</td>
+                                                <td>Lainnya</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Jabatan</td>
+                                                <td>Staf Ahli Kepresidenan</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                    <div class="box__column-info mb-2">
+                                       <p>Menyayangi segala jenis makanan dan bertugas menjaga kebersihan piring-piring yang telah terpakai. Bertugas juga dalam Penginputan Data Makanan yang tersedia, menjaga kualitas produk dan menghabiskan produk yang hampir expired.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pendidikan</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Sep 2016</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Universitas Serba Guna</p>
+                                       <p class="box__column-company">Sarjana (S1) dalam Teknik (Komputer/Telekomunikasi) | Depok, Indonesia</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Tingkat</td>
+                                                <td>Teknik</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Bahasa</h2>
+                                 <p class="box__row-subtitle">Tingkat Kemampuan: 0 - Buruk, 10 - Sempurna</p>
+                              </div>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <th>Bahasa</th>
+                                       <th>Bicara</th>
+                                       <th>Menulis</th>
+                                       <th>Mengeja</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Indonesia</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>4</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Atlantis</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Tentang Saya</h2>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <td>Jenis Kelamin</td>
+                                       <td>Laki-laki</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Umur</td>
+                                       <td>25</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kontak</td>
+                                       <td>+6285813871463</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Alamat</td>
+                                       <td>Jl Cinta Damai Raya No 18 RT009 RW021 Kel. Mekar Jaya Kec. Sukmajaya Depok 16411</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kewarganegaraan</td>
+                                       <td>Afro Indonesia</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row box__row--green">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Riwayat</h2>
+                                 <p class="box__row-subtitle">Bagian ini hanya untuk penggunaan internal</p>
+                              </div>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">BELUM DIPROSES</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Programmer .NET CBN</p>
+                                       <p class="box__column-company">PT. Cyberindo Aditama (CBN)</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                        </div><!-- /.box-expand -->
+                     </div>
+                  </div>
+                  <!-- /.box -->
+                  <div class="box w1of4">
+                     <div class="box__wrapper">
+                        <div class="box__body p-3">
+                           <div class="display-flex">
+                              <div class="box__name"><a href="#" class="box__link" data-target="#user03" data-toggle="expand-box">Atung</a></div>
+                              <div class="checkbox checkbox--green ml-auto">
+                                 <label>
+                                    <input type="checkbox" class="form-control" name="applicant" value="Endi Kuskus">
+                                    <span class="checkbox__span" name="unspecified_gender">
+                                       <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                    </span>
+                                 </label>
+                              </div>
+                           </div><!-- /.display-flex -->
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <p>Front End Developer (
+
+                                 &lt; 1Thn )</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-2 text-grey" id="Experience">
+                              <p>.NET Developer (<span>5Thn</span>)</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-3" id="latestExperience">
+                              <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span></p>
+                           </div>
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <button class="button button--alt button--small button--small-rounded button--outline">
+                                 <i data-feather="user-check" class="icon-feather"></i> <span>Kenapa Memilih Saya</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__footer box__footer--border-top p-3">
+                           <div class="display-flex w100p justify-content-center">
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Terpilih</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Wawancara</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Tidak Sesuai</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="box__separator"></div>
+                     <div class="box__expand-wrapper" id="user03">
+                        <div class="box__expand">
+                           <div class="box__row display-flex">
+                              <div class="display-flex">
+                                 <div class="img-profile90 border-green">
+                                    <img src="./assets/images/default/img-320x320.jpg" alt="Endi Kuskus" />
+                                 </div>
+                                 <div class="box__content">
+                                    <h3 class="box__name">Atung</h3>
+                                    <div class="box__text-small mb-2">
+                                       <p>Front End Developer (&lt; 1 Tahun)</p>
+                                       <p>PT. BUKALAPO</p>
+                                    </div>
+                                    <div class="box__text-small  mb-2">
+                                       <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span> | <span>Depok, Jawa Barat</span></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="ml-auto">
+                                 <p class="small">Melamar sejak: <span>01 Januari 1970</span></p>
+                                 <div class="position-relative">
+                                    <button class="button button--alt button--secondary" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i> <span>Choose your action</span></button>
+                                    <div class="dropdown-menu w100p">
+                                       <a href="./user-detail.html" class="dropdown-item">Terpilih</a>
+                                       <a href="./user-edit.html" class="dropdown-item">Wawancara</a>
+                                       <a href="#" class="dropdown-item dropdown-item--danger">Tidak Sesuai</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Mengapa Pilih Saya?</h2>
+                              <div class="profile__quotes">
+                                 <p>Saya kurus meskipun makannya banyak, tidak pernah melewatkan makan pagi, siang, malam, maupun larut malam. Saya peternak Ikan Cupang dan siap mengantar ke pelosok Indonesia. Ikan saja saya urus apalagi Perusahaan Bapak / Ibu, kan kujaga erat-erat karena susayang. </p>
+                                 <p>Akhir kata tak ada Gading yang tak retak, Salam satu aspal.</p>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pengalaman</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">1 Tahun 8 Bulan</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Front End Developer</p>
+                                       <p class="box__column-company">PT BUKALAPO</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Industri</td>
+                                                <td>Makanan &amp; Minuman /Katering /Restoran</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Spesialisasi</td>
+                                                <td>IT Komputer - Perangkat Lunak</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Bidang Pekerjaanny</td>
+                                                <td>Lainnya</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Jabatan</td>
+                                                <td>Staf Ahli Kepresidenan</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                    <div class="box__column-info mb-2">
+                                       <p>Menyayangi segala jenis makanan dan bertugas menjaga kebersihan piring-piring yang telah terpakai. Bertugas juga dalam Penginputan Data Makanan yang tersedia, menjaga kualitas produk dan menghabiskan produk yang hampir expired.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pendidikan</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Sep 2016</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Universitas Serba Guna</p>
+                                       <p class="box__column-company">Sarjana (S1) dalam Teknik (Komputer/Telekomunikasi) | Depok, Indonesia</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Tingkat</td>
+                                                <td>Teknik</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Bahasa</h2>
+                                 <p class="box__row-subtitle">Tingkat Kemampuan: 0 - Buruk, 10 - Sempurna</p>
+                              </div>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <th>Bahasa</th>
+                                       <th>Bicara</th>
+                                       <th>Menulis</th>
+                                       <th>Mengeja</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Indonesia</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>4</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Atlantis</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Tentang Saya</h2>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <td>Jenis Kelamin</td>
+                                       <td>Laki-laki</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Umur</td>
+                                       <td>25</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kontak</td>
+                                       <td>+6285813871463</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Alamat</td>
+                                       <td>Jl Cinta Damai Raya No 18 RT009 RW021 Kel. Mekar Jaya Kec. Sukmajaya Depok 16411</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kewarganegaraan</td>
+                                       <td>Afro Indonesia</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row box__row--green">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Riwayat</h2>
+                                 <p class="box__row-subtitle">Bagian ini hanya untuk penggunaan internal</p>
+                              </div>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">BELUM DIPROSES</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Programmer .NET CBN</p>
+                                       <p class="box__column-company">PT. Cyberindo Aditama (CBN)</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                        </div><!-- /.box-expand -->
+                     </div>
+                  </div>
+                  <!-- /.box -->
+                  <div class="box w1of4">
+                     <div class="box__wrapper">
+                        <div class="box__body p-3">
+                           <div class="display-flex">
+                              <div class="box__name"><a href="#" class="box__link" data-target="#user04" data-toggle="expand-box">Riki Rajakentut</a></div>
+                              <div class="checkbox checkbox--green ml-auto">
+                                 <label>
+                                    <input type="checkbox" class="form-control" name="applicant" value="Endi Kuskus">
+                                    <span class="checkbox__span" name="unspecified_gender">
+                                       <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                    </span>
+                                 </label>
+                              </div>
+                           </div><!-- /.display-flex -->
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <p>Front End Developer (
+
+                                 &lt; 1Thn )</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-2 text-grey" id="Experience">
+                              <p>.NET Developer (<span>5Thn</span>)</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-3" id="latestExperience">
+                              <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span></p>
+                           </div>
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <button class="button button--alt button--small button--small-rounded button--outline">
+                                 <i data-feather="user-check" class="icon-feather"></i> <span>Kenapa Memilih Saya</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__footer box__footer--border-top p-3">
+                           <div class="display-flex w100p justify-content-center">
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Terpilih</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Wawancara</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Tidak Sesuai</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="box__separator"></div>
+                     <div class="box__expand-wrapper" id="user04">
+                        <div class="box__expand">
+                           <div class="box__row display-flex">
+                              <div class="display-flex">
+                                 <div class="img-profile90 border-green">
+                                    <img src="./assets/images/default/img-320x320.jpg" alt="Endi Kuskus" />
+                                 </div>
+                                 <div class="box__content">
+                                    <h3 class="box__name">Riki Rajakentut</h3>
+                                    <div class="box__text-small mb-2">
+                                       <p>Front End Developer (&lt; 1 Tahun)</p>
+                                       <p>PT. BUKALAPO</p>
+                                    </div>
+                                    <div class="box__text-small  mb-2">
+                                       <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span> | <span>Depok, Jawa Barat</span></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="ml-auto">
+                                 <p class="small">Melamar sejak: <span>01 Januari 1970</span></p>
+                                 <div class="position-relative">
+                                    <button class="button button--alt button--secondary" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i> <span>Choose your action</span></button>
+                                    <div class="dropdown-menu w100p">
+                                       <a href="./user-detail.html" class="dropdown-item">Terpilih</a>
+                                       <a href="./user-edit.html" class="dropdown-item">Wawancara</a>
+                                       <a href="#" class="dropdown-item dropdown-item--danger">Tidak Sesuai</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Mengapa Pilih Saya?</h2>
+                              <div class="profile__quotes">
+                                 <p>Saya kurus meskipun makannya banyak, tidak pernah melewatkan makan pagi, siang, malam, maupun larut malam. Saya peternak Ikan Cupang dan siap mengantar ke pelosok Indonesia. Ikan saja saya urus apalagi Perusahaan Bapak / Ibu, kan kujaga erat-erat karena susayang. </p>
+                                 <p>Akhir kata tak ada Gading yang tak retak, Salam satu aspal.</p>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pengalaman</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">1 Tahun 8 Bulan</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Front End Developer</p>
+                                       <p class="box__column-company">PT BUKALAPO</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Industri</td>
+                                                <td>Makanan &amp; Minuman /Katering /Restoran</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Spesialisasi</td>
+                                                <td>IT Komputer - Perangkat Lunak</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Bidang Pekerjaanny</td>
+                                                <td>Lainnya</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Jabatan</td>
+                                                <td>Staf Ahli Kepresidenan</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                    <div class="box__column-info mb-2">
+                                       <p>Menyayangi segala jenis makanan dan bertugas menjaga kebersihan piring-piring yang telah terpakai. Bertugas juga dalam Penginputan Data Makanan yang tersedia, menjaga kualitas produk dan menghabiskan produk yang hampir expired.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pendidikan</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Sep 2016</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Universitas Serba Guna</p>
+                                       <p class="box__column-company">Sarjana (S1) dalam Teknik (Komputer/Telekomunikasi) | Depok, Indonesia</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Tingkat</td>
+                                                <td>Teknik</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Bahasa</h2>
+                                 <p class="box__row-subtitle">Tingkat Kemampuan: 0 - Buruk, 10 - Sempurna</p>
+                              </div>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <th>Bahasa</th>
+                                       <th>Bicara</th>
+                                       <th>Menulis</th>
+                                       <th>Mengeja</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Indonesia</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>4</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Atlantis</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Tentang Saya</h2>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <td>Jenis Kelamin</td>
+                                       <td>Laki-laki</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Umur</td>
+                                       <td>25</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kontak</td>
+                                       <td>+6285813871463</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Alamat</td>
+                                       <td>Jl Cinta Damai Raya No 18 RT009 RW021 Kel. Mekar Jaya Kec. Sukmajaya Depok 16411</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kewarganegaraan</td>
+                                       <td>Afro Indonesia</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row box__row--green">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Riwayat</h2>
+                                 <p class="box__row-subtitle">Bagian ini hanya untuk penggunaan internal</p>
+                              </div>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">BELUM DIPROSES</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Programmer .NET CBN</p>
+                                       <p class="box__column-company">PT. Cyberindo Aditama (CBN)</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                        </div><!-- /.box-expand -->
+                     </div>
+                  </div>
+                  <!-- /.box -->
+                  <div class="box w1of4">
+                     <div class="box__wrapper">
+                        <div class="box__body p-3">
+                           <div class="display-flex">
+                              <div class="box__name"><a href="#" class="box__link" data-target="#user05" data-toggle="expand-box">Shumochan</a></div>
+                              <div class="checkbox checkbox--green ml-auto">
+                                 <label>
+                                    <input type="checkbox" class="form-control" name="applicant" value="Endi Kuskus">
+                                    <span class="checkbox__span" name="unspecified_gender">
+                                       <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                                    </span>
+                                 </label>
+                              </div>
+                           </div><!-- /.display-flex -->
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <p>Front End Developer (
+
+                                 &lt; 1Thn )</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-2 text-grey" id="Experience">
+                              <p>.NET Developer (<span>5Thn</span>)</p>
+                              <p>PT. BUKALAPO</p>
+                           </div>
+                           <div class="box__text-small mb-3" id="latestExperience">
+                              <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span></p>
+                           </div>
+                           <div class="box__text-small mb-2" id="latestExperience">
+                              <button class="button button--alt button--small button--small-rounded button--outline">
+                                 <i data-feather="user-check" class="icon-feather"></i> <span>Kenapa Memilih Saya</span>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__footer box__footer--border-top p-3">
+                           <div class="display-flex w100p justify-content-center">
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Terpilih</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Wawancara</a>
+                              </div>
+                              <div class="mx-2">
+                                 <a href="#" class="box__link">Tidak Sesuai</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="box__separator"></div>
+                     <div class="box__expand-wrapper" id="user05">
+                        <div class="box__expand">
+                           <div class="box__row display-flex">
+                              <div class="display-flex">
+                                 <div class="img-profile90 border-green">
+                                    <img src="./assets/images/default/img-320x320.jpg" alt="Endi Kuskus" />
+                                 </div>
+                                 <div class="box__content">
+                                    <h3 class="box__name">Sumochan</h3>
+                                    <div class="box__text-small mb-2">
+                                       <p>Front End Developer (&lt; 1 Tahun)</p>
+                                       <p>PT. BUKALAPO</p>
+                                    </div>
+                                    <div class="box__text-small  mb-2">
+                                       <p><span>Rp. 10.000.000</span> | <span>Sarjana (S1) - Aug 2017</span> | <span>Depok, Jawa Barat</span></p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="ml-auto">
+                                 <p class="small">Melamar sejak: <span>01 Januari 1970</span></p>
+                                 <div class="position-relative">
+                                    <button class="button button--alt button--secondary" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i> <span>Choose your action</span></button>
+                                    <div class="dropdown-menu w100p">
+                                       <a href="./user-detail.html" class="dropdown-item">Terpilih</a>
+                                       <a href="./user-edit.html" class="dropdown-item">Wawancara</a>
+                                       <a href="#" class="dropdown-item dropdown-item--danger">Tidak Sesuai</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Mengapa Pilih Saya?</h2>
+                              <div class="profile__quotes">
+                                 <p>Saya kurus meskipun makannya banyak, tidak pernah melewatkan makan pagi, siang, malam, maupun larut malam. Saya peternak Ikan Cupang dan siap mengantar ke pelosok Indonesia. Ikan saja saya urus apalagi Perusahaan Bapak / Ibu, kan kujaga erat-erat karena susayang. </p>
+                                 <p>Akhir kata tak ada Gading yang tak retak, Salam satu aspal.</p>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pengalaman</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">1 Tahun 8 Bulan</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Front End Developer</p>
+                                       <p class="box__column-company">PT BUKALAPO</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Industri</td>
+                                                <td>Makanan &amp; Minuman /Katering /Restoran</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Spesialisasi</td>
+                                                <td>IT Komputer - Perangkat Lunak</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Bidang Pekerjaanny</td>
+                                                <td>Lainnya</td>
+                                             </tr>
+                                             <tr>
+                                                <td>Jabatan</td>
+                                                <td>Staf Ahli Kepresidenan</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                    <div class="box__column-info mb-2">
+                                       <p>Menyayangi segala jenis makanan dan bertugas menjaga kebersihan piring-piring yang telah terpakai. Bertugas juga dalam Penginputan Data Makanan yang tersedia, menjaga kualitas produk dan menghabiskan produk yang hampir expired.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Pendidikan</h2>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Sep 2016</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Universitas Serba Guna</p>
+                                       <p class="box__column-company">Sarjana (S1) dalam Teknik (Komputer/Telekomunikasi) | Depok, Indonesia</p>
+                                    </div>
+                                    <div class="mb-2">
+                                       <div class="table-responsive">
+                                          <table class="table box__column-table">
+                                             <tr>
+                                                <td>Tingkat</td>
+                                                <td>Teknik</td>
+                                             </tr>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Bahasa</h2>
+                                 <p class="box__row-subtitle">Tingkat Kemampuan: 0 - Buruk, 10 - Sempurna</p>
+                              </div>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <th>Bahasa</th>
+                                       <th>Bicara</th>
+                                       <th>Menulis</th>
+                                       <th>Mengeja</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Indonesia</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>4</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Atlantis</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                       <td>10</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row">
+                              <h2 class="box__row-title mb-3">Tentang Saya</h2>
+                              <div class="table-responsive">
+                                 <table class="table box__column-table">
+                                    <tr>
+                                       <td>Jenis Kelamin</td>
+                                       <td>Laki-laki</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Umur</td>
+                                       <td>25</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kontak</td>
+                                       <td>+6285813871463</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Alamat</td>
+                                       <td>Jl Cinta Damai Raya No 18 RT009 RW021 Kel. Mekar Jaya Kec. Sukmajaya Depok 16411</td>
+                                    </tr>
+                                    <tr>
+                                       <td>Kewarganegaraan</td>
+                                       <td>Afro Indonesia</td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div><!-- /box-row -->
+                           <div class="box__row box__row--green">
+                              <div class="mb-3">
+                                 <h2 class="box__row-title">Riwayat</h2>
+                                 <p class="box__row-subtitle">Bagian ini hanya untuk penggunaan internal</p>
+                              </div>
+                              <div class="box__row display-flex">
+                                 <div class="box__column-date box__text-small">
+                                    <p>Apr 2017 - Sekarang</p>
+                                    <p class="text-light">BELUM DIPROSES</p>
+                                 </div>
+                                 <div class="box__column-text">
+                                    <div class="mb-2">
+                                       <p class="box__column-name">Programmer .NET CBN</p>
+                                       <p class="box__column-company">PT. Cyberindo Aditama (CBN)</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div><!-- /box-row -->
+                        </div><!-- /.box-expand -->
+                     </div>
+                  </div>
+                  <!-- /.box -->
+               </div>
+            </div>
+            <div class="tab-pane tab-pane--default fade" id="chosen" role="tabpanel">
+               <h1>Chosen</h1>
+            </div>
+            <div class="tab-pane tab-pane--default fade" id="interview" role="tabpanel">
+               <h1>Interview</h1>
+            </div>
+            <div class="tab-pane tab-pane--default fade" id="dumped" role="tabpanel">
+               <h1>Dumped</h1>
+            </div>
+         </div><!-- /.tab-content -->
+         <div class="row row--footer">
+            <div class="col">
+               <p>&copy; Copyright 2017. Cyberindo Primatama. All Rights Reserved.</p>
+            </div>
+            <div class="col">
+               <p class="text-right">Powered by <a href="#">PENA Systems</a></p>
+            </div>
+         </div>
+         <div class="spinner">
+            <div class="lds-ring">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <!-- Global Scripts -->
+   <script src="./assets/scripts/modernizr/modernizr.js"></script>
+   <script src="./assets/scripts/jquery/jquery.min.js"></script>
+   <script src="./assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="./assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="./assets/scripts/jquery.nicescroll/jquery.nicescroll.js"></script>
+   <script src="./assets/scripts/prismjs/prism.js"></script>
+   <script src="./assets/scripts/components/global.js"></script>
+   <script src="./assets/scripts/components/sample-button.js"></script>
+   <!-- // Global Scripts -->
+
+   <!-- Additional Vendor Scripts -->
+
+   <script src="./assets/scripts/select2/js/select2.min.js"></script>
+
+   <!-- // Additional Vendor Scripts -->
+
+   <!-- Additional Custom Scripts -->
+
+   <script src="./assets/scripts/components/sample-form.js"></script>
+
+   <!-- // Additional Custom Scripts -->
+</body>
+
+</html>

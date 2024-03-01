@@ -1,0 +1,41 @@
+{% for post in posts %}
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">{{post.title}}</a>{% if post.status == 0%}<span>&mdash; Draft</span>{% endif %}</h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="{{BASE_HREF}}assets/images/default/{{post.author_photo}}" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">{{post.author}}</a></div>
+            <div class="table__user-role"><a href="#">{{post.author_role}}</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         {% for category in post.categories %}
+            {% if loop.last %}<a class="table__cat-link" href="post.html?cat-{{category | lower | replace(" ", "-")}}">{{category}}</a>{% else %}<a class="table__cat-link" href="post.html?cat-{{category | lower | replace(" ", "-")}}">{{category}}</a>, {% endif %}
+         {% endfor %}
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">{% if post.status == 1 %}Published on{% else %}Modified on{% endif %}</p>
+         <p class="table__date">{{post.date | date('LLL')}}</p>
+      </div>
+   </td>
+</tr>
+{% endfor %}

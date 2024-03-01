@@ -1,0 +1,67 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Settings with Tabs" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_vendor_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/summernote/summernote.js"></script>
+{% endblock %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-form.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-toast.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/init-summernote.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">{{DOC_TITLE}}</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-12">
+         <div class="box">
+            <nav>
+               <div class="nav nav-tabs nav-tabs--primary" id="navTab" role="tablist">
+                  <a href="#tabGeneral" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                     <i class="icon-feather" data-feather="compass"></i>
+                     <span>General Settings</span>
+                  </a>
+                  <a href="#tabGoogle" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                     <i class="icon-feather" data-feather="play"></i>
+                     <span>Google Integrations</span>
+                  </a>
+                  <a href="#tabParty" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                     <i class="icon-feather" data-feather="globe"></i>
+                     <span>Third Party Plugins</span>
+                  </a>
+                  <a href="#tabLang" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                     <i class="icon-feather" data-feather="mic"></i>
+                     <span>Language Settings</span>
+                  </a>
+               </div>
+            </nav>
+            <div class="tab-content">
+               <div class="tab-pane fade show active" id="tabGeneral" role="tabpanel">
+                  {% include "components/_components-general-settings.njk" %}
+               </div>
+               <div class="tab-pane fade" id="tabGoogle" role="tabpanel">
+                  {% include "components/_components-google-settings.njk" %}
+               </div>
+               <div class="tab-pane fade" id="tabParty" role="tabpanel">
+                  {% include "components/_components-party-settings.njk" %}
+               </div>
+               <div class="tab-pane fade" id="tabLang" role="tabpanel">
+                  {% include "components/_components-lang-settings.njk" %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

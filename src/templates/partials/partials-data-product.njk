@@ -1,0 +1,72 @@
+<form class="form" novalidate>
+   <div class="tab-pane__top">
+      <h2 class="tab-pane__title">
+         <i class="icon-feather" data-feather="package"></i><span>Data</span>
+      </h2>
+   </div>
+   <div class="row">
+      <div class="col-12">
+         <div class="form-group">
+            <label for="brand">Brand Name</label>
+            <select class="form-control">
+               <option value="" selected disabled>Select Available Brand</option>
+               <option value="">Item 01</option>
+               <option value="">Item 02</option>
+               <option value="">Item 03</option>
+               <option value="">Item 04</option>
+               <option value="">Item 05</option>
+            </select>
+            <div class="invalid-feedback">Invalid Message Here</div>
+            <div class="valid-feedback">Valid Message here</div>
+         </div>
+         <div class="form-group">
+            <label for="brand">Categories</label>
+            <select class="form-control">
+               <option value="" selected disabled>Select Category</option>
+               <option value="">Category 01</option>
+               <option value="">Category 02</option>
+               <option value="">Category 03</option>
+               <option value="">Category 04</option>
+               <option value="">Category 05</option>
+            </select>
+            <div class="invalid-feedback">Invalid Message Here</div>
+            <div class="valid-feedback">Valid Message here</div>
+         </div>
+         <div class="form-group">
+            <label for="">Price</label>
+            <input id="" type="number" name="" placeholder="Insert Price" class="form-control phone" data-toggle="count" data-length="50" required>
+            <div class="invalid-feedback">This is Invalid Message</div>
+            <div class="valid-feedback">This is Valid Message</div>
+         </div>
+         <div class="form-group">
+            <label for="">Status</label>
+            <div class="form__row">
+               <div class="form__action-flex">
+                  <input type="radio" name="radio_check1" value="allow" class="form__input-radio" id="r1-available" checked/>
+                  <label for="r1-available" class="form__label-radio">Available</label>
+               </div>
+               <div class="form__action-flex">
+                  <input type="radio" name="radio_check1" value="deny" class="form__input-radio" id="r1-unavailable"/>
+                  <label for="r1-unavailable" class="form__label-radio">Unavailable</label>
+               </div>
+            </div><!-- /.form__row -->
+         </div>
+         <div class="form-group d-flex">
+            <div class="form__desc">
+               <p class="form__desc-title">Set as Featured Product</p>
+               <p class="form__desc-subtitle">Product will be registered as Featured on Homepage</p>
+            </div>
+            <div class="form__actions">
+               <div class="toggle-switch">
+                  <label>
+                     <input type="checkbox" name="" value="true" class="form-check-input" checked/>
+                     <span class="toggle-switch__box">
+                        <span class="toggle-switch__switcher"></span>
+                     </span>
+                  </label>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</form>

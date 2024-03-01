@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | News Lists</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="./favicon.ico"/>
+   <!-- build:css assets/styles/styles.css -->
+<link rel="stylesheet" href="./assets/styles/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/styles/animate.css/animate.css" />
+<link rel="stylesheet" href="./assets/styles/summernote/summernote-lite.css">
+<link rel="stylesheet" href="./assets/styles/air-datepicker/css/datepicker.css">
+<link rel="stylesheet" href="./assets/styles/datatables.net-dt/css/jquery.dataTables.css" />
+<link rel="stylesheet" href="./assets/styles/prismjs/themes/prism.css">
+<link rel="stylesheet" href="./assets/styles/select2/css/select2.min.css">
+<link rel="stylesheet" href="./assets/styles/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="./temp/styles/style.css">
+<!-- endbuild -->
+</head>
+<body class="fixed-navbar">
+   
+   
+   <div class="wrapper">
+      <nav class="navbar navbar-expand-md navbar--image">
+   <div class="navbar__wrapper">
+      <div class="navbar__header">
+         <button class="button button--link d-block d-md-none js-button-nav-toggler" id="menuToggler">
+            <i data-feather="list" class="icon-feather"></i>
+         </button>
+         <a class="navbar__brand" href="./dashboard.html" title="Dashboard">
+            
+            
+            <img class="navbar__logo" src="./assets/images/default/img-logo-cp.png"/>
+            <img class="navbar__logo-simplified" src="./assets/images/default/logo-cp-white-simplified.png" alt="">
+         </a>
+         <button class="button button--link d-block d-md-none" data-toggle="collapse" data-target="#navbarForMobile">
+            <i data-feather="more-vertical" class="icon-feather"></i>
+         </button>
+      </div>
+      <div class="navbar__body">
+         <div class="collapse navbar-collapse" id="navbarForMobile">
+            <ul class="navbar__nav">
+               <li class="d-none d-md-block">
+                  <button id="zenToggleButton" class="button button--link navbar__link js-button-zenmode" href="#">
+                     <i data-feather="list" class="navbar__icon"></i>
+                     <span>Zen Mode</span>
+                  </button>
+               </li>
+               <li>
+                  <a class="navbar__link" href="http://webdev.cyberprimatama.co.id/" target="_blank">
+                     <i data-feather="home" class="navbar__icon"></i>
+                     <span>Visit Site</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="navbar__nav ml-auto">
+               <li class="dropdown navbar__dropdown">
+                  <span class="navbar__dropdown-text">Howdy</span>
+                  <button class="button button--link navbar__dropdown-toggle is-online" data-toggle="dropdown">
+                     <span class="avatar-name">Natalie Dormer</span>
+                     <span class="avatar-photo ">
+                        <img src="./assets/images/default/img-profile-md.jpg"/>
+                        <!--
+                        Default image
+                        =============
+                        <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+                        =============
+                        -->
+                     </span>
+                     <i></i>
+                  </button>
+                  <div class="dropdown-menu navbar__dropdown-menu">
+                     <a href="./user-edit.html" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="user-check"></i>
+                        <span>Edit Profile</span>
+                     </a>
+                     <a href="#" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="help-circle"></i>
+                        <span>Help</span>
+                     </a>
+                     <a href="./index.html" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="log-out"></i>
+                        <span>Logout</span>
+                     </a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</nav>
+      <div class="main-menu main-menu--fixed">
+   <div class="main-menu__profile">
+      <div class="main-menu__profile-picture">
+         <img src="./assets/images/default/img-profile-md.jpg"/>
+         <!--
+         Default image
+         =============
+         <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+         =============
+         -->
+      </div>
+      <div class="main-menu__content">
+         <span class="main-menu__profile-name">Natalie Dormer</span>
+         <span class="main-menu__profile-role">Administrator</span>
+      </div>
+   </div>
+   <div class="main-menu__container">
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Main</span>
+         </li>
+         <li class="main-menu__list">
+            <a href="./dashboard.html" title="">
+               <i data-feather="anchor"></i>
+               <span>Dashboard</span>
+            </a>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="https://instagram.com" title="">
+               <i data-feather="file-text"></i>
+               <span>Pages</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list ">
+                  <a href="./page-lists.html">View All Pages</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./page-create.html">Create New Page</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="message-circle"></i>
+               <span>Post</span>
+               <span class="badge badge-pill badge-danger">20</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./news-lists.html">All Posts</a>
+               </li>
+               <li>
+                  <a href="./news-create.html">Add New Post</a>
+               </li>
+               <li>
+                  <a href="./news-category.html">Categories</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="./settings.html" title="">
+               <i data-feather="camera"></i>
+               <span>Media</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list ">
+                  <a href="./media-lists.html">Library</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./media-create.html">Insert New Asset</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="settings"></i>
+               <span>Settings</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./settings.html">One Page Settings</a>
+               </li>
+               <li>
+                  <a href="./settings-with-tabs.html">Settings with Tabs</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="user"></i>
+               <span>Users</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./user-lists.html">User Lists</a>
+               </li>
+               <li>
+                  <a href="./user-permissions.html">User Permissions</a>
+               </li>
+               <li>
+                  <a href="./user-add.html">Add New User</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sidemenu.html" title="">
+               <i data-feather="sidebar"></i>
+               <span>Manage Menu</span>
+            </a>
+         </li>
+      </ul>
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Documentations</span>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="command"></i>
+               <span>Components</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list">
+                  <a href="./components-accordion.html">Accordion</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-alert.html">Alert</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-breadcrumb.html">Breadcrumb</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-button.html">Buttons</a>
+               </li>
+               <li class="sub-menu__list has-sub">
+                  <a href="#">
+                     <span>Card</span>
+                     <span class="icon-arrow"></span></a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./components-card.html">Card groups</a>
+                     </li>
+                     <li>
+                        <a href="our-services.html">Card decks</a>
+                     </li>
+                     <li>
+                        <a href="#">Card column</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-modal.html">Modal</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-pagination.html">Pagination</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-tabs.html">Tabs</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="lock"></i>
+               <span>Authentication</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list">
+                  <a href="./login-default.html">Login Default</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./login-light.html">Login Light</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./login-dark.html">Login Dark</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./forgot-password.html">Reactivation Password</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="edit"></i>
+               <span>Content</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="grid"></i>
+               <span>Layout</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="life-buoy"></i>
+               <span>Utilities</span>
+            </a>
+         </li>
+      </ul>
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Customize Pages</span>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-applicant-list.html" title="">
+               <i data-feather="users"></i>
+               <span>Applicant List Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-talent-search.html" title="">
+               <i data-feather="users"></i>
+               <span>Talent Search</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-product-page.html" title="">
+               <i data-feather="command"></i>
+               <span>Product Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-brand-page.html" title="">
+               <i data-feather="command"></i>
+               <span>Brand Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-recruitment-dashboard.html" title="">
+               <i data-feather="command"></i>
+               <span>Recruitment Dashboard Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-questions.html" title="">
+               <i data-feather="command"></i>
+               <span>Form Add Questions</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <div class="main-menu__title-collapsed"></div>
+   <div class="main-menu__submenu-collapsed"></div>
+</div>  
+      
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">News</h2>
+            <a class="button button--secondary button--small-icon" href="./news-create.html"><i class="icon-feather" data-feather="plus"></i>Add News</a>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">News Lists</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  
+                  <table class="table table--striped table--post" id="tableNewsLists">
+                     <thead>
+                        <tr>
+                           <th><div class="checkbox"><label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label></div></th>
+                           <th>Title</th>
+                           <th>Author</th>
+                           <th>Categories</th>
+                           <th>Date</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">10 Ways to Improve Your Website Design</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-watson-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Watson</a></div>
+            <div class="table__user-role"><a href="#">Editor</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">June 5, 2018 12:00 PM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">The MVP Is Dead, Long Life To The MAP. (Minimum Awesome Product)</a><span>&mdash; Draft</span></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-stone-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Stone</a></div>
+            <div class="table__user-role"><a href="#">Moderator</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ui-ux">UI UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Modified on</p>
+         <p class="table__date">June 4, 2018 10:00 AM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">Building An Atomic Design System With Sketch Library</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-watson-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Watson</a></div>
+            <div class="table__user-role"><a href="#">Editor</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-website-design">Website Design</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">June 4, 2018 8:00 AM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">Not So Scary: Using Design Thinking For Haunted Houses</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-watson-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Watson</a></div>
+            <div class="table__user-role"><a href="#">Editor</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">June 4, 2018 10:00 AM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">A Human-Centered Take On Seniors And Technology</a><span>&mdash; Draft</span></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-stone-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Stone</a></div>
+            <div class="table__user-role"><a href="#">Moderator</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Modified on</p>
+         <p class="table__date">June 3, 2018 9:00 AM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">A Step-By-Step Guide To User Research</a><span>&mdash; Draft</span></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-stone-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Stone</a></div>
+            <div class="table__user-role"><a href="#">Moderator</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Modified on</p>
+         <p class="table__date">June 2, 2018 11:00 PM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">How To Become A Successful Entry Level UX Designer</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-watson-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Watson</a></div>
+            <div class="table__user-role"><a href="#">Moderator</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">June 2, 2018 8:00 PM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">Why We All Need Design Thinking</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-watson-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Watson</a></div>
+            <div class="table__user-role"><a href="#">Moderator</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">June 1, 2018 12:00 PM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">Tips For Presenting Designs Remotely</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-jenlaw-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Jennifer Lawrence</a></div>
+            <div class="table__user-role"><a href="#">Administrator</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">June 1, 2018 12:00 PM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">Why Qualitative App Analytics Are A UX Designer’s Dream</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-jenlaw-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Jennifer Lawrence</a></div>
+            <div class="table__user-role"><a href="#">Administrator</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">June 1, 2018 12:00 PM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">How to build a strong corporate identity</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-watson-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Watson</a></div>
+            <div class="table__user-role"><a href="#">Editor</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">May 29, 2018 12:00 PM</p>
+      </div>
+   </td>
+</tr>
+
+<tr>
+   <td>
+      <div class="checkbox">
+         <label><input type="checkbox"><span class="checkbox__span"><i data-feather="check" class="icon-feather icon-feather--black"></i></span></label>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <h2 class="table__title"><a href="#">The intricate world of pattern design (and how to create one for your brand)</a></h2>
+         <div class="table__actions">
+            <a href="#" class="button button--link table__action"><i data-feather="edit" class="icon-feather icon-feather--black"></i>Edit</a>
+            <a href="#" class="button button--link table__action"><i data-feather="eye" class="icon-feather icon-feather--black"></i>View</a>
+            <button class="button button--link table__action"><i data-feather="trash-2" class="icon-feather icon-feather--black"></i>Trash</button>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container d-flex flex-row align-items-center">
+         <div class="table__photo"><img src="./assets/images/default/img-emma-stone-42x42.jpg" alt=""></div>
+         <div class="table__user">
+            <div class="table__user-name"><a href="#">Emma Stone</a></div>
+            <div class="table__user-role"><a href="#">Moderator</a></div>
+         </div>
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         
+            <a class="table__cat-link" href="post.html?cat-ux">UX</a>, 
+         
+            <a class="table__cat-link" href="post.html?cat-design">Design</a>
+         
+      </div>
+   </td>
+   <td>
+      <div class="table__container">
+         <p class="table__label">Published on</p>
+         <p class="table__date">May 29, 2018 12:00 PM</p>
+      </div>
+   </td>
+</tr>
+
+                     </tbody>
+                  </table>
+                  
+                  <form class="form-inline form-bulk">
+                     <select name="" class="custom-select mr-1" id="formBulkAction">
+                        <option selected>Bulk Action</option>
+                        <option value="1">Edit</option>
+                        <option value="2">Move to Trash</option>
+                        <option value="3">Twerk it!</option>
+                     </select>
+                     <button type="submit" class="button button--small">Apply</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row row--footer">
+   <div class="col">
+      <p>&copy; Copyright 2017. Cyberindo Primatama. All Rights Reserved.</p>
+   </div>
+   <div class="col">
+      <p class="text-right">Powered by <a href="#">PENA Systems</a></p>
+   </div>
+</div> 
+</div>
+
+   </div>
+   <!-- Global Scripts -->
+   <script src="./assets/scripts/modernizr/modernizr.js"></script>
+   <script src="./assets/scripts/jquery/jquery.min.js"></script>
+   <script src="./assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="./assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="./assets/scripts/jquery.nicescroll/jquery.nicescroll.js"></script>
+   <script src="./assets/scripts/prismjs/prism.js"></script>
+   <script src="./assets/scripts/components/global.js"></script>
+   <script src="./assets/scripts/components/sample-button.js"></script>
+   <!-- // Global Scripts -->
+
+   <!-- Additional Vendor Scripts -->
+   
+   <script src="./assets/scripts/datatables.net/js/jquery.dataTables.js"></script>
+
+   <!-- // Additional Vendor Scripts -->
+
+   <!-- Additional Custom Scripts -->
+   
+   <script src="./assets/scripts/components/sample-table.js"></script>
+
+   <!-- // Additional Custom Scripts -->
+</body>
+</html>

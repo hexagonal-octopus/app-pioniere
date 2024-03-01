@@ -1,0 +1,63 @@
+<form class="form" novalidate>
+   <div class="tab-pane__top">
+      <h2 class="tab-pane__title">
+         <i class="icon-feather" data-feather="mic"></i><span>Language Settings</span>
+      </h2>
+   </div>
+   <div class="row">
+      <div class="col-12">
+         <div class="form__column mb-0">
+            <div class="row">
+               <div class="col-12">
+                  <h4 class="form__title">Language Settings</h4>
+                  <button class="button button--alt button--outline button--icon-left d-block ml-auto"><i data-feather="plus" class="icon-feather"></i> Add a Language</button>
+                  <div class="div-table div-table--margin-top">
+                     <div class="div-table__row div-table__row--heading">
+                        <div class="div-table__cell">Language</div>
+                        <div class="div-table__cell">Action</div>
+                     </div>
+                     <div class="div-table__row">
+                        <div class="div-table__cell"><strong>English</strong> &mdash; Default</div>
+                        <div class="div-table__cell position-relative">
+                           <button class="button button--alt button--secondary button--dropdown d-block ml-auto" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i></button>
+                           <div class="dropdown-menu">
+                              <a href="#!" class="dropdown-item"><i data-feather="star" class="icon-feather icon-feather--dark"></i> Set as Default</a>
+                              <a href="#" class="dropdown-item dropdown-item--danger"><i data-feather="x-circle" class="icon-feather icon-feather--dark icon-feather--danger"></i> Delete</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="div-table__row">
+                        <div class="div-table__cell"><strong>Bahasa - ID</strong></div>
+                        <div class="div-table__cell position-relative">
+                           <button class="button button--alt button--secondary button--dropdown d-block ml-auto" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i></button>
+                           <div class="dropdown-menu">
+                              <a href="#!" class="dropdown-item"><i data-feather="star" class="icon-feather icon-feather--dark"></i> Set as Default</a>
+                              <a href="#" class="dropdown-item dropdown-item--danger"><i data-feather="x-circle" class="icon-feather icon-feather--dark icon-feather--danger"></i> Delete</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="div-table__row">
+                        <div class="div-table__cell"><strong>Wakanda</strong></div>
+                        <div class="div-table__cell position-relative">
+                           <button class="button button--alt button--secondary button--dropdown d-block ml-auto" type="button" data-toggle="dropdown"><i data-feather="settings" class="icon-feather"></i></button>
+                           <div class="dropdown-menu">
+                              <a href="#!" class="dropdown-item"><i data-feather="star" class="icon-feather icon-feather--dark"></i> Set as Default</a>
+                              <a href="#" class="dropdown-item dropdown-item--danger"><i data-feather="x-circle" class="icon-feather icon-feather--dark icon-feather--danger"></i> Delete</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div><!-- /.col-->
+   </div><!-- /.row -->
+   <div class="row pt-3">
+      <div class="col-12">
+         <div class="d-flex justify-content-end flex-wrap">
+            <a href="{{BASE_HREF}}dashboard.html" class="button button--alt button--hollow mr-2">Cancel</a>
+            <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+         </div>
+      </div>
+   </div><!-- /.row -->
+</form>

@@ -1,0 +1,21 @@
+.breadcrumb{
+   padding: 10px 0;
+   background: transparent;
+   font-size: rem(14);
+   line-height: 1.45;
+   border-radius: 0;
+
+   &-item > a{
+      color: $green-400;
+   }
+}
+
+.breadcrumb--alt{
+   $breadcrumb-divider: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0yLjUgMEwxIDEuNSAzLjUgNCAxIDYuNSAyLjUgOGw0LTQtNC00eiIgZmlsbD0iY3VycmVudENvbG9yIi8+PC9zdmc+);
+
+   .breadcrumb-item + .breadcrumb-item{
+      &::before{
+         content: '>';
+      }
+   }
+}

@@ -1,0 +1,85 @@
+// ***********************************
+// Content
+// ***********************************
+.main-content {
+	padding: 20px;
+	margin-left: 240px;
+	// height: 2400px;
+	transition: margin 300ms ease-out;
+
+	@include xlarge {
+		padding: 20px 40px;
+	}
+
+	@include max-medium {
+		margin-left: 0;
+	}
+
+	&__title {
+		font-family: $font-family-bold-alt;
+		font-size: 1.25em;
+		color: black;
+		line-height: 1.5;
+		margin-bottom: 16px;
+		margin-right: 12px;
+		width: 100%;
+		@include small {
+			margin-bottom: 16px;
+		}
+
+		@include large {
+			width: auto;
+			margin-bottom: 0;
+		}
+	}
+
+	&__subtitle {
+		font-size: rem(16);
+		font-family: $font-family-base-alt;
+		margin-bottom: 0;
+		line-height: rem(24);
+		margin-bottom: 24px;
+		color: #999;
+	}
+
+	.row--footer {
+		font-size: 0.875rem;
+		margin-top: 2em;
+		color: #999;
+
+		p {
+			margin: 0;
+		}
+
+		a {
+			color: $green-400;
+		}
+	}
+}
+
+.menu-collapsed {
+	background: #f6f6f6;
+	.main-content {
+		margin-left: 0px;
+		flex: 1 0 0;
+	}
+}
+
+.content {
+	&__title-border {
+		font-size: rem(16);
+		line-height: 1.5;
+		font-family: $font-family-bold-alt;
+		margin-bottom: rem(32);
+		padding-bottom: rem(16);
+		border-bottom: 1px solid #e9e9e9;
+	}
+
+	&__title {
+		font-size: rem(16);
+		line-height: 1.5;
+		font-family: $font-family-bold-alt;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}

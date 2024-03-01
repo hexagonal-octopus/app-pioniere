@@ -1,0 +1,71 @@
+/* Do not edit modules/_sprite directly as it is generated automatically by Gulp.
+Instead edit gulp/templates/sprite */
+
+   .icon{
+      background-image: url('../../assets/images/sprites/sprite.svg');
+      display: block;
+   }
+
+   .no-svg .icon{
+      background-image: url('../../assets/images/sprites/sprite.png')
+   }
+   
+   .icon--checked {
+      width: 26px;
+      height: 26px;
+      background-position: 57.5% 67.79661016949153%;
+   }
+   
+   .icon--chevron-down-white-custom {
+      width: 16px;
+      height: 16px;
+      background-position: 17.97752808988764% 93.75%;
+   }
+   
+   .icon--eye {
+      width: 24px;
+      height: 24px;
+      background-position: 72.11764705882354% 66.66666666666667%;
+   }
+   
+   .icon--eye-off {
+      width: 24px;
+      height: 24px;
+      background-position: 86.23529411764706% 66.66666666666667%;
+   }
+   
+   .icon--indonesia {
+      width: 16px;
+      height: 24px;
+      background-position: 95.84269662921348% 66.66666666666667%;
+   }
+   
+   .icon--new-cp-logo-white {
+      width: 96.6px;
+      height: 40px;
+      background-position: 0 76.92307692307692%;
+   }
+   
+   .icon--new-cp-logo-white-big {
+      width: 193.2px;
+      height: 80px;
+      background-position: 0 0;
+   }
+   
+   .icon--republic-of-the-congo {
+      width: 16px;
+      height: 24px;
+      background-position: 0 100%;
+   }
+   
+   .icon--two-line-dark {
+      width: 16px;
+      height: 16px;
+      background-position: 26.96629213483146% 93.75%;
+   }
+   
+   .icon--united-kingdom {
+      width: 16px;
+      height: 24px;
+      background-position: 8.98876404494382% 100%;
+   }

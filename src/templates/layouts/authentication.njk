@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | {{ DOC_TITLE }}</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="{{BASE_HREF}}apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="{{BASE_HREF}}favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="{{BASE_HREF}}favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="{{BASE_HREF}}favicon.ico"/>
+   {# {% include "components/_import-links-header.njk" %} #}
+   <!-- build:css assets/styles/authentication.css -->
+   <link rel="stylesheet" href="{{BASE_HREF}}assets/styles/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{{BASE_HREF}}temp/styles/style.css">
+   <!-- endbuild -->
+</head>
+<body class="{{ BODY_CLASS }}">
+   {# {% include "components/_svg-sprite.njk" %} #}
+   {# <div id="preloader" class="preloader">
+      <div class="preloader_loader"></div>
+   </div> #}
+   <div class="wrapper">
+      {% block main %}{% endblock %}
+   </div>
+   {% include "components/_auth-modal.njk" %}
+   {# <!-- build:js assets/scripts/login.js -->
+   <script src="{{BASE_HREF}}assets/scripts/jquery/jquery.min.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="{{BASE_HREF}}temp/scripts/Login.js"></script>
+   <!-- endbuild --> #}
+   <!-- Global Scripts -->
+   <script src="{{BASE_HREF}}assets/scripts/modernizr/modernizr.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/jquery/jquery.min.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/auth-login.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/auth-validation.js"></script>
+   <!-- // Global Scripts -->
+</body>
+</html>

@@ -1,0 +1,106 @@
+.text-grey,
+.text-light,
+.text-grey p {
+	color: #999 !important;
+}
+
+.p-20px {
+	padding: 20px !important;
+}
+
+.pxb-20px {
+	padding: 0px 20px 20px !important;
+}
+
+.d-stripe {
+	padding: 1rem;
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 0 !important;
+
+	&:last-child {
+		border-bottom: 1px solid transparent;
+	}
+}
+
+.highlight {
+	padding: 2rem;
+	background: #f6f6f6;
+	margin-bottom: 1rem;
+
+	// button{
+	//    margin: 3px;
+	// }
+}
+
+.hide-default {
+	display: none !important;
+}
+
+.w-50 {
+	width: 50% !important;
+}
+
+.separator {
+	width: 100%;
+	padding: 0;
+	margin: 24px 0;
+	background: #c1c1c1;
+	height: 1px;
+}
+
+.more-space {
+	padding: 24px;
+	@include max-small {
+		padding: 15px;
+	}
+}
+
+.more-space-left {
+	padding-left: 24px;
+
+	@include max-xlarge {
+		padding-left: 0px;
+	}
+}
+
+.position-relative {
+	position: relative;
+}
+
+.time-seconds {
+	animation: blink 1s step-end infinite;
+	position: relative;
+	top: -6px;
+	font-size: rem(24) !important;
+	display: inline-block;
+}
+
+.w50 {
+	width: 49% !important;
+}
+
+.w100p {
+	width: 100% !important;
+}
+
+.d-flex,
+.display-flex {
+	display: block !important;
+	@include small {
+		display: flex !important;
+		flex-flow: row wrap;
+	}
+}
+
+.display-inline-flex {
+	display: inline-flex !important;
+	flex-flow: row wrap;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+.border-green {
+	border: 1px solid $green-400;
+}

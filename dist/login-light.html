@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | Login Page</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="./favicon.ico" />
+
+   <link rel="stylesheet" href="assets/styles/authentication.css" />
+</head>
+
+<body class="page-auth">
+
+
+   <div class="wrapper">
+
+      <div class="auth-dialog auth-dialog--light">
+         <div class="auth-dialog__box">
+            <div class="auth-dialog__box-header">
+               <div class="auth-dialog__logo">
+                  <img src="./assets/images/default/logo-cp-blue.svg" alt="" height="80">
+               </div>
+            </div>
+            <div class="auth-dialog__box-body">
+               <div class="feedback feedback--alt"></div>
+               <form action="#" class="form-login form-auth form-login--light">
+                  <div class="form-login__field">
+                     <div class="form-login__input-group">
+                        <input type="text" id="inputUsername" name="username" class="form-login__input" spellcheck="false" required autocomplete="off">
+                        <label for="inputUsername">Username</label>
+                        <span class="bar"></span>
+                     </div>
+
+                  </div>
+                  <div class="form-login__field">
+                     <div class="form-login__input-group">
+                        <input type="password" id="inputPassword" name="password" class="form-login__input" required autocomplete="off">
+                        <label for="inputPassword">Password</label>
+                        <span class="bar"></span>
+                     </div>
+
+                  </div>
+                  <div class="form-login__remember">
+                     <label>
+                        <input type="checkbox" name="remember-check" id="rememberPass" class="form-login__input-checkbox">
+                        <span class="form-login__check">
+                           <i class="icon-feather" data-feather="check"></i>
+                        </span>
+                        <span class="form-login__text-label">Remember Me</span>
+                     </label>
+                  </div>
+                  <div class="form-login__button">
+                     <button type="submit" class="button button--block button--primary" id="buttonLogin" disabled>Submit</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div class="auth-dialog__footer">
+            <ul class="auth-dialog__links">
+               <li><a href="./forgot-password.html" title="Lost Password">Lost My Password</a></li>
+               <li><a href="#" data-toggle="modal" data-target="#privacyModal" title="Privacy Policy">Privacy Policy</a></li>
+               <li><a href="#" data-toggle="modal" data-target="#legalModal" title="Terms of Use">Terms of Use</a></li>
+            </ul>
+            <p class="auth-dialog__copy">&copy; Copyright 2019. <a href="http://cyberprimatama.id" target="_blank" title="Cyberindo Primatama">Cyberindo Primatama</a>. All Right Reserved.</p>
+         </div>
+      </div>
+
+   </div>
+   <div class="modal fade" id="legalModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h2 class="modal__title">Terms of Use</h2>
+               <button class="button button--link modal__button-close" id="closeModal" data-dismiss="modal">
+                  <i data-feather="x" class="icon-feather--black"></i>
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="modal__content">
+                  <p>This Terms of Use Agreement (“Agreement”) constitutes a legally binding agreement made between you, whether personally or on behalf of an entity (“user” or “you”) and ABC, Inc. and its affiliated companies (collectively, “Company” or “we” or “us” or “our”), concerning your access to and use of the abc.com website as well as any other media form, media channel, mobile website or mobile application related or connected thereto (collectively, the “Website”). The Website provides the following service: a social network experience (“Company Services”). Supplemental terms and conditions or documents that may be posted on the Website from time to time, are hereby expressly incorporated into this Agreement by reference.</p>
+
+                  <p>Company makes no representation that the Website is appropriate or available in other locations other than where it is operated by Company. The information provided on the Website is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject Company to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Website from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.</p>
+
+                  <p>All users who are minors in the jurisdiction in which they reside (generally under the age of 18) are not permitted to register for the Website or use the Company Services.</p>
+                  <p>
+                     YOU ACCEPT AND AGREE TO BE BOUND BY THIS AGREEMENT BY ACKNOWLEDGING SUCH ACCEPTANCE DURING THE REGISTRATION PROCESS (IF APPLICABLE) AND ALSO BY CONTINUING TO USE THE WEBSITE. IF YOU DO NOT AGREE TO ABIDE BY THIS AGREEMENT, OR TO MODIFICATIONS THAT COMPANY MAY MAKE TO THIS AGREEMENT IN THE FUTURE, DO NOT USE OR ACCESS OR CONTINUE TO USE OR ACCESS THE COMPANY SERVICES OR THE WEBSITE.
+                     USER REPRESENTATIONS
+                  </p>
+                  <p>
+                     Regarding Your Registration
+                     By using the Company Services, you represent and warrant that:
+                  </p>
+               </div>
+            </div>
+            <div class="modal-footer text-center">
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="modal fade" id="privacyModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h2 class="modal__title">Privacy Policy</h2>
+               <button class="button button--link modal__button-close" id="closeModal" data-dismiss="modal">
+                  <i data-feather="x" class="icon-feather--black"></i>
+
+               </button>
+            </div>
+            <div class="modal-body">
+               <div class="modal__content">
+                  <p>This Terms of Use Agreement (“Agreement”) constitutes a legally binding agreement made between you, whether personally or on behalf of an entity (“user” or “you”) and ABC, Inc. and its affiliated companies (collectively, “Company” or “we” or “us” or “our”), concerning your access to and use of the abc.com website as well as any other media form, media channel, mobile website or mobile application related or connected thereto (collectively, the “Website”). The Website provides the following service: a social network experience (“Company Services”). Supplemental terms and conditions or documents that may be posted on the Website from time to time, are hereby expressly incorporated into this Agreement by reference.</p>
+
+                  <p>Company makes no representation that the Website is appropriate or available in other locations other than where it is operated by Company. The information provided on the Website is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject Company to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Website from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.</p>
+
+                  <p>All users who are minors in the jurisdiction in which they reside (generally under the age of 18) are not permitted to register for the Website or use the Company Services.</p>
+                  <p>
+                     YOU ACCEPT AND AGREE TO BE BOUND BY THIS AGREEMENT BY ACKNOWLEDGING SUCH ACCEPTANCE DURING THE REGISTRATION PROCESS (IF APPLICABLE) AND ALSO BY CONTINUING TO USE THE WEBSITE. IF YOU DO NOT AGREE TO ABIDE BY THIS AGREEMENT, OR TO MODIFICATIONS THAT COMPANY MAY MAKE TO THIS AGREEMENT IN THE FUTURE, DO NOT USE OR ACCESS OR CONTINUE TO USE OR ACCESS THE COMPANY SERVICES OR THE WEBSITE.
+                     USER REPRESENTATIONS
+                  </p>
+                  <p>
+                     Regarding Your Registration
+                     By using the Company Services, you represent and warrant that:
+                  </p>
+               </div>
+            </div>
+            <div class="modal-footer text-center"></div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Global Scripts -->
+   <script src="./assets/scripts/modernizr/modernizr.js"></script>
+   <script src="./assets/scripts/jquery/jquery.min.js"></script>
+   <script src="./assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="./assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="./assets/scripts/components/auth-login.js"></script>
+   <script src="./assets/scripts/components/auth-validation.js"></script>
+   <!-- // Global Scripts -->
+</body>
+
+</html>

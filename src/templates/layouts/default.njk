@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | {{DOC_TITLE}}</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="{{BASE_HREF}}apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="{{BASE_HREF}}favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="{{BASE_HREF}}favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="{{BASE_HREF}}favicon.ico"/>
+   {% include "components/_import-links-header.njk" %}
+</head>
+<body class="{{BODY_CLASS}}">
+   {# {% include "components/_svg-sprite.njk" %} #}
+   {# <div id="preloader" class="preloader">
+      <div class="preloader_loader"></div>
+   </div> #}
+   <div class="wrapper">
+      {% include "components/_navbar.njk" %}
+      {% include "components/_menus.njk" %}  
+      {% block main %}{% endblock %}
+   </div>
+   <!-- Global Scripts -->
+   <script src="{{BASE_HREF}}assets/scripts/modernizr/modernizr.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/jquery/jquery.min.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/jquery.nicescroll/jquery.nicescroll.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/prismjs/prism.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/global.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-button.js"></script>
+   <!-- // Global Scripts -->
+
+   <!-- Additional Vendor Scripts -->
+   {% block additional_vendor_scripts %}{% endblock %}
+   <!-- // Additional Vendor Scripts -->
+
+   <!-- Additional Custom Scripts -->
+   {% block additional_custom_scripts %}{% endblock %}
+   <!-- // Additional Custom Scripts -->
+</body>
+</html>

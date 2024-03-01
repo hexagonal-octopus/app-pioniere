@@ -1,0 +1,457 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Library" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-collapse.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-modal.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">{{DOC_TITLE}}</h2>
+            <a class="button button--secondary button--small-icon" href="./media-create.html"><i class="icon-feather" data-feather="plus"></i>insert New Asset</a>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-12 col-lg-12 order-xl-2">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__body">
+                  <h4 class="form__title mb-0 p-3">Years Archives</h4>
+                  <div class="accordion" id="accordionYear">
+                     <div class="accordion__wrapper">
+                        <div class="accordion__header">
+                           <button class="button button--alt button--link-icon-left js-accordion-btn" data-target="#2018" data-toggle="collapse"><i class="icon-feather icon-feather--black" data-feather="minus"></i>2018</button>
+                        </div>
+                        <div class="accordion__body collapse show" id="2018" data-parent="#accordionYear">
+                           <nav>
+                              <div class="nav nav-tabs nav-tabs--vertical" id="navTab" role="tablist">
+                                 <a href="#tabAug2018" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                                    <span>August</span>
+                                 </a>
+                                 <a href="#tabJul2018" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>July</span>
+                                 </a>
+                                 <a href="#tabJun2018" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>June</span>
+                                 </a>
+                                 <a href="#tabMay2018" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>May</span>
+                                 </a>
+                                 <a href="#tabApr2018" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>April</span>
+                                 </a>
+                                 <a href="#tabMar2018" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>March</span>
+                                 </a>
+                                 <a href="#tabFeb2018" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>February</span>
+                                 </a>
+                                 <a href="#tabJan2018" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>January</span>
+                                 </a>
+                              </div>
+                           </nav>
+                        </div>
+                     </div><!-- /.accordion-wrapper -->
+                     <div class="accordion__wrapper">
+                        <div class="accordion__header">
+                           <button class="button button--alt button--link-icon-left js-accordion-btn" data-target="#2017" data-toggle="collapse"><i class="icon-feather icon-feather--black" data-feather="plus"></i>2017</button>
+                        </div>
+                        <div class="accordion__body collapse" id="2017" data-parent="#accordionYear">
+                           <nav>
+                              <div class="nav nav-tabs nav-tabs--vertical" id="navTab" role="tablist">
+                                 <a href="#tab10" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>December</span>
+                                 </a>
+                                 <a href="#tab11" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>November</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>October</span>
+                                 </a>
+                                 <a href="#tab11" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>September</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>August</span>
+                                 </a>
+                                 <a href="#tab11" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>July</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>June</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>May</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>April</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>March</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>February</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>January</span>
+                                 </a>
+                              </div>
+                           </nav>
+                        </div>
+                     </div><!-- /.accordion-wrapper -->
+                     <div class="accordion__wrapper">
+                        <div class="accordion__header">
+                           <button class="button button--alt button--link-icon-left js-accordion-btn" data-target="#2016" data-toggle="collapse"><i class="icon-feather icon-feather--black" data-feather="plus"></i>2016</button>
+                        </div>
+                        <div class="accordion__body collapse" id="2016" data-parent="#accordionYear">
+                           <nav>
+                              <div class="nav nav-tabs nav-tabs--vertical" id="navTab" role="tablist">
+                                 <a href="#tab10" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>December</span>
+                                 </a>
+                                 <a href="#tab11" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>November</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>October</span>
+                                 </a>
+                                 <a href="#tab11" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>September</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>August</span>
+                                 </a>
+                                 <a href="#tab11" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center">
+                                    <span>July</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>June</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>May</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>April</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>March</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>February</span>
+                                 </a>
+                                 <a href="#tab12" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                                    <span>January</span>
+                                 </a>
+                              </div>
+                           </nav>
+                        </div>
+                     </div><!-- /.accordion-wrapper -->
+                  </div><!-- /.accordion -->
+               </div><!-- /.box__body -->
+            </div><!-- /.box__wrapper -->
+         </div><!-- /.box -->
+      </div><!-- /.col -->
+      <div class="col-12 col-lg-12 order-xl-1">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__body">
+                  <div class="tab-content tab-content--small-space" id="navTabContent">
+                     <div class="tab-pane fade show active" id="tabAug2018" role="tabpanel">
+                        <h3 class="content__title-border">August 2018</h3>
+                        <div class="library">
+                           <ul class="library__lists">
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-1.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-2.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-3.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-4.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-5.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-6.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-7.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-8.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-9.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-10.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-11.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="tab-pane fade" id="tabJul2018" role="tabpanel">
+                        <h3 class="content__title-border">July 2018</h3>
+                        <div class="library">
+                           <ul class="library__lists">
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-4.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-5.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                           </ul>
+                        </div>      
+                     </div>
+                     <div class="tab-pane fade" id="tabJun2018" role="tabpanel">
+                        <h4 class="content__title-border">June 2018</h4>
+                        <div class="library">
+                           <ul class="library__lists">
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-5.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-6.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                           </ul>
+                        </div>  
+                     </div>
+                     <div class="tab-pane fade" id="tabMay2018" role="tabpanel">
+                        <h4 class="content__title-border">May 2018</h4>
+                        <div class="library">
+                           <ul class="library__lists">
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-6.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-7.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                           </ul>
+                        </div> 
+                     </div>
+                     <div class="tab-pane fade" id="tabApr2018" role="tabpanel">
+                        <h4 class="content__title-border">April 2018</h4>
+                        <div class="library">
+                           <ul class="library__lists">
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-7.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-8.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                           </ul>
+                        </div>    
+                     </div>
+                     <div class="tab-pane fade" id="tabMar2018" role="tabpanel">
+                        <h4 class="content__title-border">March 2018</h4>
+                        <div class="library">
+                           <ul class="library__lists">
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-8.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-9.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                           </ul>
+                        </div>  
+                     </div>
+                     <div class="tab-pane fade" id="tabFeb2018" role="tabpanel">
+                        <h4 class="content__title-border">February 2018</h4>
+                        <div class="library">
+                           <ul class="library__lists">
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-9.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-10.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                           </ul>
+                        </div> 
+                     </div>
+                     <div class="tab-pane fade" id="tabJan2018" role="tabpanel">
+                        <h4 class="content__title-border">January 2018</h4>
+                        <div class="library">
+                           <ul class="library__lists">
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-10.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                              <li class="library__list">
+                                 <div class="thumbnail js-modal-action" data-target="#exampleModalImage" data-toggle="modal">
+                                    <div class="thumbnail__wrapper">
+                                       <div class="thumbnail__centered">
+                                          <img src="{{BASE_HREF}}assets/images/default/img-sample-11.jpg" alt="" class="thumbnail__image">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li><!-- /.library__list -->
+                           </ul>
+                        </div> 
+                     </div>
+                  </div><!-- /.tab-content -->
+               </div><!-- /.box__body -->
+            </div><!-- /.box__wrapper -->
+         </div><!-- /.box -->
+      </div><!-- /.col  -->
+   </div>
+   {% include "components/_footer.njk" %}
+   {% include "components/_components-modal-image.njk" %}
+</div>
+{% endblock %}

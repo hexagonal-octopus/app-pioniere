@@ -1,0 +1,125 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Edit Profile" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-form.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">Edit Profile</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">General</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand js-jamil">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div><!-- /.box__header -->
+               <form class="form" novalidat>
+               <div class="box__body box__body--more-space">
+                  <div class="row">
+                     <div class="col-12 col-xl-3">
+                        <div class="profile__img">
+                           <div class="image-wrapper">
+                              <!-- Image Default -->
+                              <!--<img src="{{BASE_HREF}}assets/images/default/img-profile-big-default.jpg" alt="Image profile default"> -->
+                              <img src="{{BASE_HREF}}assets/images/default/img-natalie-dormer-300x300.jpg" alt="Img profile default">
+                           </div>
+                        </div>
+                        <div class="button-upload">
+                           <button type="button" class="button button--primary button--alt button--outline button--block mb-2 js-upload-button">Update Photo</button>
+                           <input type="file" accept="image/*" class="file-upload hide-default">
+                        </div>
+                        <button type="button" class="button button--alt button--danger button--hollow button--block js-remove-button">Remove Photo</button>
+                     </div>
+                     <div class="col-12 col-xl-8 offset-xl-1">
+                        <div class="row">
+                           <div class="col-12 col-xl-6">
+                              <h4 class="profile__title">Basic Information</h4>
+                              <div class="form-group">
+                                 <label for="fname">Fullname</label>
+                                 <input id="fname" name="fname" value="Natalie Dormer" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                 <label for="position">Position</label>
+                                 <select class="form-control" id="position">
+                                    <option>Select your Role</option>
+                                    <option selected>Administrator</option>
+                                    <option>Editor</option>
+                                    <option>Moderator</option>
+                                 </select>
+                              </div>
+                              <div class="form-group">
+                                 <label for="idnum">ID Number</label>
+                                 <input id="idnum" name="idnum" value="CP_ADM-0912" class="form-control" readonly>
+                              </div>
+                              <div class="form-group">
+                                 <label for="gender">Gender</label>
+                                 <select class="form-control" id="gender">
+                                    <option>Male</option>
+                                    <option selected>Female</option>
+                                    <option>Undefined</option>
+                                 </select>
+                              </div>
+                              <div class="form-group">
+                                 <label for="bio">Description about Me</label>
+                                 <textarea id="bio" name="bio" class="form-control" rows="5">I don't know if I'm a daredevil, exactly, but I do enjoy a good challenge. It's the only way you grow.</textarea>
+                              </div>
+                           </div>
+                           <div class="col-12 col-xl-6">
+                              <h4 class="profile__title">Contact Information</h4>
+                              <div class="form-group">
+                                    <label for="phone">Emergency Phone</label>
+                                    <input id="phone" name="phone" value="+62-8123-123123" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                    <label for="addr">Address</label>
+                                    <input id="addr" name="addr" value="Twickenham, London, England" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input id="email" name="email" type="email" value="natalie.dormer@gmail.com" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                    <label for="site-url">Site</label>
+                                    <input id="site-url" name="site-url" value="https://www.imdb.com/name/nm1754059/" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                    <label for="ext">Extension</label>
+                                    <input id="ext" name="ext" value="5331" class="form-control" readonly>
+                              </div>
+                           </div>
+                        </div><!-- /.row -->
+                     </div><!-- /.col -->
+                  </div>
+               </div><!-- /.box__body -->
+               <div class="box__footer box__footer--with-space box__footer--border-top justify-content-end">
+                  <div class="box__footer-actions">
+                     <a href="{{BASE_HREF}}user-detail.html" class="button button--alt button--hollow mr-2">Cancel</a>
+                     <button type="submit" class="button button--alt button--primary">Save Profile</button>
+                  </div>
+               </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

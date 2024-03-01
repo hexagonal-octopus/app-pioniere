@@ -1,0 +1,131 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Add Profile" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-form.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">Add New User</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">General</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand js-jamil">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div><!-- /.box__header -->
+               <form class="form" novalidate>
+                  <div class="box__body box__body--more-space">
+                     <div class="row">
+                        <div class="col col-xl-3">
+                           <div class="profile__img">
+                              <div class="image-wrapper">
+                                 <!-- Image Default -->
+                                 <img src="{{BASE_HREF}}assets/images/default/img-profile-big-default.jpg" alt="Image profile default">
+                              </div>
+                           </div>
+                           <div class="button-upload mb-3">
+                              <button type="button" class="button button--primary button--alt button--outline button--block mb-2 js-upload-button">Upload Photo</button>
+                              <input type="file" accept="image/*" class="file-upload hide-default">
+                           </div>
+                           <p class="small"><strong>Take note:</strong><br/>Maximum File image dimension: 300x300 px</p>
+                        </div>
+                        <div class="col col-xl-8 offset-xl-1">
+                           <div class="row">
+                              <div class="col col-xl-6">
+                                 <h4 class="profile__title">Basic Information</h4>
+                                 <div class="form-group">
+                                    <label for="fname">Fullname</label>
+                                    <input id="fname" name="fname" class="form-control" placeholder="ex. Brian Basreng" required>
+                                    <div class="invalid-feedback">Please edit your name</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="position">Position *</label>
+                                    <select class="form-control" id="position" required>
+                                       <option value="">Select your Role</option>
+                                       <option value="1">Administrator</option>
+                                       <option value="2">Editor</option>
+                                       <option value="3">Moderator</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please Select your Role</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="idnum">ID Number</label>
+                                    <input id="idnum" name="idnum" class="form-control" placeholder="Create New ID Number">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="gender">Gender *</label>
+                                    <select class="form-control" id="gender" required>
+                                       <option value="" default>Select Gender</option>
+                                       <option value="m">Male</option>
+                                       <option value="f">Female</option>
+                                       <option value="x">Undefined</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please Select your Gender, if not choosen You're Homo</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="bio">Description about Me</label>
+                                    <textarea id="bio" name="bio" class="form-control" rows="5" placeholder="Create short description about you"></textarea>
+                                 </div>
+                              </div>
+                              <div class="col col-xl-6">
+                                 <h4 class="profile__title">Contact Information</h4>
+                                 <div class="form-group">
+                                    <label for="phone">Emergency Phone *</label>
+                                    <input id="phone" name="phone" placeholder="Start with +62-" class="form-control" required>
+                                    <div class="invalid-feedback">Input your correct phone number, start with +62-</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="addr">Address *</label>
+                                    <input id="addr" name="addr" type="text" class="form-control" required>
+                                    <div class="invalid-feedback">Chooses your address Cabron!</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input id="email" name="email" type="email" class="form-control" placeholder="Your valid E-mail address" required>
+                                    <div class="invalid-feedback">Invalid Email Address, you Dipshit</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="site-url">Site</label>
+                                    <input id="site-url" name="site-url" type="text" class="form-control" placeholder="start with http://">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="ext">Extension</label>
+                                    <input id="ext" name="ext" type="number" class="form-control" placeholder="Extension Phone Registry">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div><!-- /.box__body -->
+                  <div class="box__footer box__footer--with-space box__footer--border-top justify-content-end">
+                     <div class="box__footer-actions">
+                        <a href="{{BASE_HREF}}user-lists.html" class="button button--alt button--hollow mr-2">Cancel</a>
+                        <button type="submit" class="button button--alt button--primary js-button-submit">Create User</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

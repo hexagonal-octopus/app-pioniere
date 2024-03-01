@@ -1,0 +1,252 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Sidemenu" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_vendor_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/jquery-ui-dist/jquery-ui.js"></script>
+   <script src="{{base_href}}assets/scripts/nestedsortable/jquery.mjs.nestedsortable.js"></script>
+{% endblock %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-group-menu.js"></script>
+{% endblock %}
+
+{% block main %}
+   <div class="main-content">
+      <div class="row">
+         <div class="col mb-3">
+            <div class="page-heading">
+               <h2 class="page-heading__title">{{DOC_TITLE}}</h2>
+               <p class="page-heading__text">To activate Menu Group, please add menu items into desired gorup menu on the right side.</p>
+            </div>
+         </div>
+      </div>
+      <div class="row align-items-start">
+         <div class="col-12">
+            <div class="box">
+               <div class="box__wrapper">
+                  <div class="box__header">
+                     <h3 class="box__title">
+                        <i data-feather="file-plus"></i> Add New Group</h3>
+                  </div>
+                  <div class="box__body box__body--spacy">
+                     <form class="form-row" id="formaddnewgroup" novalidate>
+                        <div class="col-12 col-md-9">
+                           <label for="inputnewgroup" class="sr-only">Enter New Group</label>
+                           <input type="text" id="inputnewgroup" class="form-control form-control--big" placeholder="type new group" required/>
+                        </div>
+                        <div class="col-12 col-md-3">
+                           <button class="button button--alt button--secondary button--icon-left button--block js-add-group-button mb-3 js-add-new-group-btn" type="submit">
+                              <i class="icon-feather icon-feather--black mr-1" data-feather="plus"></i>Add New Group</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-12">
+            <div class="row">
+               <div class="col-12 col-xl-6">
+                  <div class="box">
+                     <div class="box__wrapper">
+                        <div class="box__header">
+                           <h3 class="box__title">
+                              <i data-feather="grid"></i> Group Menu</h3>
+                           <div class="box__action">
+                              <button class="button button--link js-button-reload">
+                                 <i data-feather="rotate-cw"></i>
+                              </button>
+                              <button class="button button--link js-button-minimize">
+                                 <i data-feather="minus"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__body box__body--spacy">
+                           <p class="box__text">Lists of available Menu Group</p>
+                           <div class="lists">
+                              <ul class="lists__group sortable">
+                                 <li class="lists__group-item" id="group-main">
+                                    <a href="#" class="d-flex align-items-center">Main<i class="icon-feather icon-feather--dark ml-auto lists__icon-toggle" data-feather="chevron-up"></i>
+                                    </a>
+                                    <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                       <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                    </button>
+                                    <ul class="sublists">
+                                       <li>
+                                          <a href="#">Dashboard</a>
+                                          <div class="button-actions">
+                                             <button type="button" class="button button--ghost-secondary">
+                                                <i class="icon" data-feather="edit"></i>
+                                             </button>
+                                             <button type="button" class="button button--ghost-danger">
+                                                <i class="icon" data-feather="trash"></i>
+                                             </button>
+                                          </div>
+                                       </li>
+                                       <li>
+                                          <a href="#">Pages</a>
+                                          <div class="button-actions">
+                                             <button type="button" class="button button--ghost-secondary">
+                                                <i class="icon" data-feather="edit"></i>
+                                             </button>
+                                             <button type="button" class="button button--ghost-danger">
+                                                <i class="icon" data-feather="trash"></i>
+                                             </button>
+                                          </div>
+                                          <ul>
+                                             <li>
+                                                <a href="#">All Pages</a>
+                                                <div class="button-actions">
+                                                   <button type="button" class="button button--ghost-secondary">
+                                                      <i class="icon" data-feather="edit"></i>
+                                                   </button>
+                                                   <button type="button" class="button button--ghost-danger">
+                                                      <i class="icon" data-feather="trash"></i>
+                                                   </button>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <a href="#">Add new Pages</a>
+                                                <div class="button-actions">
+                                                   <button type="button" class="button button--ghost-secondary">
+                                                      <i class="icon" data-feather="edit"></i>
+                                                   </button>
+                                                   <button type="button" class="button button--ghost-danger">
+                                                      <i class="icon" data-feather="trash"></i>
+                                                   </button>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#">Post</a>
+                                          <div class="button-actions">
+                                             <button type="button" class="button button--ghost-secondary">
+                                                <i class="icon" data-feather="edit"></i>
+                                             </button>
+                                             <button type="button" class="button button--ghost-danger">
+                                                <i class="icon" data-feather="trash"></i>
+                                             </button>
+                                          </div>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="lists__group-item" id="group-documentation">
+                                    <a href="#" class="d-flex align-items-center">
+                                       Documentation
+                                       <i class="icon-feather icon-feather--dark ml-auto lists__icon-toggle" data-feather="chevron-up"></i>
+                                    </a>
+                                    <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                       <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                    </button>
+                                    <ul class="sublists">
+                                       <li>
+                                          <a href="#">Components</a>
+                                          <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                             <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                          </button>
+                                          <ul>
+                                             <li>
+                                                <a href="#">Alert &amp; Toast</a>
+                                                <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                                   <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                                </button>
+                                             </li>
+                                             <li>
+                                                <a href="#">Button</a>
+                                                <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                                   <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                                </button>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#">Layout</a>
+                                          <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                             <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                          </button>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="lists__group-item" id="group-log">
+                                    <a href="#" class="d-flex align-items-center">
+                                       Log
+                                       <i class="icon-feather icon-feather--dark ml-auto lists__icon-toggle" data-feather="chevron-up"></i>
+                                    </a>
+                                    <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                       <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                    </button>
+                                    <ul class="sublists">
+                                       <li>
+                                          <a href="#">Components</a>
+                                          <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                             <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                          </button>
+                                          <ul>
+                                             <li>
+                                                <a href="#">Alert &amp; Toast</a>
+                                                <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                                   <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                                </button>
+                                             </li>
+                                             <li>
+                                                <a href="#">Button</a>
+                                                <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                                   <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                                </button>
+                                             </li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a href="#">Layout</a>
+                                          <button type="button" class="button button--link button--alt lists__btn-remove js-remove-list-button">
+                                             <i class="icon-feather icon-feather--dark" data-feather="x"></i>
+                                          </button>
+                                       </li>
+                                    </ul>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="box__footer box__footer--with-space box__footer--border-top justify-content-end">
+                           <div class="box__footer-actions">
+                              <a href="{{base_href}}dashboard.html" class="button button--alt button--hollow mr-2">Cancel</a>
+                              <button type="submit" class="button button--alt button--primary js-button-submit">Save Settings</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /.box -->
+               </div>
+               <!-- /.col-inner -->
+               <div class="col-12 col-xl-6">
+                  <div class="box">
+                     <div class="box__wrapper">
+                        <div class="box__header">
+                           <h3 class="box__title">
+                              <i data-feather="list"></i> Available Menu Items</h3>
+                           <div class="box__action">
+                              <button class="button button--link js-button-reload">
+                                 <i data-feather="rotate-cw"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <div class="box__body box__body--space-bottom">
+                           <div class="lists lists--more-space lists--scroll">
+                              {% include "components/_components-menu-lists.njk" %}
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.col-inner -->
+            </div>
+            <!-- /.row -inner -->
+         </div>
+         <!-- /.col -->
+      </div>
+
+      {% include "components/_footer.njk" %}
+   </div>
+{% endblock %}

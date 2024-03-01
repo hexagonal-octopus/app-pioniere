@@ -1,0 +1,66 @@
+.label {
+   &--light {
+      font-family: $font-family-light;
+      padding: 15px;
+   }
+
+   &--green {
+      color: $green-400;
+   }
+
+   &--yellow {
+      color: $orange-500;
+   }
+
+   &--blue {
+      color: $blue-500;
+   }
+
+   &__text {
+      font-size: rem(12);
+      margin-bottom: 0;
+      line-height: 1.2;
+   }
+
+   &__text-medium {
+      font-size: rem(16);
+      margin-bottom: 0;
+      margin-top: 10px;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+         width: 24px;
+         height: 24px;
+         display: inline-block;
+         margin-right: 8px;
+         background-color: transparent;
+         background-image: none;
+         background-position: center top;
+         background-repeat: no-repeat;
+
+         &.icon--total-talent {
+            background-image: url('../../assets/images/default/icon-total-talent.png');
+         }
+
+         &.icon--open-job {
+            background-image: url('../../assets/images/default/icon-open-jobs.png');
+         }
+
+         &.icon--total-applicant {
+            background-image: url('../../assets/images/default/icon-total-applicant.png');
+         }
+      }
+   }
+
+   &__icon {
+      height: 50px;
+      width: 50px;
+   }
+
+   &__big {
+      font-size: rem(48);
+   }
+}

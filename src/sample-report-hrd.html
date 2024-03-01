@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Cyberindo Primatama | Sample Report HRD</title>
+   <!-- Favicons -->
+   <link rel="apple-touch-icon" href="./apple-touch-icon.png" sizes="180x180" />
+   <link rel="icon" href="./favicon-32x32.png" sizes="32x32" type="image/png" />
+   <link rel="icon" href="./favicon-16x16.png" sizes="16x16" type="image/png" />
+   <link rel="icon" href="./favicon.ico"/>
+   <!-- build:css assets/styles/styles.css -->
+<link rel="stylesheet" href="./assets/styles/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/styles/animate.css/animate.css" />
+<link rel="stylesheet" href="./assets/styles/summernote/summernote-lite.css">
+<link rel="stylesheet" href="./assets/styles/air-datepicker/css/datepicker.css">
+<link rel="stylesheet" href="./assets/styles/datatables.net-dt/css/jquery.dataTables.css" />
+<link rel="stylesheet" href="./assets/styles/prismjs/themes/prism.css">
+<link rel="stylesheet" href="./assets/styles/select2/css/select2.min.css">
+<link rel="stylesheet" href="./assets/styles/flatpickr/flatpickr.min.css">
+<link rel="stylesheet" href="./temp/styles/style.css">
+<!-- endbuild -->
+</head>
+<body class="fixed-navbar">
+   
+   
+   <div class="wrapper">
+      <nav class="navbar navbar-expand-md navbar--image">
+   <div class="navbar__wrapper">
+      <div class="navbar__header">
+         <button class="button button--link d-block d-md-none js-button-nav-toggler" id="menuToggler">
+            <i data-feather="list" class="icon-feather"></i>
+         </button>
+         <a class="navbar__brand" href="./dashboard.html" title="Dashboard">
+            
+            
+            <img class="navbar__logo" src="./assets/images/default/img-logo-cp.png"/>
+            <img class="navbar__logo-simplified" src="./assets/images/default/logo-cp-white-simplified.png" alt="">
+         </a>
+         <button class="button button--link d-block d-md-none" data-toggle="collapse" data-target="#navbarForMobile">
+            <i data-feather="more-vertical" class="icon-feather"></i>
+         </button>
+      </div>
+      <div class="navbar__body">
+         <div class="collapse navbar-collapse" id="navbarForMobile">
+            <ul class="navbar__nav">
+               <li class="d-none d-md-block">
+                  <button id="zenToggleButton" class="button button--link navbar__link js-button-zenmode" href="#">
+                     <i data-feather="list" class="navbar__icon"></i>
+                     <span>Zen Mode</span>
+                  </button>
+               </li>
+               <li>
+                  <a class="navbar__link" href="http://webdev.cyberprimatama.co.id/" target="_blank">
+                     <i data-feather="home" class="navbar__icon"></i>
+                     <span>Visit Site</span>
+                  </a>
+               </li>
+            </ul>
+            <ul class="navbar__nav ml-auto">
+               <li class="dropdown navbar__dropdown">
+                  <span class="navbar__dropdown-text">Howdy</span>
+                  <button class="button button--link navbar__dropdown-toggle is-online" data-toggle="dropdown">
+                     <span class="avatar-name">Natalie Dormer</span>
+                     <span class="avatar-photo ">
+                        <img src="./assets/images/default/img-profile-md.jpg"/>
+                        <!--
+                        Default image
+                        =============
+                        <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+                        =============
+                        -->
+                     </span>
+                     <i></i>
+                  </button>
+                  <div class="dropdown-menu navbar__dropdown-menu">
+                     <a href="./user-edit.html" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="user-check"></i>
+                        <span>Edit Profile</span>
+                     </a>
+                     <a href="#" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="help-circle"></i>
+                        <span>Help</span>
+                     </a>
+                     <a href="./index.html" class="dropdown-item">
+                        <i class="navbar__icon" data-feather="log-out"></i>
+                        <span>Logout</span>
+                     </a>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</nav>
+      <div class="main-menu main-menu--fixed">
+   <div class="main-menu__profile">
+      <div class="main-menu__profile-picture">
+         <img src="./assets/images/default/img-profile-md.jpg"/>
+         <!--
+         Default image
+         =============
+         <img src="[BASE_HREF]assets/images/default/img-profile-sm-default.jpg" />
+         =============
+         -->
+      </div>
+      <div class="main-menu__content">
+         <span class="main-menu__profile-name">Natalie Dormer</span>
+         <span class="main-menu__profile-role">Administrator</span>
+      </div>
+   </div>
+   <div class="main-menu__container">
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Main</span>
+         </li>
+         <li class="main-menu__list">
+            <a href="./dashboard.html" title="">
+               <i data-feather="anchor"></i>
+               <span>Dashboard</span>
+            </a>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="https://instagram.com" title="">
+               <i data-feather="file-text"></i>
+               <span>Pages</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list ">
+                  <a href="./page-lists.html">View All Pages</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./page-create.html">Create New Page</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="message-circle"></i>
+               <span>Post</span>
+               <span class="badge badge-pill badge-danger">20</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./news-lists.html">All Posts</a>
+               </li>
+               <li>
+                  <a href="./news-create.html">Add New Post</a>
+               </li>
+               <li>
+                  <a href="./news-category.html">Categories</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="./settings.html" title="">
+               <i data-feather="camera"></i>
+               <span>Media</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list ">
+                  <a href="./media-lists.html">Library</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./media-create.html">Insert New Asset</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="settings"></i>
+               <span>Settings</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./settings.html">One Page Settings</a>
+               </li>
+               <li>
+                  <a href="./settings-with-tabs.html">Settings with Tabs</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="user"></i>
+               <span>Users</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li>
+                  <a href="./user-lists.html">User Lists</a>
+               </li>
+               <li>
+                  <a href="./user-permissions.html">User Permissions</a>
+               </li>
+               <li>
+                  <a href="./user-add.html">Add New User</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sidemenu.html" title="">
+               <i data-feather="sidebar"></i>
+               <span>Manage Menu</span>
+            </a>
+         </li>
+      </ul>
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Documentations</span>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="command"></i>
+               <span>Components</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list">
+                  <a href="./components-accordion.html">Accordion</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-alert.html">Alert</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-breadcrumb.html">Breadcrumb</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-button.html">Buttons</a>
+               </li>
+               <li class="sub-menu__list has-sub">
+                  <a href="#">
+                     <span>Card</span>
+                     <span class="icon-arrow"></span></a>
+                  <ul class="sub-menu">
+                     <li>
+                        <a href="./components-card.html">Card groups</a>
+                     </li>
+                     <li>
+                        <a href="our-services.html">Card decks</a>
+                     </li>
+                     <li>
+                        <a href="#">Card column</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-modal.html">Modal</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-pagination.html">Pagination</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./components-tabs.html">Tabs</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list has-sub">
+            <a href="#" title="">
+               <i data-feather="lock"></i>
+               <span>Authentication</span>
+               <span class="icon-arrow"></span>
+            </a>
+            <ul class="sub-menu">
+               <li class="sub-menu__list">
+                  <a href="./login-default.html">Login Default</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./login-light.html">Login Light</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./login-dark.html">Login Dark</a>
+               </li>
+               <li class="sub-menu__list">
+                  <a href="./forgot-password.html">Reactivation Password</a>
+               </li>
+            </ul>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="edit"></i>
+               <span>Content</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="grid"></i>
+               <span>Layout</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="#" title="">
+               <i data-feather="life-buoy"></i>
+               <span>Utilities</span>
+            </a>
+         </li>
+      </ul>
+      <ul class="main-menu__lists">
+         <li class="main-menu__title">
+            <span class="main-menu__title-text">Customize Pages</span>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-applicant-list.html" title="">
+               <i data-feather="users"></i>
+               <span>Applicant List Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-talent-search.html" title="">
+               <i data-feather="users"></i>
+               <span>Talent Search</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-product-page.html" title="">
+               <i data-feather="command"></i>
+               <span>Product Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-brand-page.html" title="">
+               <i data-feather="command"></i>
+               <span>Brand Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-recruitment-dashboard.html" title="">
+               <i data-feather="command"></i>
+               <span>Recruitment Dashboard Page</span>
+            </a>
+         </li>
+         <li class="main-menu__list">
+            <a href="./sample-questions.html" title="">
+               <i data-feather="command"></i>
+               <span>Form Add Questions</span>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <div class="main-menu__title-collapsed"></div>
+   <div class="main-menu__submenu-collapsed"></div>
+</div>  
+      
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">Recruitment Dashboard</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row row-align-start">
+      <div class="col-xs-12 col-sm-12 col-xl-3">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title"><i data-feather="settings"></i> Sorting Filter</h3>
+               </div><!-- /.box__header -->
+               <div class="box__body box__body--spacy">
+                  <form class="form" novalidate>
+                     <div class="form-group mb-4">
+                        <p class="form__group-text">Kewarganegaraan</p>
+                        <div class="checkbox checkbox--green">
+                           <label>
+                              <input type="checkbox">
+                              <span class="checkbox__span">
+                                 <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                              </span>
+                              <span class="checkbox__text">Indonesia - <strong>25</strong></span>
+                           </label>
+                        </div>
+                        <div class="checkbox checkbox--green">
+                           <label>
+                              <input type="checkbox">
+                              <span class="checkbox__span">
+                                 <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                              </span>
+                              <span class="checkbox__text">Asing - <strong>12</strong></span>
+                           </label>
+                        </div>
+                     </div><!-- /.form-group -->
+                     <div class="form-group mb-4">
+                        <p class="form__group-text">Gender</p>
+                        <div class="checkbox checkbox--green">
+                           <label>
+                              <input type="checkbox" name="male">
+                              <span class="checkbox__span">
+                                 <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                              </span>
+                              <span class="checkbox__text">Male - <strong>25</strong></span>
+                           </label>
+                        </div>
+                        <div class="checkbox checkbox--green">
+                           <label>
+                              <input type="checkbox">
+                              <span class="checkbox__span" name="female">
+                                 <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                              </span>
+                              <span class="checkbox__text">Female - <strong>12</strong></span>
+                           </label>
+                        </div>
+                        <div class="checkbox checkbox--green">
+                           <label>
+                              <input type="checkbox">
+                              <span class="checkbox__span" name="unspecified_gender">
+                                 <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                              </span>
+                              <span class="checkbox__text">Unspecified - <strong>2</strong></span>
+                           </label>
+                        </div>
+                     </div><!-- /.form-group -->
+                     <div class="form-group mb-4">
+                        <p class="form__group-text">Age Range</p>
+                        <div class="form__display-flex">
+                           <label for="min_age">Min.</label>
+                           <input type="number" id="min_age" name="min_age" class="form-control" min="20" max="30" />
+                        </div>
+                        <div class="form__display-flex">
+                           <label for="max_age">Max.</label>
+                           <input type="number" id="max_age" name="max_age" class="form-control" min="30" max="45" />
+                        </div>
+                     </div><!-- /.form-group -->
+                     <div class="form-group mb-4">
+                        <p class="form__group-text">Years Experience</p>
+                        <input type="number" id="experience_years" name="experience_years" class="form-control" min="20" max="30"  placeholder="Minimum 1 years"/>
+                     </div><!-- /.form-group -->
+                     <div class="form-group mb-4">
+                        <p class="form__group-text">Education Degree</p>
+                        <select class="form-control select2 select2--default" name="edu_degree" id="edu_degree" multiple="multiple">
+                           <option value="High School">High School or Equivalent (SMU, SMK, etc)</option>
+                           <option value="Diploma Degree">Diploma Degree - D4</option>
+                           <option value="Associate degree">Associate degree / Diploma Degree (D1 - D3)</option>
+                           <option value="Bachelor Degree">Bachelor Degree</option>
+                           <option value="Master Degree">Master Degree / Post Graduate Degree</option>
+                           <option value="Doctorate">Doctorate</option>
+                        </select>
+                     </div><!-- /.form-group -->
+                     <div class="form-group mb-4">
+                        <p class="form__group-text">Job Level</p>
+                        <select class="form-control select2 select2--default" name="job_level" id="job_level" multiple="multiple">
+                           <option value="fresh_graduate">Fresh Graduates / Less Than 1 Year Experience</option>
+                           <option value="junior_staff">Staff / Junior Staff</option>
+                           <option value="senior_staff">Senior Staff / Supervisor / Coordinator / Team Leader</option>
+                           <option value="manager">Manager / Senior Manager / Department Head</option>
+                           <option value="director">Associate Director / Director / GM</option>
+                           <option value="c_level">C - Level (CEO, COO, CMO, CFO)</option>
+                        </select>
+                     </div><!-- /.form-group -->
+                     <div class="form-group">
+                        <p class="form__group-text">Province</p>
+                        <select class="form-control select2 select2--default" name="province" id="province">
+                           <option value="sumatera_utara">Sumatera Utara</option>
+                           <option value="sumatera_barat">Sumatera Barat</option>
+                           <option value="riau">Riau</option>
+                           <option value="jambi">Jambi</option>
+                           <option value="sumater_selatan">Sumatera Selatan</option>
+                           <option value="bengkulu">Bengkulu</option>
+                           <option value="others">Isi sendiri, Capek Ngetik</option>
+                        </select>
+                     </div><!-- /.form-group -->
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-xl-9">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header box__header--no-padding-y">
+                  <div class="box__column box__column--display-flex">
+                     <div class="checkbox checkbox--green">
+                        <label>
+                           <input type="checkbox">
+                           <span class="checkbox__span" name="unspecified_gender">
+                              <i data-feather="check" class="icon-feather icon-feather--black"></i>
+                           </span>
+                           <span class="checkbox__text">Select All</span>
+                        </label>
+                     </div>
+                     <div class="dropdown dropdown--bulk ml-4">
+                        <button class="button button--outline button--small dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Bulk Operation
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                           <a class="dropdown-item" href="#">Terpilih</a>
+                           <a class="dropdown-item" href="#">Wawancara</a>
+                           <a class="dropdown-item" href="#">Tidak Sesuai</a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="box__action">
+                     <div class="nav nav-tabs nav-tabs--tertiary" id="navTab">
+                        <a href="#unprocessed" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                           <span>Belum Diproses - <strong>25</strong></span>
+                        </a>
+                        <a href="#chosen" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <span>Terpilih - <strong>25</strong></span>
+                        </a>
+                        <a href="#interview" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <span>Wawancara - <strong>25</strong></span>
+                        </a>
+                        <a href="#dumped" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                           <span>Tidak Sesuai - <strong>25</strong></span>
+                        </a>
+                     </div>
+                  </div>
+               </div><!-- /.box__header -->
+            </div>
+         </div>
+         <!-- /.box -->
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">General</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand js-jamil">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div><!-- /.box__header -->
+               <form class="form" novalidate>
+                  <div class="box__body box__body--more-space">
+                     <div class="row">
+                        <div class="col col-xl-3">
+                           <div class="profile__img">
+                              <div class="image-wrapper">
+                                 <!-- Image Default -->
+                                 <img src="./assets/images/default/img-profile-big-default.jpg" alt="Image profile default">
+                              </div>
+                           </div>
+                           <div class="button-upload mb-3">
+                              <button type="button" class="button button--primary button--alt button--outline button--block mb-2 js-upload-button">Upload Photo</button>
+                              <input type="file" accept="image/*" class="file-upload hide-default">
+                           </div>
+                           <p class="small"><strong>Take note:</strong><br/>Maximum File image dimension: 300x300 px</p>
+                        </div>
+                        <div class="col col-xl-8 offset-xl-1">
+                           <div class="row">
+                              <div class="col col-xl-6">
+                                 <h4 class="profile__title">Basic Information</h4>
+                                 <div class="form-group">
+                                    <label for="fname">Fullname</label>
+                                    <input id="fname" name="fname" class="form-control" placeholder="ex. Brian Basreng" required>
+                                    <div class="invalid-feedback">Please edit your name</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="position">Position *</label>
+                                    <select class="form-control" id="position" required>
+                                       <option value="">Select your Role</option>
+                                       <option value="1">Administrator</option>
+                                       <option value="2">Editor</option>
+                                       <option value="3">Moderator</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please Select your Role</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="idnum">ID Number</label>
+                                    <input id="idnum" name="idnum" class="form-control" placeholder="Create New ID Number">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="gender">Gender *</label>
+                                    <select class="form-control" id="gender" required>
+                                       <option value="" default>Select Gender</option>
+                                       <option value="m">Male</option>
+                                       <option value="f">Female</option>
+                                       <option value="x">Undefined</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please Select your Gender, if not choosen You're Homo</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="bio">Description about Me</label>
+                                    <textarea id="bio" name="bio" class="form-control" rows="5" placeholder="Create short description about you"></textarea>
+                                 </div>
+                              </div>
+                              <div class="col col-xl-6">
+                                 <h4 class="profile__title">Contact Information</h4>
+                                 <div class="form-group">
+                                    <label for="phone">Emergency Phone *</label>
+                                    <input id="phone" name="phone" placeholder="Start with +62-" class="form-control" required>
+                                    <div class="invalid-feedback">Input your correct phone number, start with +62-</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="addr">Address *</label>
+                                    <input id="addr" name="addr" type="text" class="form-control" required>
+                                    <div class="invalid-feedback">Chooses your address Cabron!</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="email">Email *</label>
+                                    <input id="email" name="email" type="email" class="form-control" placeholder="Your valid E-mail address" required>
+                                    <div class="invalid-feedback">Invalid Email Address, you Dipshit</div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="site-url">Site</label>
+                                    <input id="site-url" name="site-url" type="text" class="form-control" placeholder="start with http://">
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="ext">Extension</label>
+                                    <input id="ext" name="ext" type="number" class="form-control" placeholder="Extension Phone Registry">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div><!-- /.box__body -->
+                  <div class="box__footer box__footer--with-space box__footer--border-top justify-content-end">
+                     <div class="box__footer-actions">
+                        <a href="./user-lists.html" class="button button--alt button--hollow mr-2">Cancel</a>
+                        <button type="submit" class="button button--alt button--primary js-button-submit">Create User</button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row row--footer">
+   <div class="col">
+      <p>&copy; Copyright 2017. Cyberindo Primatama. All Rights Reserved.</p>
+   </div>
+   <div class="col">
+      <p class="text-right">Powered by <a href="#">PENA Systems</a></p>
+   </div>
+</div> 
+</div>
+
+   </div>
+   <!-- Global Scripts -->
+   <script src="./assets/scripts/modernizr/modernizr.js"></script>
+   <script src="./assets/scripts/jquery/jquery.min.js"></script>
+   <script src="./assets/scripts/bootstrap/js/bootstrap.bundle.js"></script>
+   <script src="./assets/scripts/feather-icons/feather.min.js"></script>
+   <script src="./assets/scripts/jquery.nicescroll/jquery.nicescroll.js"></script>
+   <script src="./assets/scripts/prismjs/prism.js"></script>
+   <script src="./assets/scripts/components/global.js"></script>
+   <script src="./assets/scripts/components/sample-button.js"></script>
+   <!-- // Global Scripts -->
+
+   <!-- Additional Vendor Scripts -->
+   
+<script src="./assets/scripts/select2/js/select2.min.js"></script>
+
+   <!-- // Additional Vendor Scripts -->
+
+   <!-- Additional Custom Scripts -->
+   
+   <script src="./assets/scripts/components/sample-form.js"></script>
+
+   <!-- // Additional Custom Scripts -->
+</body>
+</html>

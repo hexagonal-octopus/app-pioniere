@@ -1,0 +1,62 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Product Detail" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_vendor_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/summernote/summernote.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/dropzone/dropzone.js"></script>
+{% endblock %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-form.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-toast.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/init-summernote.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-upload-product.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">{{DOC_TITLE}}</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-12">
+         <div class="box">
+            <nav>
+               <div class="nav nav-tabs nav-tabs--primary" id="navTab" role="tablist">
+                  <a href="#tabInfo" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center active">
+                     <i class="icon-feather" data-feather="compass"></i>
+                     <span>Basic Info</span>
+                  </a>
+                  <a href="#tabData" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                     <i class="icon-feather" data-feather="package"></i>
+                     <span>Data</span>
+                  </a>
+                  <a href="#tabImages" role="tab" data-toggle="tab" class="nav-item nav-link d-flex align-items-center ">
+                     <i class="icon-feather" data-feather="image"></i>
+                     <span>Images</span>
+                  </a>
+               </div>
+            </nav>
+            <div class="tab-content">
+               <div class="tab-pane fade show active" id="tabInfo" role="tabpanel">
+                  {% include "partials/partials-basic-info-product.njk" %}
+               </div>
+               <div class="tab-pane fade" id="tabData" role="tabpanel">
+                  {% include "partials/partials-data-product.njk" %}
+               </div>
+               <div class="tab-pane fade" id="tabImages" role="tabpanel">
+                  {% include "partials/partials-image-product.njk" %}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

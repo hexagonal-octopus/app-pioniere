@@ -1,0 +1,406 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Dashboard" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_vendor_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/simpleweather/jquery.simpleWeather.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/chart.js/Chart.bundle.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/moment/min/moment-with-locales.js"></script>
+{% endblock %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-time-moment.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-chart.js"></script>
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-weather.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <h2 class="main-content__title">Dashboard</h2>
+      </div>
+   </div>
+   <div class="row row--align-stretch">
+      <div class="col-12 col-lg-12 col-xl-4">
+         <div class="box box--full-height">
+            <div class="box__wrapper box--image" style="background-image: url(./assets/images/default/bg-welcome-screen.jpg);">
+               <div class="box__body">
+                  <p class="box__info m-0">Welcome Back</p>
+                  <h2 class="box__heading">Natalie Dormer</h2>
+               </div>
+               <div class="box__footer">
+                  <div class="box__footer-left">
+                     <div class="js-weather"></div>
+                  </div>
+                  <div class="box__footer-right">
+                     <p class="text-light dashboard-time"></p>
+                     <p class="text-light dashboard-date"></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-4">
+         <div class="box box--white-content box--blue">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Database</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body box__body--flex-column box__body--padding-vertical">
+                  <div class="label label--light">
+                     <p class="label__text"><span class="label__big">12.35</span>%</p>
+                     <p class="label__text">Percentage Usage</p>
+                  </div>
+                  <div class="label label--light">
+                     <i class="label__icon" data-feather="database"></i>
+                     <p class="label__text">cbn_cpliv3DB</p>
+                  </div>
+               </div>
+               <div class="box__footer">
+                  <div class="box__footer-left">
+                     <p class="text-light">Usage</p>
+                     <p class="text-light"><span class="text-hilite">126.5</span>MB</p>
+                  </div>
+                  <div class="box__footer-right">
+                     <p class="text-light">Capacity</p>
+                     <p class="text-light"><span class="text-hilite">1024</span> MB</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-lg-6 col-xl-4">
+         <div class="box box--white-content box--green">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Disk Space</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body box__body--flex-column box__body--padding-vertical">
+                  <div class="label label--light">
+                     <p class="label__text"><span class="label__big">50</span>%</p>
+                     <p class="label__text">Percentage Usage</p>
+                  </div>
+                  <div class="label label--light">
+                     <i class="label__icon" data-feather="hard-drive"></i>
+                     <p class="label__text">Server Linux XXX</p>
+                  </div>
+               </div>
+               <div class="box__footer">
+                  <div class="box__footer-left">
+                     <p class="text-light">Usage</p>
+                     <p class="text-light"><span class="text-hilite">150</span>MB</p>
+                  </div>
+                  <div class="box__footer-right">
+                     <p class="text-light">Capacity</p>
+                     <p class="text-light"><span    class="text-hilite">300 </span>MB</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col col-lg-12">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Visitor Overview</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="chart">
+                     <div class="chart__container">
+                        <canvas id="chartMonthly"></canvas>
+                     </div>
+                     <div class="chart__legends">
+                        <div class="chart__legend">
+                           <p class="label__text"><span class="label__big">15.678</span></p>
+                           <p class="label__text label__text--blue">Total Visit</p>
+                        </div>
+                        <div class="chart__legend">
+                           <p class="label__text"><span class="label__big">8,630</span></p>
+                           <p class="label__text label__text--green">Unique Visitor</p>
+                        </div>
+                        <div class="chart__legend">
+                           <p class="label__text"><span class="label__big">32,545</span></p>
+                           <p class="label__text label__text--orange">Page Views</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col col-sm-6 col-xl-4">
+         <div class="box box--white-content box--orange">
+            <div class="box__wrapper box--color">
+               <div class="box__header">
+                  <h3 class="box__title">Bounce Rate</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body box__body--flex-column box__body--padding-vertical">
+                  <div class="chart-circle chart-circle--orange">
+                     <div class="chart-circle__wrapper">
+                        <svg viewbox="0 0 36 36" class="chart-circle__svg">
+                           <path class="circle-bg"
+                           d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                           />
+                           <path class="circle"
+                           stroke-dasharray="45, 100"
+                           d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                           />
+                        </svg>
+                     </div>
+                     <div class="label label--light">
+                        <p class="label__text"><span class="label__big">45</span>%</p>
+                        <p class="label__text">Bounce rate</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col col-sm-6 col-xl-4">
+         <div class="box box--white-content box--blue">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">My Efficiency</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body box__body--flex-column box__body--padding-vertical">
+                  <div class="chart-circle chart-circle--blue">
+                     <div class="chart-circle__wrapper">
+                        <svg viewbox="0 0 36 36" class="chart-circle__svg">
+                           <path class="circle-bg"
+                           d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                           />
+                           <path class="circle"
+                           stroke-dasharray="85, 100"
+                           d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                           />
+                        </svg>
+                     </div>
+                     <div class="label label--light">
+                        <p class="label__text"><span class="label__big">85</span>%</p>
+                        <p class="label__text">My Efficiency</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col col-sm-6 col-xl-4">
+         <div class="box box--white-content box--purple">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Task Completed</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body box__body--flex-column box__body--padding-vertical">
+                  <div class="chart-circle chart-circle--purple">
+                     <div class="chart-circle__wrapper">
+                        <svg viewbox="0 0 36 36" class="chart-circle__svg">
+                           <path class="circle-bg"
+                           d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                           />
+                           <path class="circle"
+                           stroke-dasharray="50, 100"
+                           d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                           />
+                        </svg>
+                     </div>
+                     <div class="label label--light">
+                        <p class="label__text"><span class="label__big">50</span>%</p>
+                        <p class="label__text">Task Completed</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col">
+         <div class="box">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <h3 class="box__title">Recent Activities</h3>
+                  <div class="box__action">
+                     <button class="button button--link js-button-reload">
+                        <i data-feather="rotate-cw"></i>
+                     </button>
+                     <button class="button button--link js-button-expand">
+                        <i data-feather="maximize"></i>
+                     </button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="div-table div-table--three-column">
+                     {# <div class="div-table__row div-table__row--heading">
+                        <div class="div-table__cell">Author</div>
+                        <div class="div-table__cell">Updates</div>
+                        <div class="div-table__cell">Status</div>
+                        <div class="div-table__cell">Last Edited</div>
+                     </div> #}
+                     <div class="div-table__row">
+                        <div class="div-table__cell" data-label="author">
+                           <div class="div-table__photo">
+                              <img src="{{BASE_HREF}}assets/images/default/img-emma-watson-42x42.jpg" alt="">
+                           </div>
+                           <div class="div-table__user">
+                              <div class="div-table__user-name"><a href="#">Emma Watson</a></div>
+                              <div class="div-table__user-role"><a href="#">Editor</a></div>
+                           </div>
+                        </div>
+                        <div class="div-table__cell" data-label="updates">
+                           <h3 class="div-table__post-title">
+                              <a href="#">[POST] How to Display Tooltips on Mobile Forms</a>
+                           </h3>
+                        </div>
+                        <div class="div-table__cell" data-label="status">Published</div>
+                        <div class="div-table__cell" data-label="last edited">Apr 12th 2018, 02:00 PM</div>
+                     </div>
+                     <div class="div-table__row">
+                        <div class="div-table__cell" data-label="author">
+                           <div class="div-table__photo">
+                              <img src="{{BASE_HREF}}assets/images/default/img-emma-watson-42x42.jpg" alt="">
+                           </div>
+                           <div class="div-table__user">
+                              <div class="div-table__user-name"><a href="#">Emma Watson</a></div>
+                              <div class="div-table__user-role"><a href="#">Editor</a></div>
+                           </div>
+                        </div>
+                        <div class="div-table__cell" data-label="updates">
+                           <h3 class="div-table__post-title">
+                              <a href="#">[PAGE] Company in Brief</a>
+                           </h3>
+                        </div>
+                        <div class="div-table__cell" data-label="status">Published</div>
+                        <div class="div-table__cell" data-label="last edited">Apr 12th 2018, 02:00 PM</div>
+                     </div>
+                     <div class="div-table__row">
+                        <div class="div-table__cell" data-label="author">
+                           <div class="div-table__photo">
+                              <img src="{{BASE_HREF}}assets/images/default/img-emma-stone-42x42.jpg" alt="">
+                           </div>
+                           <div class="div-table__user">
+                              <div class="div-table__user-name"><a href="#">Emma Stone</a></div>
+                              <div class="div-table__user-role"><a href="#">Legal Officer</a></div>
+                           </div>
+                        </div>
+                        <div class="div-table__cell" data-label="updates">
+                           <h3 class="div-table__post-title">
+                              <a href="#">[PAGE] Terms of Use</a>
+                           </h3>
+                        </div>
+                        <div class="div-table__cell" data-label="status">Published</div>
+                        <div class="div-table__cell" data-label="last edited">Apr 12th 2018, 02:00 PM</div>
+                     </div>
+                     <div class="div-table__row">
+                        <div class="div-table__cell" data-label="author">
+                           <div class="div-table__photo">
+                              <img src="{{BASE_HREF}}assets/images/default/img-emma-watson-42x42.jpg" alt="">
+                           </div>
+                           <div class="div-table__user">
+                              <div class="div-table__user-name"><a href="#">Emma Watson</a></div>
+                              <div class="div-table__user-role"><a href="#">Editor</a></div>
+                           </div>
+                        </div>
+                        <div class="div-table__cell" data-label="updates">
+                           <h3 class="div-table__post-title">
+                              <a href="#">[PAGE] Company in Brief</a>
+                           </h3>
+                        </div>
+                        <div class="div-table__cell" data-label="status">Published</div>
+                        <div class="div-table__cell" data-label="last edited">Apr 12th 2018, 02:00 PM</div>
+                     </div>
+                     <div class="div-table__row">
+                        <div class="div-table__cell" data-label="author">
+                           <div class="div-table__photo">
+                              <img src="{{BASE_HREF}}assets/images/default/img-jenlaw-42x42.jpg" alt="">
+                           </div>
+                           <div class="div-table__user">
+                              <div class="div-table__user-name"><a href="#">Jennifer Lawrence</a></div>
+                              <div class="div-table__user-role"><a href="#">Financial Officer</a></div>
+                           </div>
+                        </div>
+                        <div class="div-table__cell" data-label="updates">
+                           <h3 class="div-table__post-title">
+                              <a href="#">[INVOICES] Billing Overdue March 2018</a>
+                           </h3>
+                        </div>
+                        <div class="div-table__cell" data-label="status">Pending Review</div>
+                        <div class="div-table__cell" data-label="last edited">Apr 12th 2018, 02:00 PM</div>
+                     </div>
+                     <div class="div-table__row">
+                        <div class="div-table__cell" data-label="author">
+                           <div class="div-table__photo">
+                              <img src="{{BASE_HREF}}assets/images/default/img-profile-md.jpg" alt="">
+                           </div>
+                           <div class="div-table__user">
+                              <div class="div-table__user-name"><a href="#">Natalie Dormer</a></div>
+                              <div class="div-table__user-role"><a href="#">Administrator</a></div>
+                           </div>
+                        </div>
+                        <div class="div-table__cell" data-label="updates">
+                           <h3 class="div-table__post-title">
+                              <a href="#">[USERS] Change User Role</a>
+                           </h3>
+                        </div>
+                        <div class="div-table__cell" data-label="status">Draft</div>
+                        <div class="div-table__cell" data-label="last edited">Apr 12th 2018, 02:00 PM</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

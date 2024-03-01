@@ -1,0 +1,104 @@
+{% extends "layouts/default.njk" %}
+{% set DOC_TITLE = "Add New Asset" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "fixed-navbar" %}
+
+{% block additional_vendor_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/dropzone/dropzone.js"></script>
+{% endblock %}
+
+{% block additional_custom_scripts %}
+   <script src="{{BASE_HREF}}assets/scripts/components/sample-upload-file.js"></script>
+{% endblock %}
+
+{% block main %}
+<div class="main-content">
+   <div class="row">
+      <div class="col mb-3">
+         <div class="d-flex">
+            <h2 class="main-content__title">{{ DOC_TITLE }}</h2>
+         </div>
+      </div>
+   </div>
+   <div class="row">
+      <div class="col-12 col-xl-5">
+         <div class="drop-area" id="dropArea">
+            <div class="drop-area__wrapper">
+               <div class="drop-area__content">
+                  <h2 class="drop-area__title">Drop Files Here</h2>
+                  <p class="drop-area__text">or</p>
+                  <button class="button button--alt button--outline js-fileinput-btn">Select Files</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-xl-7">
+         <div class="box box--full-height">
+            <div class="box__wrapper">
+               <div class="box__header">
+                  <div class="box__title">Uploaded File Lists</div>
+                  <div class="box__action">
+                     <button class="button button--alt button--hollow js-drop-btn" style="display: none;">Drop All</button>
+                     <button class="button button--alt button--secondary js-process-btn" style="display: none;">Process All</button>
+                  </div>
+               </div>
+               <div class="box__body">
+                  <div class="div-table div-table--upload-files" id="previews">
+                     <div class="div-table__row" id="template">
+                        <div class="div-table__cell">
+                           <div class="thumbnail thumbnail--small">
+                                 <div class="thumbnail__wrapper">
+                                    <div class="thumbnail__centered">
+                                       <img data-dz-thumbnail class="thumbnail__image">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        <div class="div-table__cell flex-grow-1">
+                           <div class="div-table__content-100">
+                              <p class="m-0"><strong>Filename: </strong><span data-dz-name></span></p>
+                              <p><strong>File-size: </strong><span data-dz-size></span></p>
+                              <strong class="error text-danger" data-dz-errormessage></strong>
+                              <div class="progress" style="height:5px;">
+                                 <div class="progress-bar" style="width: 0%;" role="progressbar" data-dz-uploadprogress></div>
+                              </div>
+                           </div>
+                        </d            iv>
+                        <div class="div-table__cell">
+                           <button class="button button--primary button--icon-only ml-2 start"><i data-feather="upload" class="icon-feather"></i></button>
+                           <button class="button button--outline button--icon-only ml-2 cancel"><i data-feather="x-circle" class="icon-feather icon-feather--black"></i></button>
+                           <button class="button button--secondary button--icon-only ml-2 delete"><i data-feather="trash-2" class="icon-feather"></i></button>
+                        </div>
+                        {# <div class="div-table__cell">
+                           <div class="thumbnail thumbnail--small">
+                                 <div class="thumbnail__wrapper">
+                                    <div class="thumbnail__centered">
+                                       <img src="{{BASE_HREF}}assets/images/default/img-sample-3.jpg" alt="" class="thumbnail__image">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        <div class="div-table__cell flex-grow-1">
+                           <div class="div-table__content-100">
+                              <p class="m-0"><strong>Filename: </strong>Filename.jpg</p>
+                              <p><strong>File-size: </strong>165KB</p>
+                              <div class="progress" style="height:5px;">
+                                 <div class="progress-bar" style="width: 70%;" role="progressbar"></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="div-table__cell">
+                           <button class="button button--primary button--icon-only ml-2"><i data-feather="upload" class="icon-feather"></i></button>
+                           <button class="button button--outline button--icon-only ml-2"><i data-feather="x-circle" class="icon-feather icon-feather--black"></i></button>
+                           <button class="button button--secondary button--icon-only ml-2"><i data-feather="trash-2" class="icon-feather"></i></button>
+                        </div> #}
+                     </div><!-- /.div-table__row -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   {% include "components/_footer.njk" %}
+</div>
+{% endblock %}

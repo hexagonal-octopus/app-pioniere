@@ -1,0 +1,56 @@
+{% extends "layouts/authentication.njk" %}
+{% set DOC_TITLE = "Login Page" %}
+{% set BASE_HREF = "./" %}
+{% set BODY_CLASS = "page-auth" %}
+{% block main %}
+<div class="auth-dialog auth-dialog--light">
+   <div class="auth-dialog__box">
+      <div class="auth-dialog__box-header">
+         <div class="auth-dialog__logo">
+            <img src="{{BASE_HREF}}assets/images/default/logo-cp-blue.svg" alt="" height="80">
+         </div>
+      </div>
+      <div class="auth-dialog__box-body">
+         <div class="feedback feedback--alt"></div>
+         <form action="#" class="form-login form-auth form-login--light">
+            <div class="form-login__field">
+               <div class="form-login__input-group">
+                  <input type="text" id="inputUsername" name="username" class="form-login__input" spellcheck="false" required autocomplete="off">
+                  <label for="inputUsername">Username</label>
+                  <span class="bar"></span>
+               </div>
+               {# <div class="feedback is-valid">Seems Legit</div> #}
+            </div>
+            <div class="form-login__field">
+               <div class="form-login__input-group">
+                  <input type="password" id="inputPassword" name="password" class="form-login__input" required autocomplete="off">
+                  <label for="inputPassword">Password</label>
+                  <span class="bar"></span>
+               </div>
+               {# <div class="feedback is-invalid">Wrong Password, Please check your Eyes</div> #}
+            </div>
+            <div class="form-login__remember">
+               <label>
+                  <input type="checkbox" name="remember-check" id="rememberPass" class="form-login__input-checkbox">
+                  <span class="form-login__check">
+                     <i class="icon-feather" data-feather="check"></i>
+                  </span>
+                  <span class="form-login__text-label">Remember Me</span>
+               </label>
+            </div>
+            <div class="form-login__button">
+               <button type="submit" class="button button--block button--primary" id="buttonLogin" disabled>Submit</button>
+            </div>
+         </form>
+      </div>
+   </div>
+   <div class="auth-dialog__footer">
+      <ul class="auth-dialog__links">
+         <li><a href="./forgot-password.html" title="Lost Password">Lost My Password</a></li>
+         <li><a href="#" data-toggle="modal" data-target="#privacyModal" title="Privacy Policy">Privacy Policy</a></li>
+         <li><a href="#" data-toggle="modal" data-target="#legalModal" title="Terms of Use">Terms of Use</a></li>
+      </ul>
+      <p class="auth-dialog__copy">&copy; Copyright 2019. <a href="http://cyberprimatama.id" target="_blank" title="Cyberindo Primatama">Cyberindo Primatama</a>. All Right Reserved.</p>
+   </div>
+</div>
+{% endblock %}

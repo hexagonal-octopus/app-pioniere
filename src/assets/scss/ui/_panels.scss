@@ -1,0 +1,61 @@
+// ***********************************
+// PANELS
+// ***********************************
+.panel--collapse{
+   margin: 16px 0;
+
+   .panel__header{
+      padding: 10px 20px;
+      color: black;
+      background: #f1f1f1;
+      line-height: 20px;
+
+      .icon-feather{
+         stroke: #999;
+      }
+   }
+   
+   .panel__link{
+      color: #555;
+      display: block;
+      line-height: 20px;
+      margin-right: 12px;
+      display: flex;
+
+      &:hover, &:focus{
+         color: $green-400;
+         text-decoration: none;
+      }
+   }
+   
+   .panel__button-add{
+      svg{
+         position: relative;
+         top:2px;
+         stroke: #999;
+      }
+   }
+
+   .panel__body{
+      opacity: 0;
+      display: none;
+      visibility: hidden;
+      transition: all 250ms ease-out;
+      height: 0;
+      overflow: hidden;
+
+      &--visible{
+         display: block;
+      }
+
+      &--shown{
+         opacity: 1;
+         visibility: visible;
+         height: auto;
+      }
+   }
+
+   .panel__links{
+      padding: 12px;
+   }
+}

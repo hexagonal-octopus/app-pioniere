@@ -1,0 +1,285 @@
+.chart {
+   display: flex;
+   flex-direction: rows;
+   align-items: stretch;
+   padding: 40px 20px;
+   flex-flow: wrap;
+
+   &__container {
+      width: 85%;
+      height: 450px;
+      position: relative;
+      @include max-large {
+         width: 100%;
+      }
+   }
+
+   &.chart--2fr {
+      .chart__wrapper {
+         position: relative;
+         width: 278px;
+
+         @include small {
+            width: 500px;
+         }
+
+         @include medium {
+            width: 400px;
+         }
+
+         @include large {
+            width: 600px;
+         }
+
+         @include xlarge {
+            width: 380px;
+         }
+
+         @include xxlarge {
+            width: 600px;
+         }
+      }
+   }
+
+   &__wrapper {
+      position: relative;
+      width: 260px;
+
+      // @include small {
+      //    width: 500px;
+      // }
+
+      // @include medium {
+      //    width: 400px;
+      // }
+
+      // @include large {
+      //    width: 600px;
+      // }
+
+      // @include xlarge {
+      //    width: 380px;
+      // }
+
+      // @include xxlarge {
+      //    width: 600px;
+      // }
+   }
+
+   &__percentage {
+      font-size: 40px;
+      line-height: 1;
+      font-family: $font-family-light;
+      position: absolute;
+      top: 50%;
+      left: 32%;
+      transform: translate(-50%, -50%);
+
+      &:after {
+         content: '%';
+         font-family: $font-family-base;
+         font-size: 18px;
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         transform: translate(15px, -8px);
+      }
+
+      @include small {
+         font-size: 60px;
+         left: 40%;
+      }
+
+      @include medium {
+         left: 37%;
+      }
+
+      @include large {
+         left: 42%;
+      }
+
+      @include xlarge {
+         left: 36%;
+      }
+
+      @include xxlarge {
+         left: 42%;
+      }
+   }
+
+   &__legends {
+      text-align: right;
+      padding-left: 15px;
+      width: 14%;
+      @include max-large {
+         width: 100%;
+         padding: 0;
+         padding-top: 30px;
+         text-align: left;
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+
+   &__legend {
+      margin-bottom: 2rem;
+   }
+
+   .label__text {
+      font-size: 0.875rem;
+
+      &--blue {
+         color: $blue;
+      }
+
+      &--green {
+         color: $green-400;
+      }
+
+      &--orange {
+         color: $orange-500;
+      }
+   }
+
+   .label__big {
+      font-size: 2em;
+      font-family: $font-family-light;
+   }
+}
+
+.legend {
+   font-size: rem(14);
+   color: #666;
+   line-height: 20px;
+
+   &--inline {
+      display: flex;
+      margin-bottom: 30px;
+   }
+
+   &--circle {
+      .legend__item {
+         display: flex;
+         margin: 0 10px;
+      }
+
+      .legend__box {
+         border-radius: 50%;
+         border: 3px solid $blue-500;
+         background: transparent;
+         margin-right: 5px;
+      }
+   }
+
+   p {
+      display: flex;
+      justify-content: flex-start;
+      text-align: left;
+      margin-bottom: 8px;
+   }
+
+   &__box {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-right: 8px;
+      border-radius: 3px;
+   }
+}
+
+.bar {
+   &__item {
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+
+      &:before,
+      &:after {
+         width: 100%;
+         content: '';
+         height: 5px;
+         border-radius: 3px;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+      }
+
+      &:before {
+         background-color: rgba(white, 0.1);
+         z-index: 1;
+      }
+   }
+
+   &__text {
+      display: flex;
+
+      span.numeric {
+         margin-left: auto;
+         font-family: $font-family-light;
+      }
+   }
+
+   &__stick {
+      position: absolute;
+      height: 5px;
+      width: 0;
+      transition: width 0.5s;
+      background-color: #00e93c;
+      border-radius: 3px 0 0 3px;
+      bottom: 0;
+      left: 0;
+   }
+}
+
+.chart-circle {
+   width: 50%;
+   position: relative;
+   @include max-large {
+      width: 70%;
+   }
+
+   &__wrapper {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+   }
+
+   .circle-bg {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.2);
+      stroke-width: 2px;
+   }
+
+   .circle {
+      fill: none;
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke: #fff;
+      animation: progress 1.5s ease-out forwards;
+   }
+
+   .label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+
+   &--orange {
+      .circle {
+         stroke: #e65100;
+      }
+   }
+
+   &--blue {
+      .circle {
+         stroke: #01579b;
+      }
+   }
+
+   &--purple {
+      .circle {
+         stroke: #4527a0;
+      }
+   }
+}
